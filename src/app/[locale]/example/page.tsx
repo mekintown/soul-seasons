@@ -2,11 +2,12 @@
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 type Props = {};
 
 const Page = (props: Props) => {
-  const t = useTranslations("0");
+  const t = useTranslations("Example");
 
   return (
     <div className="absolute h-full w-full bg-cover bg-no-repeat">
@@ -22,7 +23,9 @@ const Page = (props: Props) => {
         <p className="mt-2 w-80 text-woh-black">{t("title")}</p>
 
         <div className="absolute bottom-[10vh]">
-          <Link href="/1-2"></Link>
+          <Link href="/1-2">
+            <Button variant="default">Button</Button>
+          </Link>
         </div>
       </motion.div>
     </div>

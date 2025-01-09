@@ -5,11 +5,13 @@ import { routing } from "@/i18n/routing";
 
 const LocaleLayout = async ({
   children,
-  params: { locale },
+  params,
 }: {
   children: React.ReactNode;
   params: { locale: string };
 }) => {
+  const { locale } = await params;
+
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
