@@ -8,7 +8,7 @@ on:
 
 env:
   NODE_VERSION: '18'
-  FRONTEND_DIR: 'hmpis-frontend'
+  FRONTEND_DIR: '.'
   PNPM_VERSION: '9'
 
 jobs:
