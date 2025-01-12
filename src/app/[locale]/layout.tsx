@@ -4,6 +4,7 @@ import { notFound } from "next/navigation"
 import { routing } from "@/i18n/routing"
 import "../globals.css"
 import Sounds from "@/components/sounds"
+import SoundToggle from "@/components/sound-toggle"
 
 const LocaleLayout = async ({
   children,
@@ -25,6 +26,9 @@ const LocaleLayout = async ({
       <body>
         <NextIntlClientProvider messages={messages}>
           <Sounds />
+          <div className="absolute right-8 top-12 z-50 flex w-full items-center justify-end">
+            <SoundToggle />
+          </div>
           {children}
         </NextIntlClientProvider>
       </body>
