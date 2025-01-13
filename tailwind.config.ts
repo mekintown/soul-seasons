@@ -10,6 +10,7 @@ export default {
   theme: {
   	extend: {
   		colors: {
+			indigo: '#182649',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -49,9 +50,12 @@ export default {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
-  		},
-  		borderRadius: {
+			},
+		},
+		fontFamily: {
+			'cloud': ['Cloud', 'sans-serif'], // Replace 'cloud' with your desired class name
+		},
+		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
