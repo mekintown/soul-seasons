@@ -21,7 +21,7 @@ const LocaleLayout = async ({
 
   return (
     <html lang={locale}>
-      <body className="relative mx-auto min-h-screen w-full max-w-md">
+      <body className="relative mx-auto min-h-screen w-full max-w-[393px] overflow-x-hidden overscroll-none">
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
