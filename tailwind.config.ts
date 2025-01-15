@@ -54,12 +54,23 @@ export default {
 		},
 		fontFamily: {
 			'cloud': ['Cloud', 'sans-serif'], // Replace 'cloud' with your desired class name
+			'kanit': ['Kanit', 'sans-serif'], // Replace 'kanit' with your desired class name
 		},
 		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		animation: {
+			'dissolve': 'dissolve 0.3s ease-out',
+			'rotate' : 'rotate 0.5s linear '
+		},
+		keyframes: {
+			dissolve: {
+			  "0%": { opacity: 0 },
+			  "100%": { opacity: 1 },
+			},
+		}
   	}
   },
   plugins: [require("tailwindcss-animate")],
