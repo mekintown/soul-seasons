@@ -9,7 +9,7 @@ const Scene2 = () => {
   const router = useRouter();
 
   const HandleClick = () => {
-    router.push("/en/0/0-4");
+    router.push("/en/0/0-3-1");
   };
 
   return (

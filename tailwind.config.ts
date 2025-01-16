@@ -63,8 +63,10 @@ export default {
   		},
 		animation: {
 			'dissolve': 'dissolve 0.3s ease-out',
-			'rotate' : 'rotate 0.5s linear '
+			'rotate' : 'rotate 1s linear ',
+			'dissolve_slow': 'dissolve 2s ease-out',
 		},
+		
 		keyframes: {
 			dissolve: {
 			  "0%": { opacity: 0 },

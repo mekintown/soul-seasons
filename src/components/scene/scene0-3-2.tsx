@@ -9,7 +9,7 @@ import HideTab from '../../img/icons/hidetab.png';
 const Scene3_2 = () => {
     const router = useRouter();
     const HandleClick = ()=>{
-        router.push("/en/0/0-4");
+        router.push("/en/0/0-4-1");
     }
   return(
     <section
@@ -39,7 +39,7 @@ const Scene3_2 = () => {
         BoxPadding="px-3 py-5"/>
         <div className="flex justify-start items-center h-full flex-col gap-5 relative">
             <img src={Tab.src}/>
-            <div className=" absolute w-[27px] h-[27px] border-solid border-[2px] border-black rounded-[100%] top-[9px] left-[26px] "/>
+            <div className=" absolute w-[27px] h-[27px] border-solid border-[2px] border-black rounded-[100%] top-[9px] left-[25px] "/>
             <img src={HideTab.src}/>
             <div className=" absolute w-[220px] h-[32px] border-solid border-[2px] border-black rounded-[12px] top-[160px] "/>
         </div>
