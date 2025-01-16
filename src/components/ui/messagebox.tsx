@@ -8,7 +8,7 @@ interface MessageBoxProps {
 
 const MessageBox: React.FC<MessageBoxProps> = ({ message, size, BoxPadding }) => {
   return (
-    <div className={`flex justify-center items-center h-full ${size || ""}`}>
+    <div className={`flex justify-center items-center  ${size || ""}`}>
       <div className={`w-full h-full opacity-70 bg-white flex items-center justify-center rounded-lg ${BoxPadding || ''}`}>
         <div className="text-center relative">{message}</div>
       </div>
