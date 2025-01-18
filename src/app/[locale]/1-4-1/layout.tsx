@@ -1,23 +1,20 @@
 import { pick } from "lodash"
-import { NextIntlClientProvider, useMessages } from "next-intl"
-import { setRequestLocale } from "next-intl/server"
+import { NextIntlClientProvider } from "next-intl"
+import { getMessages, setRequestLocale } from "next-intl/server"
 import { PropsWithChildren } from "react"
 
-const Layout = ({
-  children,
-  params: { locale },
-}: PropsWithChildren<{
-  params: {
-    locale: string
-  }
-}>) => {
+interface LayoutProps extends PropsWithChildren {
+  params: Promise<{ locale: string }>
+}
+
+const Layout = async ({ children, params }: LayoutProps) => {
+  const { locale } = await params
   setRequestLocale(locale)
-  const messages = useMessages()
+
+  const messages = await getMessages()
 
   return (
-    <NextIntlClientProvider messages={pick(messages, ["1-4-1", "NextButton"])}>
-      {children}
-    </NextIntlClientProvider>
+    <NextIntlClientProvider messages={pick(messages, ["1-4-1"])}>{children}</NextIntlClientProvider>
   )
 }
 

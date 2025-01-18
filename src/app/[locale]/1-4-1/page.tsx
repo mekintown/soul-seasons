@@ -1,12 +1,14 @@
 "use client"
-import { Button } from "@/components/ui/button"
-import { Link } from "@/i18n/routing"
 import { motion } from "framer-motion"
-// import { useTranslations } from "next-intl"
+import { useTranslations } from "next-intl"
 import React from "react"
 
 const Scene5Page4: React.FC = () => {
-  // const t = useTranslations("5-4")
+  const t = useTranslations("1-4-1")
+  // get name from localstorage
+  const name = typeof window !== "undefined" ? localStorage.getItem("name") : null
+  const importantPerson =
+    typeof window !== "undefined" ? localStorage.getItem("importantPerson") : null
 
   return (
     <div className="flex h-screen w-full bg-[url('/bg/1-4-1.webp')] flex-col items-center bg-cover bg-no-repeat">
@@ -14,40 +16,26 @@ const Scene5Page4: React.FC = () => {
         {/* Screen text */}
 
         <motion.div
-          className="absolute bottom-[64%]"
+          className="absolute bottom-[62%]"
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}>
           <div className="flex h-[135px] w-[400px]">
             <div className="items-cemter flex h-full w-full flex-col justify-center">
-              <p className="text-center text-lg text-white">
-                อาจจะมีเบาะแสอะไรอยู่ก็ได้ ลองเปิดอ่านดูมั้ย
+              <p className="text-center text-lg text-white font-light whitespace-break-spaces">
+                {t("thereMightBe")}
               </p>
             </div>
           </div>
         </motion.div>
         <motion.div
-          className="absolute bottom-[52%] right-[14%]"
+          className="absolute bottom-[51%] right-[13%] w-36 h-10 flex items-center justify-center text-center text-sm text-black"
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}>
-          <p className="text-center text-sm text-black">UserName & คนสำคัญ</p>
-        </motion.div>
-
-        {/* Next button */}
-        <motion.div
-          className="absolute bottom-[18%]"
-          initial={{ opacity: 0, y: 5 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 5 }}
-          transition={{ delay: 2, duration: 1.5 }}>
-          <div>
-            <Link href="/5-5">
-              <Button />
-            </Link>
-          </div>
+          {name ?? t("name")} & {importantPerson ?? t("importantPerson")}
         </motion.div>
       </div>
     </div>
