@@ -4,6 +4,7 @@ import Background1 from '../../img/background/0.png';
 import SoulSeasons from '../../img/icons/Soul Seasons-MAIN LOGO 1.png';
 import { useRouter } from 'next/navigation';
 
+
 const Scene1: React.FC = () => {
   const router = useRouter();
 

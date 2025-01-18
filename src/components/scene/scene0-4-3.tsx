@@ -8,7 +8,14 @@ const Scene4_3 = ()=>{
         router.push('/en/0/0-5');
     }   
     return(
-        <section className='w-full h-lvh flex flex-col pt-[150px]'style={{ backgroundImage: `url(${Background1.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <section
+        className="w-full justify-center h-lvh flex flex-col"
+        style={{
+          backgroundImage: `url(${Background1.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
             <div className='flex justify-end items-center h-full flex-col font-kanit text-center gap-[20px] mt-[200px] animate-dissolve_slow'> 
                  <div className='flex justify-end items-center h-full flex-col  '>
                     <h1 className='font-extralight text-white text-[28px]'>อยากให้เราเรียกคุณว่าอะไร</h1> {/* change to weith 300 once get cloud font*/}
@@ -16,9 +23,9 @@ const Scene4_3 = ()=>{
                 <NameInput/>
             </div>
             <div className='flex justify-start items-center h-full flex-col mt-[100px]'>
-                    <button onClick={HandleClick} className='font-kanit font-medium bg-indigo w-[173px] h-[55px] rounded-lg text-white font-cloud font-bold animate-dissolve_slow  ease-out'>
-                        ถัดไป
-                    </button>
+                <button onClick={HandleClick} className='font-kanit font-medium bg-indigo w-[173px] h-[55px] rounded-lg text-white font-cloud font-bold animate-dissolve_slow  ease-out'>
+                    ถัดไป
+                </button>
             </div>
     </section>
 

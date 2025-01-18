@@ -69,8 +69,8 @@ export default {
 		
 		keyframes: {
 			dissolve: {
-			  "0%": { opacity: 0 },
-			  "100%": { opacity: 1 },
+				'0%': { "opacity": "0" },
+			  '100%': {"opacity": "1" },
 			},
 		}
   	}

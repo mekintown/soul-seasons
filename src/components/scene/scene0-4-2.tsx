@@ -7,9 +7,9 @@ const Scene4_2 = ()=>{
     const HandleClick = ()=>{
         router.push('/en/0/0-4-3');
     }   
-    setTimeout(()=>{
-        router.push('/en/0/0-4-3');
-    },1000)
+    // setTimeout(()=>{
+    //     router.push('/en/0/0-4-3');
+    // },1000)
     return(
         <section className='w-full h-lvh flex flex-col pt-[150px]'style={{ backgroundImage: `url(${Background1.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className='flex justify-end items-center h-full flex-col font-kanit text-center gap-[20px] mt-[200px] animate-dissolve duration-300 ease-out'> 

@@ -3,12 +3,12 @@ import { useState, useEffect} from 'react';
 const NameInput:React.FC =  ()=>{
     const [name,setName] = useState(''); 
     
-    useEffect(() => {
-        const storedName = localStorage.getItem('name'); // Retrieve the value from local storage
-        if (storedName) {
-            setName(storedName); // Set it to the state if available
-        }
-    }, []);
+    // useEffect(() => {
+    //     const storedName = localStorage.getItem('name'); // Retrieve the value from local storage
+    //     if (storedName) {
+    //         setName(storedName); // Set it to the state if available
+    //     }
+    // }, []);
 
     useEffect(()=>{  
         localStorage.setItem('name',name);
