@@ -6,5 +6,9 @@
     "thereMightBe": "There might be some clues inside.\nDo you want to open it and take a look?",
     "name": "You",
     "importantPerson": "Someone important"
+  },
+  "1-4-2": {
+    "name": "You",
+    "importantPerson": "Someone important"
   }
 }

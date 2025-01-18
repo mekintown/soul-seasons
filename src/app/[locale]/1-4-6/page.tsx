@@ -16,7 +16,7 @@ const Scene5Page4: React.FC = () => {
         {/* Screen text */}
 
         <motion.div
-          className="absolute bottom-[64%]"
+          className="absolute bottom-[64%] w-full"
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 1, y: 0 }}
@@ -25,6 +25,7 @@ const Scene5Page4: React.FC = () => {
             onChange={(e) => setText(e.target.value)}
             value={text}
             maxCount={80}
+            className="mx-12 h-[214px]"
           />
         </motion.div>
         <motion.div
@@ -33,7 +34,7 @@ const Scene5Page4: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}>
-          <p className="text-center text-sm text-black">UserName & คนสำคัญ</p>
+          <p className="text-center text-sm text-black">name & คนสำคัญ</p>
         </motion.div>
 
         {/* Next button */}

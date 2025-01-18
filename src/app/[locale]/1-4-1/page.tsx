@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import { useTranslations } from "next-intl"
 import React from "react"
 
-const Scene5Page4: React.FC = () => {
+const Scene1_4Page1: React.FC = () => {
   const t = useTranslations("1-4-1")
   // get name from localstorage
   const name = typeof window !== "undefined" ? localStorage.getItem("name") : null
@@ -11,7 +11,7 @@ const Scene5Page4: React.FC = () => {
     typeof window !== "undefined" ? localStorage.getItem("importantPerson") : null
 
   return (
-    <div className="flex h-screen w-full bg-[url('/bg/1-4-1.webp')] flex-col items-center bg-cover bg-no-repeat">
+    <div className="flex h-screen w-full bg-[url('/bg/1-4-1.webp')] flex-col items-center bg-cover bg-no-repeat bg-center">
       <div className="flex flex-col items-center justify-center">
         {/* Screen text */}
 
@@ -30,7 +30,7 @@ const Scene5Page4: React.FC = () => {
           </div>
         </motion.div>
         <motion.div
-          className="absolute bottom-[51%] right-[13%] w-36 h-10 flex items-center justify-center text-center text-sm text-black"
+          className="absolute bottom-[51%] right-[24%] w-36 h-10 flex items-center justify-center text-center text-sm text-black"
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 1, y: 0 }}
@@ -42,4 +42,4 @@ const Scene5Page4: React.FC = () => {
   )
 }
 
-export default Scene5Page4
+export default Scene1_4Page1
