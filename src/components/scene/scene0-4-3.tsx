@@ -23,7 +23,7 @@ const Scene4_3 = ()=>{
                 <NameInput/>
             </div>
             <div className='flex justify-start items-center h-full flex-col mt-[100px]'>
-                <button onClick={HandleClick} className='font-kanit font-medium bg-indigo w-[173px] h-[55px] rounded-lg text-white font-cloud font-bold animate-dissolve_slow  ease-out'>
+                <button onClick={HandleClick} className='font-kanit font-medium bg-primaryblue w-[173px] h-[55px] rounded-lg text-white font-cloud font-bold animate-dissolve_slow  ease-out'>
                     ถัดไป
                 </button>
             </div>

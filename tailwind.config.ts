@@ -9,8 +9,11 @@ export default {
   ],
   theme: {
   	extend: {
+		backgroundImage: {
+			'hero-pattern': "url('/img/background/0.png')",
+		},
   		colors: {
-			indigo: '#182649',
+			primaryblue: '#182649',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -53,8 +56,7 @@ export default {
 			},
 		},
 		fontFamily: {
-			'cloud': ['Cloud', 'sans-serif'], // Replace 'cloud' with your desired class name
-			'kanit': ['Kanit', 'sans-serif'], // Replace 'kanit' with your desired class name
+			'kanit': ['Kanit', 'sans-serif']
 		},
 		borderRadius: {
   			lg: 'var(--radius)',

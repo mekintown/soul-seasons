@@ -6,7 +6,7 @@ const Zero = () => {
     const router = useRouter();
 
     const HandleClick = () => { 
-        router.push('/en/0/0-1'); // Replace with your desired route
+        router.push('/en/0/0-1'); 
     };
 
     return (

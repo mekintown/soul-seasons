@@ -24,11 +24,11 @@ const Scene3_2 = () => {
     <Shadow>
       
     <div className="flex justify-end h-full flex-col">
-        <h1 className="font-kanit text-indigo text-[28px] mb-[10px] font-bold">สำหรับผู้ใช้งาน iOS</h1>
+        <h1 className="font-kanit text-primaryblue text-[28px] mb-[10px] font-bold">สำหรับผู้ใช้งาน iOS</h1>
       </div>
       <div className="flex justify-start items-center h-full flex-col gap-5">
         <MessageBox message={
-          <div className="flex flex-col text-indigo font-kanit font-light text-[18px] w-[292px] leading-6 space-y-3">
+          <div className="flex flex-col text-primaryblue font-kanit font-light text-[18px] w-[292px] leading-6 space-y-3">
           <p>ขอแนะนำให้เปิดเว็บไซต์ผ่าน <span className="font-bold">Safari</span>
             <br/> และซ่อนแถบเครื่องมือเพื่อการแสดงผล
           ที่สมบูรณ์ที่สุด
@@ -46,7 +46,7 @@ const Scene3_2 = () => {
       </div>
       
       <div className='flex justify-start items-start h-full flex-col mt-10'>
-        <button onClick={HandleClick} className='font-kanit font-medium bg-indigo w-[173px] h-[55px] rounded-lg text-white font-cloud font-bold animate-dissolve duration-300 ease-out animate'>
+        <button onClick={HandleClick} className='font-kanit font-medium bg-primaryblue w-[173px] h-[55px] rounded-lg text-white font-cloud font-bold animate-dissolve duration-300 ease-out animate'>
             ถัดไป
         </button>
         </div>

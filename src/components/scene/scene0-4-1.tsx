@@ -16,7 +16,7 @@ const Scene4_1 = ()=>{
            <div className='flex justify-end items-center h-full flex-col'>
             
             <MessageBox 
-            message={<p className='text-indigo font-kanit font-light text-[18px] w-[227px] leading-6'>ยินดีต้อนรับสู่ 
+            message={<p className='text-primaryblue font-kanit font-light text-[18px] w-[227px] leading-6'>ยินดีต้อนรับสู่ 
             <span className='font-semibold'>Soul Seasons</span> 
             <br></br> Interactive website <br></br> ที่จะ
             <span className='font-semibold'>พาคุณกลับไปค้นหาตัวตนที่อาจหล่นหายไประหว่างทาง
@@ -29,7 +29,7 @@ const Scene4_1 = ()=>{
            </div>
 
         <div className='flex justify-center items-center h-full flex-col'>
-        <button onClick={HandleClick} className='font-kanit font-medium bg-indigo w-[173px] h-[55px] rounded-lg text-white font-cloud font-bold animate-dissolve duration-300 ease-out animate'>
+        <button onClick={HandleClick} className='font-kanit font-medium bg-primaryblue w-[173px] h-[55px] rounded-lg text-white font-cloud font-bold animate-dissolve duration-300 ease-out animate'>
             ถัดไป
         </button>
         </div>

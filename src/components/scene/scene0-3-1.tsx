@@ -22,11 +22,11 @@ const Scene3_1 = () => {
     <Shadow>
       
     <div className="flex justify-end h-full flex-col">
-        <h1 className="font-kanit text-indigo text-[28px] mb-[10px] font-bold">คำแนะนำสำหรับการเล่น</h1>
+        <h1 className="font-kanit text-primaryblue text-[28px] mb-[10px] font-bold">คำแนะนำสำหรับการเล่น</h1>
       </div>
       <div className="flex justify-start items-center h-full flex-col">
         <MessageBox message={
-          <div className="flex flex-col text-indigo font-kanit font-light text-[18px] w-[292px] leading-6 space-y-3">
+          <div className="flex flex-col text-primaryblue font-kanit font-light text-[18px] w-[292px] leading-6 space-y-3">
           <p>เว็บไซต์นี้ใช้เวลาในการเล่นประมาณ <span className="font-bold w-full"> 7-12 นาที </span>
             <br/>เพื่อให้ได้ประสบการณ์ที่ดีที่สุด 
             <br/>ขอแนะนำให้ผู้เล่นอยู่ในสถานที่ที่สงบ
@@ -39,7 +39,7 @@ const Scene3_1 = () => {
         BoxPadding="px-5 py-5"/>
       </div>
       <div className='flex justify-center items-center h-full flex-col'>
-        <button onClick={HandleClick} className='font-kanit font-medium bg-indigo w-[173px] h-[55px] rounded-lg text-white font-cloud font-bold animate-dissolve duration-300 ease-out animate'>
+        <button onClick={HandleClick} className='font-kanit font-medium bg-primaryblue w-[173px] h-[55px] rounded-lg text-white font-cloud font-bold animate-dissolve duration-300 ease-out animate'>
             ถัดไป
         </button>
         </div>

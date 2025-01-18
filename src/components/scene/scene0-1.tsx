@@ -32,7 +32,7 @@ const Scene1: React.FC = () => {
         {/* Animated Button */}
         <button
           onClick={HandleClick}
-          className="bg-indigo w-[173px] h-[55px] rounded-lg text-white font-cloud font-bold animate-dissolve duration-300 ease-out cursor-pointer mt-4"
+          className="bg-primaryblue w-[173px] h-[55px] rounded-lg text-white font-cloud font-bold animate-dissolve duration-300 ease-out cursor-pointer mt-4"
         >
           เริ่ม
         </button>
