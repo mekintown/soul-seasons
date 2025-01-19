@@ -1,4 +1,5 @@
 "use client"
+import { Link } from "@/i18n/routing"
 import { motion } from "framer-motion"
 import { useTranslations } from "next-intl"
 import React from "react"
@@ -22,6 +23,17 @@ const Scene1_4Page2: React.FC = () => {
           exit={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}>
           {name ?? t("name")} &<br /> {importantPerson ?? t("importantPerson")}
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-[39%] right-[4%] w-16 h-16"
+          initial={{ opacity: 0, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.5, duration: 1 }}>
+          <Link href="/1-4-4">
+            <div className="w-full h-full rounded-full opacity-50 bg-[#D9D9D9]" />
+          </Link>
         </motion.div>
       </div>
     </div>
