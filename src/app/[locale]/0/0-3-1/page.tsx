@@ -34,9 +34,9 @@ const Scene031 = () => {
         className="flex justify-center items-center h-full flex-col ">
       
     <div className="flex justify-end mt-[200px] flex-col">
-        <h1 className="text-primaryblue text-[28px] mb-[10px] font-bold">{t("title")}</h1>
+        <h1 className="text-primaryblue justify-center text-[28px] mb-[10px] font-bold">{t("title")}</h1>
       </div>
-      <div className="flex justify-center items-center h-full flex-col w-[320px] ">
+      <div className="flex justify-center items-center mt-[200px ] flex-col w-[320px] ">
         <MessageBox message={
           <div className="flex flex-col text-primaryblue  font-light text-[18px] w-auto leading-6 space-y-3">
           <p>{t("p1.s1")} 
