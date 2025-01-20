@@ -83,6 +83,15 @@
         "s4": "Learning patience through seasons' plays."
       }
   },
+    "1-4-1": {
+        "thereMightBe": "There might be some clues inside.\nDo you want to open it and take a look?",
+        "name": "You",
+        "importantPerson": "Someone important"
+      },
+      "1-4-2": {
+        "name": "You",
+        "importantPerson": "Someone important"
+      },
   "two1": {
     "p1":{
       "s1":"What is the motivation behind your goal? ",
@@ -99,3 +108,4 @@
     "btn": "Next"
   }
 }
+
