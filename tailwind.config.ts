@@ -10,8 +10,16 @@ export default {
   theme: {
   	extend: {
 		backgroundImage: {
-			'hero-pattern': "url('/img/background/0.png')",
+			'linear-radial-gradient': `
+          linear-gradient(0deg, var(--white, #FFFFFF), var(--white, #FFFFFF)),
+          radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 72%, rgba(0, 0, 0, 0.2) 100%)
+        `,
+
 		},
+		background:{
+			
+		},
+		
   		colors: {
 			primaryblue: '#182649',
   			background: 'hsl(var(--background))',
@@ -56,7 +64,8 @@ export default {
 			},
 		},
 		fontFamily: {
-			'kanit': ['Kanit', 'sans-serif']
+			th: ['Kanit', 'sans-serif'],
+			en: ['"Source Serif 4"', 'serif']
 		},
 		borderRadius: {
   			lg: 'var(--radius)',
@@ -77,5 +86,6 @@ export default {
 		}
   	}
   },
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;

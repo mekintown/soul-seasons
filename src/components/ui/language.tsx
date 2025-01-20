@@ -11,7 +11,7 @@ const LangSwitch = () => {
    
 
     return (
-        <div className="rounded-2xl bg-indigo flex w-[69px] h-[37px] justify-center items-center gap-1">
+        <div className="rounded-2xl bg-primaryblue flex w-[69px] h-[37px] justify-center items-center gap-1">
             {/* TH Language */}
             {chooseLang === 'TH' ? (
                 <div

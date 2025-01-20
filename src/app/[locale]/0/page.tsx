@@ -1,8 +1,8 @@
 'use client'
-import Scene0 from "@/components/scene/scene0";
+import Background1 from '../../../img/background/0.png';
 import { useRouter } from "next/navigation"; // Use next/navigation in App Router
 
-const Zero = () => {
+const Scene0 = () => {
     const router = useRouter();
 
     const HandleClick = () => { 
@@ -10,10 +10,8 @@ const Zero = () => {
     };
 
     return (
-        <div className="h-lvh overflow-hidden" onClick={HandleClick}>
-            <Scene0 />
-        </div>
+        <section onClick={HandleClick} className='w-full h-lvh flex flex-col'style={{ backgroundImage: `url(${Background1.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}/>
     );
 };
 
-export default Zero;
+export default Scene0;

@@ -1,6 +1,9 @@
 'use client'
 import { useState, useEffect} from 'react';
-const NameInput:React.FC =  ()=>{
+type Props = {
+    placeholder: string;
+}
+const NameInput:React.FC<Props> =  ({placeholder})=>{
     const [name,setName] = useState(''); 
     
     // useEffect(() => {
@@ -23,7 +26,7 @@ const NameInput:React.FC =  ()=>{
             onChange={HandleChange} 
             className='font-kanit text-[18px] font-bold w-[205px] h-[41px] rounded-[12px] px-5 opacity-70 placeholder:font-light'  
             type="text"
-            placeholder="ไม่เกิน xx ตัวอักษร" />
+            placeholder={placeholder} />
         </div>
     )
 }

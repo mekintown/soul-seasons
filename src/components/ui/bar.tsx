@@ -7,7 +7,7 @@ const Bar = ()=>{
                 <img src={High.src} alt="High" />
             </div>
             <div className="flex flex-col items-center justify-center">
-                <input type='range' min='0' max='100' className='w-[200px]  ' />
+                <input type='range' min='0' max='100' name="score" className='w-[200px]  ' />
             </div>
             <div className="flex flex-col items-center">
                 <img src={Low.src} alt="Low" />
