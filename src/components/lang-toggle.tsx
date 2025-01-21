@@ -16,37 +16,37 @@ const LangToggle = () => {
   const path = usePathname();
   const isEnglish = locale === "en";
   const targetLang = isEnglish ? "th" : "en";
-  const currentLangDisplay = isEnglish ? "EN" : "TH";
-  const targetLangDisplay = isEnglish ? "TH" : "EN";
 
   return (
-    <Link
-      href={path}
-      locale={targetLang}
-      aria-label={`Switch language to ${targetLang.toUpperCase()}`}
-    >
+    <Link href={path} locale={targetLang}>
       <div
         className={cn(
-          "flex items-center rounded-full bg-[#202A44] p-2 text-white hover:bg-[#2d3b5e] transition-colors",
+          "relative flex items-center justify-between w-[69px] h-[39px] rounded-[16px] bg-[#202A44] p-2 text-white hover:bg-[#2d3b5e] transition-colors",
           interFont.className
         )}
-        style={{ width: "80px", height: "40px" }}
         role="button"
       >
         <div
           className={cn(
-            "flex items-center justify-center w-[36px] h-[36px] rounded-full bg-white text-[#202A44] text-sm font-semibold transition-transform",
-            isEnglish ? "translate-x-0" : "translate-x-[32px]"
+            "absolute w-[29px] h-[29px] rounded-full bg-white transition-transform",
+            isEnglish ? "translate-x-[28px]" : "translate-x-[-4px]"
+          )}
+        />
+        <div
+          className={cn(
+            "z-50 text-sm font-semibold",
+            isEnglish ? "text-white" : "text-[#202A44]"
           )}
         >
-          {targetLangDisplay}
+          TH
         </div>
         <div
           className={cn(
-            "flex-grow flex items-center justify-center text-sm font-semibold"
+            "z-50 text-sm font-semibold",
+            isEnglish ? "text-[#202A44]" : "text-white"
           )}
         >
-          {currentLangDisplay}
+          EN
         </div>
       </div>
     </Link>
