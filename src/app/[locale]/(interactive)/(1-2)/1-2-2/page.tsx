@@ -6,6 +6,12 @@ import { useTranslations } from "next-intl";
 
 const Page1_2_2 = () => {
   const t = useTranslations("1-2-2");
+  const importantPerson =
+    typeof window !== "undefined" &&
+    localStorage.getItem("importantPerson") != null
+      ? localStorage.getItem("importantPerson")
+      : t("importantPerson");
+
   return (
     <div className="flex h-screen flex-col items-center justify-center relative">
       <motion.div
@@ -13,7 +19,9 @@ const Page1_2_2 = () => {
         initial={{ opacity: 0, z: -20 }}
         animate={{ opacity: 1, z: 0, transition: { duration: 1, delay: 1 } }}
       >
-        <p> TODO:คนสำคัญ : {t("callYou")}</p>
+        <p>
+          {importantPerson} : {t("callYou")}
+        </p>
       </motion.div>
 
       <motion.div

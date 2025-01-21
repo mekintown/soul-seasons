@@ -6,6 +6,16 @@ import { useTranslations } from "next-intl";
 
 const Page1_3_3 = () => {
   const t = useTranslations("1-3-3");
+  const name =
+    typeof window !== "undefined" && localStorage.getItem("name") != null
+      ? localStorage.getItem("name")
+      : t("name");
+  const importantPerson =
+    typeof window !== "undefined" &&
+    localStorage.getItem("importantPerson") != null
+      ? localStorage.getItem("importantPerson")
+      : t("importantPerson");
+
   return (
     <div className="flex h-screen flex-col items-center justify-center relative">
       <motion.div
@@ -13,7 +23,9 @@ const Page1_3_3 = () => {
         initial={{ opacity: 0, z: -20 }}
         animate={{ opacity: 1, z: 0, transition: { duration: 1, delay: 1 } }}
       >
-        <p> [TODOคนสำคัญ] : UserName {t("areYouHere")}</p>
+        <p>
+          {importantPerson} : {name} {t("areYouHere")}
+        </p>
       </motion.div>
 
       <Link href="1-3-4">

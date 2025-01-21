@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 
 const Page1_3_6 = () => {
   const t = useTranslations("1-3-6");
+
   return (
     <div className="flex h-screen flex-col items-center justify-center relative">
       <motion.div

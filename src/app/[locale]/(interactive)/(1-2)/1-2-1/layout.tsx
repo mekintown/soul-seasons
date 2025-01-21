@@ -6,7 +6,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   const messages = useMessages();
 
   return (
-    <NextIntlClientProvider messages={pick(messages, ["NextButton"])}>
+    <NextIntlClientProvider messages={pick(messages, ["1-2-1", "NextButton"])}>
       {children}
     </NextIntlClientProvider>
   );
