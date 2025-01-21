@@ -6,15 +6,6 @@
   },
   "1-3-3": { "areYouHere": "TRANSLATEอยู่ที่นี่รึเปล่า" },
   "1-3-6": { "diaryHere": "TRANSLATEเอ๊ะ เหมือนจะมี Diary วางอยู่ด้วย" },
-
-  "Example": {
-    "title": "Hello world!"
-  },
-
-  "NextButton": {
-    "next": "TRANSLATEแตะเพื่อไปต่อ"
-  },
-
   "1-4-1": {
     "thereMightBe": "There might be some clues inside.\nDo you want to open it and take a look?",
     "name": "You",
@@ -23,5 +14,13 @@
   "1-4-2": {
     "name": "You",
     "importantPerson": "Someone important"
+  },
+
+  "Example": {
+    "title": "Hello world!"
+  },
+
+  "NextButton": {
+    "next": "TRANSLATEแตะเพื่อไปต่อ"
   }
 }
