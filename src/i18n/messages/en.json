@@ -1,12 +1,15 @@
 {
+  "base": {
+    "next": "Next"
+  },
   "Example": {
     "title": "Hello world!"
     
   },
-  "zero1":{
+  "0-1":{
     "btn":"Start"
   },
-  "zero2":{
+  "0-2":{
     "title": "Trigger Warning",
     "p1": {
       "s1": "This website explores the journey of",
@@ -27,7 +30,7 @@
     },
     "btn": "Noted"
   },
-  "zero31": {
+  "0-3-1": {
     "title": "Recommendation",
     "p1":{
       "s1":"This website takes approximately",
@@ -37,34 +40,30 @@
       "s5": " turning on the background sound for an immersive atmosphere,",
       "and": " and",
       "s6": " letting your heart follow your feelings."
-    },
-    "btn": "Next"
+    }
   },
-  "zero32":{
+  "0-3-2":{
     "title": "For iOS Users",
     "p1": {
       "s1": "we suggest accessing the website via",
       "s2": " Safari",
       "s3": " and hiding the toolbar for an optimal display"
-    },
-    "btn": "Next"
+    }
   },
-  "zero41":{
+  "0-4-1":{
     "p1": {
       "s1": "Welcome to",
       "s2": "An interactive website that takes you on a journey to ",
       "s3": " rediscover the parts of yourself that may have been lost along the way. ",
       "s4": " Explore a world of imagination and the changing seasons of life to",
       "s5": " reconnect with who you truly are."
-    },
-     "btn": "Next"
+    }
   },
-  "zero42":{
+  "0-4-2":{
     "title": "What should we call you?",
-    "input": "within xx characters",
-    "btn": "Next"
+    "input": "within xx characters"
   },
-  "zero5":{
+  "0-5":{
     "p1":{
       "s1": "Before we begin, ",
       "s2": "take a moment to think about your feelings. How much ",
@@ -72,39 +71,37 @@
       "or": "or ",
       "stress": "stress ",
       "s3": "are you feeling right now?"
-    } ,
-    "btn": "Next"
+    } 
   },
-  "zero6": {
+  "0-6": {
     "p1": {
       "s1": "A tree rises slowly, in silence it grows,",
       "s2": "Its roots dig deep where no eye knows.",
       "s3": "In sunlight it basks, in storms it sways,",
       "s4": "Learning patience through seasons' plays."
     }
-},
-"1-4-1": {
-        "thereMightBe": "There might be some clues inside.\nDo you want to open it and take a look?",
-        "name": "You",
-        "importantPerson": "Someone important"
-      },
-      "1-4-2": {
-        "name": "You",
-        "importantPerson": "Someone important"
-      },
-"two1": {
-  "p1":{
-    "s1":"What is the motivation behind your goal? ",
-    "s2": "Help add some fertilizer to your tree.",
-    "s3": ""
-  }
-},
-"two2": {
-  "p1":{
-    "s1":"What is the motivation behind your goal? ",
-    "s2": "Help add some fertilizer to your tree.",
-    "s3": ""
   },
-  "btn": "Next"
-}
+  "1-4-1": {
+          "thereMightBe": "There might be some clues inside.\nDo you want to open it and take a look?",
+          "name": "You",
+          "importantPerson": "Someone important"
+        },
+        "1-4-2": {
+          "name": "You",
+          "importantPerson": "Someone important"
+        },
+  "2-1": {
+    "p1":{
+      "s1":"What is the motivation behind your goal? ",
+      "s2": "Help add some fertilizer to your tree.",
+      "s3": ""
+    }
+  },
+  "2-2": {
+    "p1":{
+      "s1":"What is the motivation behind your goal? ",
+      "s2": "Help add some fertilizer to your tree.",
+      "s3": ""
+    }
+  }
 }
