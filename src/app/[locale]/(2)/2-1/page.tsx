@@ -22,6 +22,8 @@ const Two2 = () => {
     setClicks(clicks + 1);
   };
   const locale = useLocale();
+
+  // TODO: Fix this. use my Next button
   const HandleClick = () => {
     if (clicks === 3) {
       router.push(`${locale}/2`);
