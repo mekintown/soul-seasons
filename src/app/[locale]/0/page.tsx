@@ -8,7 +8,7 @@ const Scene0 = () => {
     const locale = useLocale();
 
     const HandleClick = () => { 
-        router.push(`/${locale}/0-1`); 
+        router.push(`/${locale}/0/0-1`); 
     };
 
     return (

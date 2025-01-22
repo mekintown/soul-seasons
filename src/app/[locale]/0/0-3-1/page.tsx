@@ -32,12 +32,12 @@ const Scene031 = () => {
           duration: 1,
           delay: 1,
         }}
-        className="flex justify-center items-center h-full flex-col mt-[150px] ">
+        className="flex justify-center items-center h-full flex-col gap-5 ">
       
-    <div className="flex justify-center  flex-col">
+    <div className="flex justify-end h-full flex-col">
         <h1 className="text-primaryblue justify-center text-[28px] mb-[10px] font-bold">{t("title")}</h1>
       </div>
-      <div className="flex justify-center items-center mt-5 flex-col  w-[320px] ">
+      <div className="flex justify-center items-center flex-col  w-[320px] ">
         <MessageBox message={
           <div className="flex flex-col text-primaryblue font-light text-[18px] w-auto leading-6 space-y-3">
           <p>{t("p1.s1")} 
@@ -52,7 +52,7 @@ const Scene031 = () => {
         }
         BoxPadding="px-5 py-5"/>
       </div>
-      <div className='flex justify-start mt-[100px] items-start h-full flex-col'>
+      <div className='flex justify-start mt-[90px] items-start h-full flex-col'>
         <button onClick={HandleClick} className=' font-bold bg-primaryblue w-[173px] h-[55px] rounded-lg text-white font-cloud font-bold animate-dissolve duration-300 ease-out animate'>
             {t('btn')}
         </button>
