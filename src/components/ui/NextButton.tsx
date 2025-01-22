@@ -8,7 +8,7 @@ type Props = {
   url: string;
 };
 
-const NextButton = ({ disabled = true, label, url }: Props) => {
+const NextButton = ({ disabled = false, label, url }: Props) => {
   const t = useTranslations("base");
 
   if (disabled) {
