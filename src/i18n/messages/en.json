@@ -10,5 +10,12 @@
   "1-4-2": {
     "name": "You",
     "importantPerson": "Someone important"
+  },
+  "1-4-4": {
+    "theDiary": "The diary records the story of you and\nsomeone important planting a tree together",
+    "planting": "Planting a tree is like\nstarting something new.\nWhen you planted this tree,\nyou wrote down your goal\nin the diary."
+  },
+  "1-4-6": {
+    "whatIsAGoal": "What is a goal you are currently\nworking on but haven’t achieved yet?"
   }
 }
