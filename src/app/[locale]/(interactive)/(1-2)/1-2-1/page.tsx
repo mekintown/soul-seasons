@@ -1,5 +1,5 @@
 "use client";
-import NextButton from "@/components/ui/nextButton";
+import NextDisplay from "@/components/ui/nextDisplay";
 import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
@@ -20,7 +20,7 @@ const Page1_2_1 = () => {
   return (
     <div className="flex h-screen flex-col items-center justify-center relative">
       <motion.div
-        className="text-center text-base text-white absolute top-1/4"
+        className="text-center text-base text-white absolute top-2/3"
         initial={{ opacity: 0, z: -20 }}
         animate={{ opacity: 1, z: 0, transition: { duration: 1, delay: 1 } }}
       >
@@ -39,7 +39,7 @@ const Page1_2_1 = () => {
           }}
           className="flex justify-center absolute top-[75%] inset-x-0"
         >
-          <NextButton />
+          <NextDisplay />
         </motion.div>
       </Link>
     </div>

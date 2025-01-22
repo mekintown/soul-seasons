@@ -32,11 +32,7 @@
     "importantPerson": "คนสำคัญ"
   },
 
-  "Example": {
-    "title": "หวัดดีจ้า"
-  },
-
-  "NextButton": {
+  "NextDisplay": {
     "next": "แตะเพื่อไปต่อ"
   }
 }

@@ -39,7 +39,7 @@
     "title": "Hello world!"
   },
 
-  "NextButton": {
-    "next": "TRANSLATEแตะเพื่อไปต่อ"
+  "NextDisplay": {
+    "next": "Tap to continue"
   }
 }

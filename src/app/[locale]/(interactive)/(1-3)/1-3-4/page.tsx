@@ -1,5 +1,5 @@
 "use client";
-import NextButton from "@/components/ui/nextButton";
+import NextButton from "@/components/ui/nextDisplay";
 import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
 
