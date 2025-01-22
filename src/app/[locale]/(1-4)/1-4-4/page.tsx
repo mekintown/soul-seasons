@@ -15,7 +15,7 @@ const Scene1_4Page4: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}>
-          <div className="flex h-[135px] w-[400px]">
+          <div className="flex h-[135px] w-full">
             <div className="items-cemter flex h-full w-full flex-col justify-center">
               <p className="text-center text-lg text-white font-light whitespace-break-spaces drop-shadow">
                 {t("theDiary")}
