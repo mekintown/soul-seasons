@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import "../globals.css";
-import Sounds from "@/components/sounds";
-import SoundToggle from "@/components/sound-toggle";
+import Sounds from "@/components/ui/sounds";
+import SoundToggle from "@/components/ui/sound-toggle";
 import LangSwitch from "@/components/ui/language";
 import { PropsWithChildren } from "react";
 
