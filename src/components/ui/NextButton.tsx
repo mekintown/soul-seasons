@@ -3,16 +3,27 @@ import { Button } from "./button";
 import { Link } from "@/i18n/routing";
 
 type Props = {
-  trigger?: boolean;
+  disabled?: boolean;
   label?: string;
   url: string;
 };
 
-const NextButton = ({ trigger = true, label, url }: Props) => {
+const NextButton = ({ disabled = true, label, url }: Props) => {
   const t = useTranslations("base");
+
+  if (disabled) {
+    return (
+      <div>
+        <Button disabled={true} variant="next" size="xl">
+          <p>{label ? label : t("next")}</p>
+        </Button>
+      </div>
+    );
+  }
+
   return (
     <Link href={url}>
-      <Button disabled={!trigger} variant="next" size="xl">
+      <Button disabled={false} variant="next" size="xl">
         <p>{label ? label : t("next")}</p>
       </Button>
     </Link>
