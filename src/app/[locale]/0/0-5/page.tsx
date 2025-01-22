@@ -2,7 +2,7 @@
 import Background1 from '../../../../img/background/0.png';
 import Bar from '../../../../components/ui/bar';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import MessageBox from '../../../../components/ui/messagebox';
 import { useRouter } from 'next/navigation';
@@ -10,8 +10,9 @@ import { motion } from 'framer-motion';
 const Scene5 = () => {
     const t = useTranslations('zero5');
     const router = useRouter();
+    const locale = useLocale();
     const HandleClick = ()=>{
-        router.push('/en/0/0-6');
+        router.push(`/${locale}/0/0-6`);
     }
     return (
         <section className='w-full h-lvh flex flex-col pt-[150px]'>

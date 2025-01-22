@@ -3,16 +3,17 @@
 import Background1 from '../../../../img/background/0.png';
 import SoulSeasons from '../../../../img/icons/Soul Seasons-MAIN LOGO 1.png';
 import { useRouter } from 'next/navigation';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { motion } from "framer-motion";
 
 
 const Scene01: React.FC = () => {
-    const t = useTranslations('zero1');
+  const t = useTranslations('zero1');
   const router = useRouter();
+  const locale = useLocale();
 
   const HandleClick = () => {
-    router.push('/en/0/0-2');
+    router.push(`/${locale}/0/0-2`);
   };
 
   return (

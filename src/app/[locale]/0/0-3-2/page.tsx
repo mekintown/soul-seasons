@@ -12,8 +12,9 @@ import { motion } from "framer-motion";
 const Scene032 = () => {
   const t:any = useTranslations("zero32")
     const router = useRouter();
+    
     const HandleClick = ()=>{
-        router.push("/en/0/0-4-1");
+        router.push(`/${locale}/0/0-4-1`);
     }
     const locale = useLocale(); // Use the useLocale hook
     const imageSrc = locale === "th" ? HideTabTh.src : HideTabEn.src;
@@ -35,6 +36,7 @@ const Scene032 = () => {
         transition={{
           duration: 1,
           delay: 1,
+          easings: 'easeOut'
         }}
         className="flex justify-center items-center h-full flex-col ">
       

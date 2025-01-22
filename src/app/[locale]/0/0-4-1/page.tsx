@@ -1,5 +1,5 @@
 'use client'
-import { useTranslations } from 'next-intl';
+import { useTranslations , useLocale} from 'next-intl';
 import Background1 from '../../../../img/background/0.png';
 import MessageBox from '../../../../components/ui/messagebox';
 import { useRouter } from 'next/navigation';
@@ -8,8 +8,9 @@ import { motion } from 'framer-motion';
 const Scene041 = ()=>{
     const t = useTranslations('zero41');
     const router = useRouter();
+    const locale = useLocale();
     const HandleClick = ()=>{
-        router.push('/en/0/0-4-2');
+        router.push(`/${locale}/0/0-4-2`);
     }
     return(
         <section className='w-full h-lvh flex flex-col pt-[150px]'style={{ backgroundImage: `url(${Background1.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
@@ -19,6 +20,7 @@ const Scene041 = ()=>{
             transition={{
             duration: 1,
             delay: 1,
+            easings: 'easeOut'
             }}
         className="flex justify-center items-center h-full flex-col ">
       

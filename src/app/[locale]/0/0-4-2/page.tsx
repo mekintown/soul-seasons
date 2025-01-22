@@ -9,7 +9,7 @@ const Scene042 = ()=>{
     const t = useTranslations('zero42');
     const locale = useLocale();
     const HandleClick = ()=>{
-        router.push('/en/0/0-5');
+        router.push(`/${locale}/0/0-5`);
     }   
    const fontWeights = locale === 'th' ? 'font-light': 'font-medium';
     return(

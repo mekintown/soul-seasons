@@ -2,16 +2,17 @@
 import MessageBox from "../../../../components/ui/messagebox";
 import Shadow from "../../../../components/ui/Shadow";
 import Background1 from "../../../../img/background/0.png";
-import { useRouter } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useRouter  } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
 
 const Scene02 = () => {
   const t = useTranslations("zero2");
+   const locale = useLocale();
   const router = useRouter();
   const HandleClick = () => {
-    router.push("/en/0/0-3-1");
+    router.push(`/${locale}/0/0-3-1`);
   };
   
 
