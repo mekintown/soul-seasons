@@ -1,17 +1,17 @@
 "use client";
 import DelayedFullScreenLink from "@/components/ui/DelayedFullScreenLink";
 import NextDisplay from "@/components/ui/nextDisplay";
+import { getLocalStorageWithFallback } from "@/lib/localstorageUtils";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
 const Page2_3_2 = () => {
   const t = useTranslations("2-3-2");
 
-  const importantPerson =
-    typeof window !== "undefined" &&
-    localStorage.getItem("importantPerson") != null
-      ? localStorage.getItem("importantPerson")
-      : t("importantPerson");
+  const importantPerson = getLocalStorageWithFallback(
+    "importantPerson",
+    t("importantPerson")
+  );
 
   return (
     <div className="flex h-screen flex-col items-center justify-center relative">
