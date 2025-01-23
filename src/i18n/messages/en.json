@@ -1,4 +1,7 @@
 {
+  "base": {
+    "next": "Next"
+  },
   "1-2-1": {
     "name": "You",
     "importantPerson": "Someone important"
@@ -14,6 +17,81 @@
   },
   "1-2-6": {
     "dontSee": "It seems like they can’t see you. What happened? Can you remember anything?"
+  },
+  "0-1": {
+    "btn": "Start"
+  },
+  "0-2": {
+    "title": "Trigger Warning",
+    "p1": {
+      "s1": "This website explores the journey of",
+      "s2": " rediscovering your lost self",
+      "and": " and",
+      "s3": " reflecting on the worries",
+      "or": " and",
+      "s4": "fears within your mind"
+    },
+    "p2": {
+      "s1": "The content revolves around",
+      "s2": " unachieved goals,facing obstacles and failures.",
+      "s3": " It should not be overanalyzed in terms of both the storyline and real life."
+    },
+    "p3": {
+      "s1": "If you feel uncomfortable at any point, you may stop immediately because ",
+      "s2": "your emotions come first. "
+    },
+    "btn": "Noted"
+  },
+  "0-3-1": {
+    "title": "Recommendation",
+    "p1": {
+      "s1": "This website takes approximately",
+      "s2": " 7-12 minutes.",
+      "s3": " For the best experience,",
+      "s4": " we recommend playing in a quiet environment,",
+      "s5": " turning on the background sound for an immersive atmosphere,",
+      "and": " and",
+      "s6": " letting your heart follow your feelings."
+    }
+  },
+  "0-3-2": {
+    "title": "For iOS Users",
+    "p1": {
+      "s1": "we suggest accessing the website via",
+      "s2": " Safari",
+      "s3": " and hiding the toolbar for an optimal display"
+    }
+  },
+  "0-4-1": {
+    "p1": {
+      "s1": "Welcome to",
+      "s2": "An interactive website that takes you on a journey to ",
+      "s3": " rediscover the parts of yourself that may have been lost along the way. ",
+      "s4": " Explore a world of imagination and the changing seasons of life to",
+      "s5": " reconnect with who you truly are."
+    }
+  },
+  "0-4-2": {
+    "title": "What should we call you?",
+    "input": "within xx characters"
+  },
+  "0-5": {
+    "p1": {
+      "s1": "Before we begin, ",
+      "s2": "take a moment to think about your feelings. How much ",
+      "push": "pressure ",
+      "or": "or ",
+      "stress": "stress ",
+      "s3": "are you feeling right now?"
+    }
+  },
+  "0-6": {
+    "p1": {
+      "s1": "A tree rises slowly, in silence it grows,",
+      "s2": "Its roots dig deep where no eye knows.",
+      "s3": "In sunlight it basks, in storms it sways,",
+      "s4": "Learning patience through seasons' plays."
+    }
   },
   "1-3-1": {
     "name": "You",
@@ -41,5 +119,19 @@
 
   "NextDisplay": {
     "next": "Tap to continue"
+  },
+  "2-1": {
+    "p1": {
+      "s1": "What is the motivation behind your goal? ",
+      "s2": "Help add some fertilizer to your tree.",
+      "s3": ""
+    }
+  },
+  "2-2": {
+    "p1": {
+      "s1": "What is the motivation behind your goal? ",
+      "s2": "Help add some fertilizer to your tree.",
+      "s3": ""
+    }
   }
 }
