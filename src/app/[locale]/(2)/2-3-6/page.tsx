@@ -15,7 +15,7 @@ const Page2_3_6 = () => {
         }}
         exit={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 1 }}
-        className="flex justify-center absolute top-[75%] inset-x-0"
+        className="flex justify-center absolute top-[85%] inset-x-0"
       >
         <NextDisplay />
       </motion.div>
