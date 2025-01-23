@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 const SevenLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="">

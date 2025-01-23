@@ -4,7 +4,7 @@ const SevenLayout = async ({ children }: { children: React.ReactNode }) => {
     <div className="">
       {children}
       <Image
-        src="/0-8-1/0-8-1-bg.png"
+        src="/0-8/0-8-bg.webp"
         alt="Picture of the author"
         className="-z-10 absolute top-0 left-0"
         width={500}
