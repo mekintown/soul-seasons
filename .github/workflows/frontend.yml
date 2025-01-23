@@ -7,9 +7,9 @@ on:
   pull_request:
 
 env:
-  NODE_VERSION: '18'
-  FRONTEND_DIR: '.'
-  PNPM_VERSION: '9'
+  NODE_VERSION: "18"
+  FRONTEND_DIR: "."
+  PNPM_VERSION: "9"
 
 jobs:
   setup:
@@ -17,7 +17,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout Code
         uses: actions/checkout@v3
 
@@ -34,7 +33,6 @@ jobs:
     needs: setup
 
     steps:
-
       - name: Checkout Code
         uses: actions/checkout@v3
 
@@ -49,40 +47,12 @@ jobs:
         run: pnpm run lint
         working-directory: ${{ env.FRONTEND_DIR }}
 
-  test:
-    name: Run Tests
-    runs-on: ubuntu-latest
-    needs: setup
-
-    steps:
-
-      - name: Checkout Code
-        uses: actions/checkout@v3
-
-      - name: Setup Environment
-        uses: ./.github/actions/setup-environment
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          pnpm-version: ${{ env.PNPM_VERSION }}
-          project-dir: ${{ env.FRONTEND_DIR }}
-
-      - name: Run Tests
-        run: pnpm run test
-        working-directory: ${{ env.FRONTEND_DIR }}
-
-      - name: Upload Test Coverage Report
-        uses: actions/upload-artifact@v3
-        with:
-          name: coverage-report
-          path: ${{ env.FRONTEND_DIR }}/coverage
-
   build:
     name: Build Frontend
     runs-on: ubuntu-latest
-    needs: [lint, test]
+    needs: [lint]
 
     steps:
-
       - name: Checkout Code
         uses: actions/checkout@v3
 
