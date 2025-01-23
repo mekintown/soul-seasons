@@ -1,15 +1,28 @@
 {
   "base": {
-    "next": "Next"
+    "next": "Next",
+    "tap": "Tap to continue"
   },
-  "Example": {
-    "title": "Hello world!"
-    
+  "1-2-1": {
+    "name": "You",
+    "importantPerson": "Someone important"
   },
-  "0-1":{
-    "btn":"Start"
+  "1-2-2": {
+    "callYou": "has been calling you for a while. Would you like to say something back to them?",
+    "next": "Next",
+    "importantPerson": "Someone important"
   },
-  "0-2":{
+  "1-2-5": {
+    "whereAreYou": "where are you?",
+    "importantPerson": "Someone important"
+  },
+  "1-2-6": {
+    "dontSee": "It seems like they can’t see you. What happened? Can you remember anything?"
+  },
+  "0-1": {
+    "btn": "Start"
+  },
+  "0-2": {
     "title": "Trigger Warning",
     "p1": {
       "s1": "This website explores the journey of",
@@ -19,12 +32,12 @@
       "or": " and",
       "s4": "fears within your mind"
     },
-    "p2":{
+    "p2": {
       "s1": "The content revolves around",
       "s2": " unachieved goals,facing obstacles and failures.",
       "s3": " It should not be overanalyzed in terms of both the storyline and real life."
     },
-    "p3":{
+    "p3": {
       "s1": "If you feel uncomfortable at any point, you may stop immediately because ",
       "s2": "your emotions come first. "
     },
@@ -32,17 +45,17 @@
   },
   "0-3-1": {
     "title": "Recommendation",
-    "p1":{
-      "s1":"This website takes approximately",
-      "s2":" 7-12 minutes.",
-      "s3":" For the best experience,",
-      "s4":" we recommend playing in a quiet environment,",
+    "p1": {
+      "s1": "This website takes approximately",
+      "s2": " 7-12 minutes.",
+      "s3": " For the best experience,",
+      "s4": " we recommend playing in a quiet environment,",
       "s5": " turning on the background sound for an immersive atmosphere,",
       "and": " and",
       "s6": " letting your heart follow your feelings."
     }
   },
-  "0-3-2":{
+  "0-3-2": {
     "title": "For iOS Users",
     "p1": {
       "s1": "we suggest accessing the website via",
@@ -50,7 +63,7 @@
       "s3": " and hiding the toolbar for an optimal display"
     }
   },
-  "0-4-1":{
+  "0-4-1": {
     "p1": {
       "s1": "Welcome to",
       "s2": "An interactive website that takes you on a journey to ",
@@ -59,19 +72,19 @@
       "s5": " reconnect with who you truly are."
     }
   },
-  "0-4-2":{
+  "0-4-2": {
     "title": "What should we call you?",
     "input": "within xx characters"
   },
-  "0-5":{
-    "p1":{
+  "0-5": {
+    "p1": {
       "s1": "Before we begin, ",
       "s2": "take a moment to think about your feelings. How much ",
       "push": "pressure ",
       "or": "or ",
       "stress": "stress ",
       "s3": "are you feeling right now?"
-    } 
+    }
   },
   "0-6": {
     "p1": {
@@ -81,27 +94,47 @@
       "s4": "Learning patience through seasons' plays."
     }
   },
+  "1-3-1": {
+    "name": "You",
+    "importantPerson": "Someone important"
+  },
+  "1-3-3": {
+    "areYouHere": ", are you here?",
+    "importantPerson": "Someone important",
+    "name": "You"
+  },
+  "1-3-6": { "diaryHere": "Wait, it looks like there’s a diary lying there." },
   "1-4-1": {
-          "thereMightBe": "There might be some clues inside.\nDo you want to open it and take a look?",
-          "name": "You",
-          "importantPerson": "Someone important"
-        },
-        "1-4-2": {
-          "name": "You",
-          "importantPerson": "Someone important"
-        },
+    "thereMightBe": "There might be some clues inside.\nDo you want to open it and take a look?",
+    "name": "You",
+    "importantPerson": "Someone important"
+  },
+  "1-4-2": {
+    "name": "You",
+    "importantPerson": "Someone important"
+  },
   "2-1": {
-    "p1":{
-      "s1":"What is the motivation behind your goal? ",
+    "p1": {
+      "s1": "What is the motivation behind your goal? ",
       "s2": "Help add some fertilizer to your tree.",
       "s3": ""
     }
   },
   "2-2": {
-    "p1":{
-      "s1":"What is the motivation behind your goal? ",
+    "p1": {
+      "s1": "What is the motivation behind your goal? ",
       "s2": "Help add some fertilizer to your tree.",
       "s3": ""
     }
+  },
+  "2-3-1": {
+    "importantPerson": "Important Person",
+    "iSee": "I see... ",
+    "motivations": "They",
+    "isMotivations": "are the motivations driving you toward your goal, aren’t they?"
+  },
+  "2-3-2": {
+    "importantPerson": "Important Person",
+    "ifYouKnow": "Now that you know this... best of luck!"
   }
 }

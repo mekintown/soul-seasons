@@ -46,6 +46,7 @@
     "@types/react-dom": "^19",
     "@types/react-howler": "^5.2.3",
     "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
     "eslint": "^9",
     "eslint-config-next": "15.1.4",
     "jsdom": "^26.0.0",
