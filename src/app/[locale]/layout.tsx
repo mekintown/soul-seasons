@@ -42,6 +42,10 @@ const LocaleLayout = async ({
   
   return (
     <html lang={locale} >
+      <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no"
+        />
       <body className= "relative mx-auto min-h-screen w-full max-w-md overflow-x-hidden overscroll-none">
         <NextIntlClientProvider messages={messages}>
           <Sounds />
