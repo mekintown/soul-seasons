@@ -4,50 +4,35 @@ import React from "react";
 import { Link, usePathname } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import { useLocale } from "next-intl";
-import { Inter } from "next/font/google";
-
-const interFont = Inter({
-  weight: "600",
-  subsets: ["greek"],
-});
 
 const LangToggle = () => {
   const locale = useLocale();
   const path = usePathname();
-  const isEnglish = locale === "en";
-  const targetLang = isEnglish ? "th" : "en";
+  const targetLang = locale === "en" ? "th" : "en";
 
   return (
     <Link href={path} locale={targetLang}>
       <div
         className={cn(
-          "relative flex items-center justify-between w-[69px] h-[39px] rounded-[16px] bg-[#202A44] p-2 text-white hover:bg-[#2d3b5e] transition-colors",
-          interFont.className
+          "rounded-3xl bg-primaryblue flex w-[69px] h-[37px] justify-center items-center gap-2"
         )}
         role="button"
       >
-        <div
-          className={cn(
-            "absolute w-[29px] h-[29px] rounded-full bg-white transition-transform",
-            isEnglish ? "translate-x-[28px]" : "translate-x-[-4px]"
-          )}
-        />
-        <div
-          className={cn(
-            "z-50 text-sm font-semibold",
-            isEnglish ? "text-white" : "text-[#202A44]"
-          )}
-        >
-          TH
-        </div>
-        <div
-          className={cn(
-            "z-50 text-sm font-semibold",
-            isEnglish ? "text-[#202A44]" : "text-white"
-          )}
-        >
-          EN
-        </div>
+        {locale === "th" ? (
+          <div className="rounded-full bg-white flex h-[29px] w-[29px] justify-center items-center cursor-pointer">
+            <h1>TH</h1>
+          </div>
+        ) : (
+          <h1 className="text-white cursor-pointer">TH</h1>
+        )}
+
+        {locale === "en" ? (
+          <div className="rounded-full bg-white flex h-[29px] w-[29px] justify-center items-center cursor-pointer">
+            <h1>EN</h1>
+          </div>
+        ) : (
+          <h1 className="text-white cursor-pointer">EN</h1>
+        )}
       </div>
     </Link>
   );
