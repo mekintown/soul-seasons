@@ -1,6 +1,7 @@
 {
   "base": {
-    "next": "Next"
+    "next": "Next",
+    "tap": "Tap to continue"
   },
   "1-2-1": {
     "name": "You",
@@ -111,14 +112,6 @@
   "1-4-2": {
     "name": "You",
     "importantPerson": "Someone important"
-  },
-
-  "Example": {
-    "title": "Hello world!"
-  },
-
-  "NextDisplay": {
-    "next": "Tap to continue"
   },
   "2-1": {
     "p1": {
