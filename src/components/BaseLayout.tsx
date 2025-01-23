@@ -6,13 +6,13 @@ import InteractiveBackground from "./interactive-background";
 
 interface BaseLayoutProps extends PropsWithChildren {
   locale: string;
-  messageScope: string;
+  messageScope?: string;
 }
 
 const BaseLayout = async ({
   children,
   locale,
-  messageScope,
+  messageScope = "base",
 }: BaseLayoutProps) => {
   setRequestLocale(locale);
 

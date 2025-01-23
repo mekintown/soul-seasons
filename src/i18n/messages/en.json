@@ -126,5 +126,15 @@
       "s2": "Help add some fertilizer to your tree.",
       "s3": ""
     }
+  },
+  "2-3-1": {
+    "importantPerson": "Important Person",
+    "iSee": "I see... ",
+    "motivations": "They",
+    "isMotivations": "are the motivations driving you toward your goal, aren’t they?"
+  },
+  "2-3-2": {
+    "importantPerson": "Important Person",
+    "ifYouKnow": "Now that you know this... best of luck!"
   }
 }

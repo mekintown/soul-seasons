@@ -7,6 +7,17 @@ import { useTranslations } from "next-intl";
 const Page2_3_1 = () => {
   const t = useTranslations("2-3-1");
 
+  const importantPerson =
+    typeof window !== "undefined" &&
+    localStorage.getItem("importantPerson") != null
+      ? localStorage.getItem("importantPerson")
+      : t("importantPerson");
+  // TODO : USE MOTIVATIONS
+  const motivations =
+    typeof window !== "undefined" && localStorage.getItem("motivations") != null
+      ? localStorage.getItem("motivations")
+      : t("motivations");
+
   return (
     <div className="flex h-screen flex-col items-center justify-center relative">
       <motion.div
@@ -14,7 +25,11 @@ const Page2_3_1 = () => {
         initial={{ opacity: 0, z: -20 }}
         animate={{ opacity: 1, z: 0, transition: { duration: 1, delay: 1 } }}
       >
-        <p> {t("diaryHere")}</p>
+        <p>
+          {importantPerson} : {t("iSee")}
+        </p>
+        <p>{motivations}</p>
+        <p>{t("isMotivations")}</p>
       </motion.div>
 
       <motion.div
@@ -31,7 +46,7 @@ const Page2_3_1 = () => {
         <NextDisplay />
       </motion.div>
 
-      <DelayedFullScreenLink href="1-4-1" delay={2000} />
+      <DelayedFullScreenLink href="2-3-2" delay={2000} />
     </div>
   );
 };
