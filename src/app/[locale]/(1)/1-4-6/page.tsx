@@ -1,7 +1,6 @@
 "use client"
-import { Button } from "@/components/ui/button"
+import NextButton from "@/components/ui/NextButton"
 import { TextareaWithCounter } from "@/components/ui/textareaWithCounter"
-import { Link } from "@/i18n/routing"
 import { motion } from "framer-motion"
 import { useTranslations } from "next-intl"
 import React from "react"
@@ -54,14 +53,9 @@ const Scene1_4Page6: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}>
-          <Link href="1-4-7">
-            <Button
-              disabled={text.length === 0}
-              className="mx-12 mt-4"
-              onClick={() => localStorage.setItem("goal", text)}>
-              Send
-            </Button>
-          </Link>
+          <div onClick={() => localStorage.setItem("goal", text)}>
+            <NextButton url="1-4-8" disabled={text.length === 0} />
+          </div>
         </motion.div>
       </div>
     </div>
