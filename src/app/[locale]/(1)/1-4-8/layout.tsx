@@ -8,11 +8,7 @@ interface LayoutProps extends PropsWithChildren {
 const Layout = async ({ children, params }: LayoutProps) => {
   const { locale } = await params
 
-  return (
-    <BaseLayout locale={locale} messageScope="1-4-8">
-      {children}
-    </BaseLayout>
-  )
+  return <BaseLayout locale={locale}>{children}</BaseLayout>
 }
 
 export default Layout
