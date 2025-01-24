@@ -1,46 +1,26 @@
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
 import "../globals.css";
-import Sounds from "@/components/sounds";
-import SoundToggle from "@/components/sound-toggle";
+import Sounds from "@/components/ui/sounds";
+import SoundToggle from "@/components/ui/sound-toggle";
 import LangSwitch from "@/components/ui/language";
-import { Kanit, Source_Serif_4 } from "next/font/google"; // Import fonts
- 
+import { PropsWithChildren } from "react";
 
-// Load fonts
-const kanit = Kanit({
-  subsets: ["latin", "thai"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-kanit",
-});
-
-const sourceSerif = Source_Serif_4({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-source-serif",
-});
-
-const LocaleLayout = async ({
-  children,
-  params,
-}: {
-  children: React.ReactNode;
+interface LayoutProps extends PropsWithChildren {
   params: Promise<{ locale: string }>;
-}) => {
+}
+
+const LocaleLayout = async ({ children, params }: LayoutProps) => {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as any)) {
+  const validLocales = ["en", "th"];
+  if (!validLocales.includes(locale)) {
     notFound();
   }
 
-  const messages = await getMessages();
-
-  // Determine font based on locale
   const fontClass = locale === "th" ? "font-th" : "font-en";
-  
+
   return (
+<<<<<<< HEAD
     <html lang={locale} >
       <meta
           name="viewport"
@@ -55,6 +35,16 @@ const LocaleLayout = async ({
           </div>
           <div className={`${fontClass} relative z-10`}>{children}</div>
         </NextIntlClientProvider>
+=======
+    <html lang={locale}>
+      <body className="relative mx-auto min-h-screen w-full max-w-md overflow-x-hidden overscroll-none">
+        <Sounds />
+        <div className="absolute right-8 top-12 z-50 flex w-full items-center justify-end">
+          <LangSwitch />
+          <SoundToggle />
+        </div>
+        <div className={`${fontClass} relative z-10`}>{children}</div>
+>>>>>>> origin/tt-soul
       </body>
     </html>
   );
