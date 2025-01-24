@@ -1,6 +1,7 @@
 'use client';
 import { useTranslations } from "next-intl";
-import Background2 from '../../../../img/background/2.png';
+import Background2Blur from '../../../../img/background/blur2.png';
+import ChristmasTree from '../../../../img/background/christmas tree  1.png';
 import { motion } from 'framer-motion';
 import potOrange from '../../../../img/icons/pot/potOrange.png';
 import potPurple from '../../../../img/icons/pot/potPurple.png';
@@ -61,19 +62,33 @@ const Two2 = () => {
     ];
 
     return (
-        <section
-            className="w-full h-lvh flex flex-col justify-center items-center"
+        <motion.div
+                initial={{ opacity: 0.8 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0 }}
+                >
+                     <section
+            className="relative w-full h-lvh flex flex-col justify-center items-center"
             style={{
-                backgroundImage: `url(${Background2.src})`,
+                backgroundImage: `url(${Background2Blur.src})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}
         >
+            {/* Christmas Tree */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0 }}
+                className="absolute bottom-[40px] w-full h-full flex justify-center items-center">
+                    <img src={ChristmasTree.src} alt="Christmas Tree"/>
+              </motion.div>
+
             {/* Intro Text */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 1 }}
+                transition={{ duration: 1, delay: 3 }}
                 className="flex text-white flex-col justify-center items-center w-full mt-[120px] text-center"
             >
                 <p>
@@ -99,8 +114,8 @@ const Two2 = () => {
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 3 }}
-                className="relative flex justify-center h-full w-full mx-auto gap-2"
+                transition={{ duration: 1, delay: 1 }}
+                className="relative flex justify-center h-full w-full mx-auto gap-3"
             >
                 {/* Left Column */}
                 <div className="flex flex-col items-center">
@@ -170,6 +185,8 @@ const Two2 = () => {
                 </div>
             </motion.div>
         </section>
+                </motion.div>
+       
     );
 };
 

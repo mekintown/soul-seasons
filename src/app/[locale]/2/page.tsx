@@ -39,7 +39,7 @@ const Scene2 = () => {
         <section
             onClick={currentIndex === backgrounds.length - 1 ? handleClick : undefined}
             className={`w-full h-lvh flex flex-col transition-opacity duration-500 ${
-                isFading ? 'opacity-0' : 'opacity-100'
+                isFading ? 'opacity-80' : 'opacity-100'
             }`}
             style={{
                 backgroundImage: `url(${backgrounds[currentIndex].src})`,

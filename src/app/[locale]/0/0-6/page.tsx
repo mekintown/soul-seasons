@@ -6,7 +6,7 @@ const Zero6 = ()=>{
     const t = useTranslations('zero6');
     const router = useRouter();
     const HandleClick = () => {
-        router.push('/en/2/2-1');
+        router.push('/en/2');
     }
     return(
         <section onClick={HandleClick} className="bg-linear-radial-gradient w-full justify-center h-lvh flex flex-col" >

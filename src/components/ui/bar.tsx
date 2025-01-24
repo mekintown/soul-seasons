@@ -1,9 +1,10 @@
+'use client'
 import { useEffect, useState } from 'react';
 import High from '../../img/icons/high.png';
 import Low from '../../img/icons/low.png';
 
 const Bar = () => {
-    const [stressScore, setStressScore] = useState(50); // Default value for the range
+    const [stressScore, setStressScore] = useState(5); // Default value for the range
 
     const handleInputChange = (e:React.ChangeEvent<HTMLInputElement>) => {
         setStressScore(Number(e.target.value));
@@ -23,7 +24,7 @@ const Bar = () => {
                 <div
                     className="absolute -top-6 bg-gray-300 text-black text-sm rounded-full px-2 py-1"
                     style={{
-                        left: `calc(${stressScore}% - 20px)`, // Adjust position dynamically
+                        left: `calc(${stressScore*10}% - 20px)`, // Adjust position dynamically
                     }}
                 >
                     {stressScore}
@@ -32,8 +33,8 @@ const Bar = () => {
                 {/* Range Input */}
                 <input
                     type="range"
-                    min="0"
-                    max="100"
+                    min="1"
+                    max="10"
                     name="score"
                     className="w-[200px]"
                     value={stressScore}
