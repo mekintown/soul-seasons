@@ -1,13 +1,14 @@
 "use client"
+import { getLocalStorageWithFallback } from "@/lib/localstorageUtils"
 import { motion } from "framer-motion"
 import { useTranslations } from "next-intl"
 import React from "react"
 
 const Scene1_4Page1: React.FC = () => {
   const t = useTranslations("1-4-1")
-  const name = typeof window !== "undefined" ? localStorage.getItem("name") : null
-  const importantPerson =
-    typeof window !== "undefined" ? localStorage.getItem("importantPerson") : null
+
+  const name = getLocalStorageWithFallback("name", t("name"))
+  const importantPerson = getLocalStorageWithFallback("importantPerson", t("importantPerson"))
 
   return (
     <div className="flex h-screen w-full bg-[url('/bg/1-4-1.webp')] flex-col items-center bg-cover bg-no-repeat bg-center">
