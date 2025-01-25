@@ -7,8 +7,12 @@ import { useTranslations } from "next-intl";
 import MessageBox from "../../../../components/ui/messagebox";
 import { motion } from "framer-motion";
 import NextButton from "@/components/ui/NextButton";
+import { useState } from "react";
+
 const Scene5 = () => {
   const t = useTranslations("0-5");
+const [stressScore, setStressScore] = useState(0);
+
   return (
     <section className="w-full h-lvh flex flex-col pt-[150px]">
       <Image
@@ -47,11 +51,11 @@ const Scene5 = () => {
             BoxPadding="px-5 py-5"
           />
           <div className="flex justify-center items-center h-full flex-col">
-            <Bar />
+            <Bar stressScore={stressScore} setStressScore={setStressScore} />
           </div>
 
           <div className="flex justify-start items-center h-full flex-col ">
-            <NextButton url="/0-6" />
+            <NextButton disabled= {stressScore === 0 ? true: false} url="/0-6" />
           </div>
         </div>
       </motion.div>

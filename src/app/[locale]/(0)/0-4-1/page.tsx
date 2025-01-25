@@ -24,7 +24,7 @@ const Scene041 = () => {
           delay: 1,
           easings: "easeOut",
         }}
-        className="flex justify-center items-center h-full flex-col "
+        className="flex justify-end items-center mt-[150px] h-full flex-col "
       >
         <div className="flex justify-end items-center h-full flex-col">
           <MessageBox
@@ -42,8 +42,8 @@ const Scene041 = () => {
           />
         </div>
 
-        <div className="flex justify-center items-center h-full flex-col">
-          <NextButton url="/0-4-2" />
+        <div className="flex justify-start mt-16 items-center h-full flex-col">
+          <NextButton disabled={false} url="/0-4-2" />
         </div>
       </motion.div>
     </section>

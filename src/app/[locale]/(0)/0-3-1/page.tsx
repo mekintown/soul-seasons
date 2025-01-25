@@ -26,7 +26,7 @@ const Scene031 = () => {
             duration: 1,
             delay: 1,
           }}
-          className="flex justify-center items-center h-full flex-col gap-5"
+          className="flex justify-center items-center h-full flex-col"
         >
           <div className="flex justify-end h-full flex-col">
             <h1 className="text-primaryblue justify-center text-[28px]  font-bold">
@@ -56,7 +56,7 @@ const Scene031 = () => {
               BoxPadding="px-5 py-5"
             />
           </div>
-          <div className="flex justify-start mt-10 items-start h-full flex-col">
+          <div className="flex justify-start mt-16 items-start h-full flex-col">
             <NextButton disabled={false} url="/0-3-2" />
           </div>
         </motion.div>

@@ -61,7 +61,7 @@ const Scene032 = () => {
           </div>
 
           <div className="flex justify-start items-start h-full flex-col mt-10">
-            <NextButton url="/0-4-1" />
+            <NextButton disabled={false} url="/0-4-1" />
           </div>
         </motion.div>
       </Shadow>
