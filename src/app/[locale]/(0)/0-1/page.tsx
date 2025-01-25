@@ -41,7 +41,7 @@ const Scene01: React.FC = () => {
           }}
           className="flex flex-col items-center text-center text-base text-woh-black"
         >
-          <NextButton url="/0-2" label={t("btn")} />
+          <NextButton url="/0-2" disabled={false} label={t("btn")} />
         </motion.div>
       </div>
     </section>

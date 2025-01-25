@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const LangSwitch = () => {
     const [chooseLang, setChooseLang] = useState('EN');
-    const [sound, setSound] = useState(true);
+ 
 
     const HandleClick = (lang: string) => {
         setChooseLang(lang); // Update the language

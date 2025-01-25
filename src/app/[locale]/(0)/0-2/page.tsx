@@ -26,7 +26,7 @@ const Scene02 = () => {
             duration: 1,
             delay: 1,
           }}
-          className="flex justify-center items-center h-full flex-col"
+          className="flex justify-center items-center gap-5 h-full flex-col"
         >
           <div className="flex justify-end items-center h-full flex-col">
             <h1 className=" text-primaryblue text-[28px] mb-[10px]">
@@ -34,10 +34,10 @@ const Scene02 = () => {
             </h1>
           </div>
 
-          <div className="flex justify-end items-center h-full flex-col">
+          <div className="flex justify-start items-center h-full flex-col">
             <MessageBox
               size="w-[274px] h-auto"
-              BoxPadding=" py-5"
+              BoxPadding=" py-3"
               message={
                 <div className="flex flex-col text-primaryblue  font-light text-[18px] w-[243px] leading-6 space-y-3">
                   <p>
@@ -64,7 +64,7 @@ const Scene02 = () => {
 
           {/* Confirmation Button */}
           <div className="flex justify-start items-center h-full flex-col mt-10 ">
-            <NextButton url="/0-3-1" label={t("btn")} />
+            <NextButton url="/0-3-1" disabled={false} label={t("btn")} />
           </div>
         </motion.div>
       </Shadow>

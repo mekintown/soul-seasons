@@ -28,8 +28,8 @@ const Scene031 = () => {
           }}
           className="flex justify-center items-center h-full flex-col gap-5"
         >
-          <div className="flex justify-center  flex-col">
-            <h1 className="text-primaryblue justify-center text-[28px] mb-[10px] font-bold">
+          <div className="flex justify-end h-full flex-col">
+            <h1 className="text-primaryblue justify-center text-[28px]  font-bold">
               {t("title")}
             </h1>
           </div>
@@ -56,8 +56,8 @@ const Scene031 = () => {
               BoxPadding="px-5 py-5"
             />
           </div>
-          <div className="flex justify-start mt-[90px] items-start h-full flex-col">
-            <NextButton url="/0-3-2" />
+          <div className="flex justify-start mt-10 items-start h-full flex-col">
+            <NextButton disabled={false} url="/0-3-2" />
           </div>
         </motion.div>
       </Shadow>
