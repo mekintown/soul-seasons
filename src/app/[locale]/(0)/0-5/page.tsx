@@ -1,9 +1,6 @@
 "use client";
-import Background1 from "../../../../img/background/0.png";
 import Bar from "../../../../components/ui/bar";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
-
 import MessageBox from "../../../../components/ui/messagebox";
 import { motion } from "framer-motion";
 import NextButton from "@/components/ui/NextButton";
@@ -11,14 +8,6 @@ const Scene5 = () => {
   const t = useTranslations("0-5");
   return (
     <section className="w-full h-lvh flex flex-col pt-[150px]">
-      <Image
-        src={Background1}
-        alt="Background"
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-        priority
-      />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
