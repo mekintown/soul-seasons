@@ -109,16 +109,23 @@
     "name": "You",
     "importantPerson": "Someone important"
   },
-  "1-4-2": {
-    "name": "You",
-    "importantPerson": "Someone important"
-  },
   "2-1": {
     "p1": {
       "s1": "What is the motivation behind your goal? ",
       "s2": "Help add some fertilizer to your tree.",
       "s3": ""
     }
+  },
+  "1-4-2": {
+    "name": "You",
+    "importantPerson": "Someone important"
+  },
+  "1-4-4": {
+    "theDiary": "The diary records the story of you and\nsomeone important planting a tree together",
+    "planting": "Planting a tree is like\nstarting something new.\nWhen you planted this tree,\nyou wrote down your goal\nin the diary."
+  },
+  "1-4-6": {
+    "whatIsAGoal": "What is a goal you are currently\nworking on but haven’t achieved yet?"
   },
   "2-2": {
     "p1": {

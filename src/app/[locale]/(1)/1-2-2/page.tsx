@@ -1,17 +1,18 @@
 "use client";
 import NextButton from "@/components/ui/NextButton";
 import { TextareaWithCounter } from "@/components/ui/textareaWithCounter";
+import { getLocalStorageWithFallback } from "@/lib/localstorageUtils";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 const Page1_2_2 = () => {
   const t = useTranslations("1-2-2");
-  const importantPerson =
-    typeof window !== "undefined" &&
-    localStorage.getItem("importantPerson") != null
-      ? localStorage.getItem("importantPerson")
-      : t("importantPerson");
+
+  const importantPerson = getLocalStorageWithFallback(
+    "importantPerson",
+    t("importantPerson")
+  );
 
   const [text, setText] = useState("");
 
