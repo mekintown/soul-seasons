@@ -3,7 +3,7 @@ import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import SlideUnlock from "@/components/slide-to-unlock";
+import SlideUnlock from "@/components/ui/slide-to-unlock";
 
 type Props = {};
 
