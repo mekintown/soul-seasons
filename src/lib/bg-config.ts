@@ -91,6 +91,10 @@ export const backgroundMapConfig = {
     image: "/background/1-4-2.webp",
     imagePreload: [],
   },
+  "2-1": {
+    image: "/background/2.png",
+    imagePreload: [],
+  },
   "2-3-1": {
     image: "/background/2-3-1.png",
     imagePreload: [],
