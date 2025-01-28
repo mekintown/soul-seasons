@@ -5,9 +5,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import SlideUnlock from "@/components/ui/slide-to-unlock";
 
-type Props = {};
-
-const Page = (props: Props) => {
+const Page = () => {
   const t = useTranslations("Example");
 
   return (
