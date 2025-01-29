@@ -5,7 +5,43 @@ import Image from "next/image"
 import React, { useEffect, useState } from "react"
 
 const Scene2_2Page4: React.FC = () => {
-  const colors = ["blue", "yellow", "purple", "green", "red", "orange", "pink", "cyan"]
+  const motivations = [
+    {
+      index: 4,
+      name: "Self-Development",
+    },
+    {
+      index: 0,
+      name: "Career/Work",
+    },
+    {
+      index: 1,
+      name: "Family",
+    },
+  ]
+  // available colors: blue, yellow, purple, green, red, orange, pink, cyan
+  const colors = motivations.map((motivation) => {
+    switch (motivation.name) {
+      case "Family":
+        return "blue"
+      case "Finance/Money":
+        return "yellow"
+      case "Spirituality/Religion":
+        return "purple"
+      case "Health":
+        return "green"
+      case "Relationships/Friends":
+        return "red"
+      case "Sharing/Contribution":
+        return "orange"
+      case "Career/Work":
+        return "pink"
+      case "Self-Development":
+        return "cyan"
+      default:
+        return "blue"
+    }
+  })
   const stopMotionDuration = 600
   const [sparkleImgs, setSparkleImgs] = useState<string[]>([])
   const [pouringImg, setPouringImg] = useState<string>()
