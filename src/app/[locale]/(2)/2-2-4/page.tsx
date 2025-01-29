@@ -1,27 +1,22 @@
 "use client"
 import { useRouter } from "@/i18n/routing"
+import { getLocalStorageWithFallback } from "@/lib/localstorageUtils"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
 import React, { useEffect, useState } from "react"
 
+interface motivationGoal {
+  index: string
+  name: string
+}
+
 const Scene2_2Page4: React.FC = () => {
-  const motivations = [
-    {
-      index: 4,
-      name: "Self-Development",
-    },
-    {
-      index: 0,
-      name: "Career/Work",
-    },
-    {
-      index: 1,
-      name: "Family",
-    },
-  ]
+  const motivationGoals: motivationGoal[] = JSON.parse(
+    getLocalStorageWithFallback("motivationGoal", "[]")
+  )
   // available colors: blue, yellow, purple, green, red, orange, pink, cyan
-  const colors = motivations.map((motivation) => {
-    switch (motivation.name) {
+  const colors = motivationGoals.map((motivationGoal) => {
+    switch (motivationGoal.name) {
       case "Family":
         return "blue"
       case "Finance/Money":
