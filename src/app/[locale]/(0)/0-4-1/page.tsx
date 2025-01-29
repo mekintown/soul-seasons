@@ -4,9 +4,11 @@ import Background1 from "@/img/background/0.png";
 import MessageBox from "@/components/ui/messagebox";
 import { motion } from "framer-motion";
 import NextButton from "@/components/ui/NextButton";
+import {useLocale} from "next-intl";
 
 const Scene041 = () => {
   const t = useTranslations("0-4-1");
+  const locale  = useLocale();
   return (
     <section
       className="w-full h-lvh flex flex-col pt-[150px]"
@@ -24,9 +26,9 @@ const Scene041 = () => {
           delay: 1,
           easings: "easeOut",
         }}
-        className="flex justify-end items-center mt-[150px] h-full flex-col "
+        className={`flex justify-end items-center ${locale === 'th'? 'mt-[150px]': 'mt-[100px]'} h-full flex-col `}
       >
-        <div className="flex justify-end items-center h-full flex-col">
+        <div className="flex justify-start items-center h-full flex-col">
           <MessageBox
             message={
               <p className="text-primaryblue  font-light text-[18px] w-[227px] leading-6">
@@ -42,7 +44,7 @@ const Scene041 = () => {
           />
         </div>
 
-        <div className="flex justify-start mt-16 items-center h-full flex-col">
+        <div className="flex justify-start mt-10 items-center h-full flex-col">
           <NextButton disabled={false} url="/0-4-2" />
         </div>
       </motion.div>

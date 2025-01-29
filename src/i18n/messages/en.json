@@ -65,12 +65,14 @@
   },
   "0-5":{
     "p1":{
-      "s1": "Before we begin, ",
-      "s2": "take a moment to think about your feelings. How much ",
-      "push": "pressure ",
+      "s1": "Before we begin, take a  ",
+      "s2": "moment to think about ",
+      "s3": "your feelings.",
+      "s4": " How much",
+      "push": " strees ",
       "or": "or ",
-      "stress": "stress ",
-      "s3": "are you feeling right now?"
+      "stress": "pressure ",
+      "s5": "are you feeling right now?"
     } 
   },
   "0-6": {
@@ -95,13 +97,15 @@
       "s1":"What is the motivation behind your goal? ",
       "s2": "Help add some fertilizer to your tree.",
       "s3": ""
-    }
+    },
+    "btn":"Next"
   },
   "2-2": {
     "p1":{
       "s1":"What is the motivation behind your goal? ",
       "s2": "Help add some fertilizer to your tree.",
       "s3": ""
-    }
+    },
+    "btn":"Next"
   }
 }

@@ -6,11 +6,13 @@ import Low from '../../img/icons/low.png';
 interface BarProps {
   stressScore: number;
   setStressScore: (score: number) => void;
+  setMouseDown: (mouseDown: boolean) => void;
 }
 
-const Bar: React.FC<BarProps> = ({ stressScore, setStressScore }) => {
+const Bar: React.FC<BarProps> = ({ stressScore, setStressScore, setMouseDown }) => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setStressScore(Number(e.target.value));
+    setMouseDown(true);
   };
 
   useEffect(() => {
@@ -19,8 +21,9 @@ const Bar: React.FC<BarProps> = ({ stressScore, setStressScore }) => {
 
   return (
     <div className="flex">
-      <div className="flex flex-col items-center justify-center">
-        <img src={High.src} alt="High" />
+      <div className="flex flex-col items-center justify-center  font-bold text-white">
+        <img src={Low.src} alt="High" />
+        1
       </div>
       <div className="flex flex-col items-center justify-center relative">
         {/* Bubble */}
@@ -33,21 +36,23 @@ const Bar: React.FC<BarProps> = ({ stressScore, setStressScore }) => {
           {stressScore}
         </div>
 
-        {/* Range Input */}
+       
         <input
           type="range"
-          min="0"
+          min="1"
           max="10"
           name="score"
-          className="w-[200px]"
+          className="w-[200px] h-[20px]"
           value={stressScore}
           onChange={handleInputChange}
         />
       </div>
-      <div className="flex flex-col items-center">
-        <img src={Low.src} alt="Low" />
+      <div className="flex flex-col items-center font-bold text-white">
+        <img src={High.src} alt="Low" />
+        10
       </div>
     </div>
+    
   );
 };
 

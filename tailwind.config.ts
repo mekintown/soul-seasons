@@ -13,13 +13,7 @@ export default {
 			'linear-radial-gradient': `
           linear-gradient(0deg, var(--white, #FFFFFF), var(--white, #FFFFFF)),
           radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 72%, rgba(0, 0, 0, 0.2) 100%)
-        `,
-
-		},
-		background:{
-			
-		},
-		
+        `},
   		colors: {
 			primaryblue: '#182649',
 			primaryGrey: '#8E8E93',
@@ -65,8 +59,8 @@ export default {
 			},
 		},
 		fontFamily: {
-			th: ['Kanit', 'sans-serif'],
-			en: ['"Source Serif 4"', 'serif']
+			th: ['cloud', 'sans-serif'],
+			en: ['"Source Serif 4"', 'serif'],
 		},
 		borderRadius: {
   			lg: 'var(--radius)',
