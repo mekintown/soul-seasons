@@ -1,18 +1,18 @@
-import Image from "next/image";
+import BaseLayout from "@/components/BaseLayout";
+import { PropsWithChildren } from "react";
 
-const SevenLayout = async ({ children }: { children: React.ReactNode }) => {
+interface LayoutProps extends PropsWithChildren {
+  params: Promise<{ locale: string }>;
+}
+
+const Layout = async ({ children, params }: LayoutProps) => {
+  const { locale } = await params;
+
   return (
-    <div className="">
+    <BaseLayout locale={locale} messageScope="0-7-7">
       {children}
-      <Image
-        src="/0-7/0-7-bg.webp"
-        alt="Picture of the author"
-        className="-z-10 absolute top-0 left-0"
-        width={500}
-        height={500}
-      />
-    </div>
+    </BaseLayout>
   );
 };
 
-export default SevenLayout;
+export default Layout;
