@@ -1,17 +1,8 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
-import Background2 from "@/img/background/2.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import potOrange from "@/img/icons/pot/potOrange.png";
-import potPurple from "@/img/icons/pot/potPurple.png";
-import potGreen from "@/img/icons/pot/potGreen.png";
-import potRed from "@/img/icons/pot/potRed.png";
-import potPink from "@/img/icons/pot/potPink.png";
-import potYellow from "@/img/icons/pot/potYellow.png";
-import potBlue from "@/img/icons/pot/potBlue.png";
-import potIndigo from "@/img/icons/pot/potIndigo.png";
 import { useState } from "react";
 import router from "next/router";
 
@@ -31,14 +22,7 @@ const Two2 = () => {
     handleClick();
   };
   return (
-    <section
-      className="w-full h-lvh flex flex-col"
-      style={{
-        backgroundImage: `url(${Background2.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <section className="w-full h-lvh flex flex-col">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -72,29 +56,49 @@ const Two2 = () => {
       >
         <div className="flex justify-center items-center h-full w-full ">
           <Image
-            src={potOrange.src}
+            src={"/icons/pot/potOrange.png"}
             alt="Orange Pot"
             width={100}
             height={200}
           />
           <Image
-            src={potPurple.src}
+            src={"/icons/pot/potPurple.png"}
             alt="Purple Pot"
             width={100}
             height={200}
           />
-          <Image src={potRed.src} alt="Red Pot" width={100} height={100} />
-          <Image src={potGreen.src} alt="Green Pot" width={100} height={100} />
-          <Image src={potBlue.src} alt="Blue Pot" width={100} height={100} />
           <Image
-            src={potIndigo.src}
+            src={"/icons/pot/potRed.png"}
+            alt="Red Pot"
+            width={100}
+            height={100}
+          />
+          <Image
+            src={"/icons/pot/potGreen.png"}
+            alt="Green Pot"
+            width={100}
+            height={100}
+          />
+          <Image
+            src={"/icons/pot/potBlue.png"}
+            alt="Blue Pot"
+            width={100}
+            height={100}
+          />
+          <Image
+            src={"/icons/pot/potIndigo.png"}
             alt="Indigo Pot"
             width={100}
             height={100}
           />
-          <Image src={potPink.src} alt="Pink Pot" width={100} height={100} />
           <Image
-            src={potYellow.src}
+            src={"/icons/pot/potPink.png"}
+            alt="Pink Pot"
+            width={100}
+            height={100}
+          />
+          <Image
+            src={"/icons/pot/potYellow.png"}
             alt="Yellow Pot"
             width={100}
             height={100}

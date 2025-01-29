@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import Background1 from "@/img/background/0.png";
 import { motion } from "framer-motion";
 import NextButton from "@/components/ui/NextButton";
 import NameInput from "@/components/ui/NameInput";
@@ -13,14 +12,7 @@ const Scene042 = () => {
 
   const [name, setName] = useState("");
   return (
-    <section
-      className="w-full justify-center h-lvh flex flex-col"
-      style={{
-        backgroundImage: `url(${Background1.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <section className="w-full justify-center h-lvh flex flex-col">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

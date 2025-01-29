@@ -1,11 +1,9 @@
-import High from "../../img/icons/high.png";
-import Low from "../../img/icons/low.png";
 const Bar = () => {
   // TODO: Fix this
   return (
     <div className="flex">
       <div className="flex flex-col items-center justify-center">
-        <img src={High.src} alt="High" />
+        <img src="/icons/high.png" alt="High" />
       </div>
       <div className="flex flex-col items-center justify-center">
         <input
@@ -17,7 +15,7 @@ const Bar = () => {
         />
       </div>
       <div className="flex flex-col items-center">
-        <img src={Low.src} alt="Low" />
+        <img src="/icons/low.png" alt="Low" />
       </div>
     </div>
   );

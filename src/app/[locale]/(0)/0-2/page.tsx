@@ -1,7 +1,6 @@
 "use client";
 import MessageBox from "@/components/ui/messagebox";
 import Shadow from "@/components/ui/Shadow";
-import Background1 from "@/img/background/0.png";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import NextButton from "@/components/ui/NextButton";
@@ -10,14 +9,7 @@ const Scene02 = () => {
   const t = useTranslations("0-2");
 
   return (
-    <section
-      className="w-full justify-center h-lvh flex flex-col"
-      style={{
-        backgroundImage: `url(${Background1.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <section className="w-full justify-center h-lvh flex flex-col">
       <Shadow>
         <motion.div
           initial={{ opacity: 0 }}
