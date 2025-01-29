@@ -64,7 +64,7 @@ export default {
 			},
 		},
 		fontFamily: {
-			th: ['Kanit', 'sans-serif'],
+			th: ["var(--cloud)", 'Kanit', 'sans-serif'],
 			en: ['"Source Serif 4"', 'serif']
 		},
 		borderRadius: {

@@ -3,6 +3,7 @@ import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import SlideUnlock from "@/components/ui/slide-to-unlock";
 
 const Page = () => {
   const t = useTranslations("Example");
@@ -25,6 +26,7 @@ const Page = () => {
             <Button variant="default">Button</Button>
           </Link>
         </div>
+        <SlideUnlock />
       </motion.div>
     </div>
   );

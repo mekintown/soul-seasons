@@ -35,6 +35,34 @@ export const backgroundMapConfig = {
     image: "/background/0.png",
     imagePreload: [],
   },
+  "0-7-1": {
+    image: "/background/0-7-1.png",
+    imagePreload: [],
+  },
+  "0-7-2": {
+    image: "/background/0-7-1.png",
+    imagePreload: [],
+  },
+  "0-7-3": {
+    image: "/background/0-7-1.png",
+    imagePreload: [],
+  },
+  "0-7-4": {
+    image: "/background/0-7-1.png",
+    imagePreload: [],
+  },
+  "0-7-5": {
+    image: "/background/0-7-1.png",
+    imagePreload: [],
+  },
+  "0-7-6": {
+    image: "/background/0-7-1.png",
+    imagePreload: [],
+  },
+  "0-7-7": {
+    image: "/background/0-7-1.png",
+    imagePreload: [],
+  },
   "1-2-1": {
     image: "/background/1-2.webp",
     imagePreload: [],
