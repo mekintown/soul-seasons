@@ -1,11 +1,20 @@
 "use client";
-import DelayedFullScreenLink from "@/components/ui/DelayedFullScreenLink";
-import NextDisplay from "@/components/ui/nextDisplay";
+import { useRouter } from "@/i18n/routing";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { useEffect } from "react";
 
 const Page1_3_6 = () => {
+  const router = useRouter();
   const t = useTranslations("1-3-6");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      router.push("1-4-1");
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [router]);
 
   return (
     <div className="flex h-screen flex-col items-center justify-center relative">
@@ -16,22 +25,6 @@ const Page1_3_6 = () => {
       >
         <p> {t("diaryHere")}</p>
       </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-          z: 10,
-          transition: { duration: 1, delay: 4 },
-        }}
-        exit={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 1 }}
-        className="flex justify-center absolute top-[75%] inset-x-0"
-      >
-        <NextDisplay />
-      </motion.div>
-
-      <DelayedFullScreenLink href="1-4-1" delay={2000} />
     </div>
   );
 };
