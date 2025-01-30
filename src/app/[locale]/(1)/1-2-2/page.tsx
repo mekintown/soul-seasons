@@ -37,7 +37,7 @@ const Page1_2_2 = () => {
           onChange={(e) => setText(e.target.value)}
           value={text}
           maxCount={80}
-          className="mx-12 h-[214px] pb-4"
+          className="mx-12 h-[214px] text-black mb-4"
         />
         <NextButton
           url="1-2-4"
