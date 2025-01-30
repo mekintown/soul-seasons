@@ -143,5 +143,12 @@
   "2-3-2": {
     "importantPerson": "Important Person",
     "ifYouKnow": "Now that you know this... best of luck!"
+  },
+  "3-2-11": {
+    "name": "You",
+    "stillRaining": "The rain keeps pouring so heavily... How can I make it calm down?"
+  },
+  "3-2-12": {
+    "rainDoll": "Maybe... try tapping on the rain doll?"
   }
 }
