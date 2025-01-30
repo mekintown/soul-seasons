@@ -32,19 +32,19 @@ const [mouseDown, setMouseDown] = useState(false);
           duration: 1,
           delay: 1,
         }}
-        className="flex justify-center items-center h-full flex-col font-th text-center gap-[20px] z-10 mt-[100px]"
+        className="flex justify-center items-center h-full flex-col text-center gap-[20px] z-10 mt-[100px]"
       >
         <div className="flex justify-center items-center h-full flex-col gap-[20px]">
           <MessageBox
             message={
-              <div className="flex flex-col text-center text-primaryblue font-th font-light text-[18px] w-[246px] leading-6 space-y-3">
+              <div className="flex flex-col text-center text-primaryblue  font-light text-[18px] w-[246px] leading-6 space-y-3">
                 <p>
                   {t("p1.s1")}
                   <br />
                   {t("p1.s2")}
                   <br/>
                   {t("p1.s3")}
-                 
+                 {locale === 'en'? <br/>: null}
                   {t("p1.s4")}
                   <span className="font-bold">{t("p1.push")}</span>
                   {locale === 'th'? <br/> : null}

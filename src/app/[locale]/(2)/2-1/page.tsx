@@ -40,7 +40,7 @@ const Scene2 = () => {
             {backgrounds.map((background, index) => (
                 <div
                     key={index}
-                    className={`absolute top-0 left-0 w-full h-full transition-opacity duration-2000 ease-in-out ${
+                    className={`absolute top-0 left-0 w-full h-full transition-opacity animation-dissolve duration-2000 ease-in-out ${
                         currentIndex === index ? 'opacity-100' : 'opacity-0'
                     }`}
                     style={{
