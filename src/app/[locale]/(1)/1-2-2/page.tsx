@@ -39,11 +39,9 @@ const Page1_2_2 = () => {
           maxCount={80}
           className="mx-12 h-[214px] text-black mb-4"
         />
-        <NextButton
-          url="1-2-4"
-          disabled={text == null}
-          variant="nextSecondary"
-        />
+        <div onClick={() => localStorage.setItem("response", text)}>
+          <NextButton url="1-2-4" disabled={text.length === 0} />
+        </div>
       </motion.div>
     </div>
   );
