@@ -17,6 +17,7 @@ export default {
   		colors: {
 			primaryblue: '#182649',
 			primaryGrey: '#8E8E93',
+
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -59,6 +60,7 @@ export default {
 			},
 		},
 		fontFamily: {
+
 			th: ['cloud', 'sans-serif'],
 			en: ['"Source Serif 4"', 'serif'],
 		},
