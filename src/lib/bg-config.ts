@@ -149,28 +149,17 @@ export const backgroundMapConfig = {
     imagePreload: ["/background/2-3-5.png"],
   },
   "2-3-5": {
-    image: "/background/2-3-5.png",
-    imagePreload: ["/background/2-3-6.png"],
-  },
-  "2-3-6": {
-    image: "/background/2-3-6.png",
-    imagePreload: ["/background/2-3-7.png"],
-  },
-  "2-3-7": {
-    image: "/background/2-3-7.png",
-    imagePreload: ["/background/2-3-8.png"],
-  },
-  "2-3-8": {
-    image: "/background/2-3-8.png",
-    imagePreload: ["/background/2-3-9.png"],
-  },
-  "2-3-9": {
-    image: "/background/2-3-9.png",
-    imagePreload: ["/background/2-3-10.png"],
-  },
-  "2-3-10": {
-    image: "/background/2-3-10.png",
-    imagePreload: ["/background/3-1-1.png"],
+    image: [
+      "/background/2-3-5.webp",
+      "/background/1-4-10.webp",
+      "/background/1-4-11.webp",
+      "/background/1-4-12.webp",
+      "/background/1-4-13.webp",
+      "/background/1-4-14.webp",
+      "/background/1-4-15.webp",
+    ],
+    stopMotionDuration: 1000,
+    imagePreload: [],
   },
   "2-7": {
     image: [
