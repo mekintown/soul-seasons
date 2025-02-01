@@ -29,7 +29,7 @@ const Scene02 = () => {
           className="flex justify-center items-center gap-5 h-full flex-col"
         >
           <div className="flex justify-end items-center h-full flex-col">
-            <h1 className=" text-primaryblue text-[28px] mb-[10px]">
+            <h1 className=" font-bold text-primaryblue text-[28px] mb-[10px]">
               {t("title")}
             </h1>
           </div>

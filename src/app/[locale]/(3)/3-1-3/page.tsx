@@ -1,6 +1,7 @@
 'use client'
 import {useEffect, useState} from 'react'
 import Background3 from "../../../../img/background/3-1.gif"
+import { motion } from 'framer-motion';
 const Scene3 = ()=>{
     const [username, setUsername] = useState("");
     const importantPerson = 'importantPerson'
@@ -17,12 +18,21 @@ const Scene3 = ()=>{
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           
-        }}>
-            <div className='w-[279px] h-[75px] flex text-white justfy-center items-center font-light'>
-                <p>
-                    {importantPerson} : “ขอโทษนะ {username} ช่วงนี้ฉันไม่ว่างเลย คงไม่ได้ไปที่ต้นไม้ด้วยนะฤดูนี้”
+        }}
+        >
+             <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                className=' h-full flex text-white justfy-center items-start mt-[248px] font-light text-center'
+                >
+                    
+                <p className='w-[279px] h-auto'>
+                  กว่าจะมาถึงตรงนี้ได้ คงเหนื่อยมากเลยสินะ
                 </p>
-            </div>
+          
+                </motion.div>
+           
         </section>
     )
 }
