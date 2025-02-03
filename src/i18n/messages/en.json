@@ -102,7 +102,7 @@
           "name": "You",
           "importantPerson": "Someone important"
         },
-  "2-2-1": {
+  "2-1": {
     "p1":{
       "s1":"What is the motivation behind your goal? ",
       "s2": "Help add some fertilizer to your tree.",
@@ -110,7 +110,7 @@
     },
     "btn":"Next"
   },
-  "2-2-2": {
+  "2-2": {
     "p1":{
       "s1":"What is the motivation behind your goal? ",
       "s2": "Help add some fertilizer to your tree.",

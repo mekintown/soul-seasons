@@ -6,10 +6,13 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
+<<<<<<< HEAD:src/app/[locale]/(2)/2-2-2/page.tsx
 import { potImagesLeft,potImagesRight } from "@/lib/pots-config";
+=======
+>>>>>>> parent of 36c707c (glow pot sequence added):src/app/[locale]/(2)/2-2/page.tsx
 
 const Scene2_2Page2 = () => {
-    const t = useTranslations('2-2-2');
+    const t = useTranslations('2-2');
     const [clicks, setClicks] = useState(0);
     const [glowingPots, setGlowingPots] = useState<Array<{ index: number; name: string }>>([]); // Store glowing pots with name
     const locale = useLocale();
@@ -25,7 +28,6 @@ const Scene2_2Page2 = () => {
             if (existingIndex >= 0) {
                 // If pot is already glowing, remove it
                 setClicks(() => clicks - 1);
-                
                 return prev.filter((_, i) => i !== existingIndex);
             } else {
                 // If pot is not glowing, add it
@@ -96,6 +98,7 @@ const Scene2_2Page2 = () => {
                 className="relative flex justify-center h-full w-full mx-auto gap-3"
             >
                 {/* Left Column */}
+<<<<<<< HEAD:src/app/[locale]/(2)/2-2-2/page.tsx
                 {/* Left Column */}
 <div className="flex flex-col items-center">
     {potImagesLeft.map((pot, index) => {
@@ -164,7 +167,55 @@ const Scene2_2Page2 = () => {
         );
     })}
 </div>
+=======
+                <div className="flex flex-col items-center">
+                    {potImagesLeft.map((pot, index) => (
+                        <div
+                            key={index}
+                            className={`relative ${pot.pos} flex flex-col h-[120px] items-center gap-5`}
+                            onClick={() => handleClick(index, pot.label)}
+                        >
+                            <img
+                                src={
+                                    glowingPots.some((glow) => glow.index === index) && pot.glow
+                                        ? pot.glow
+                                        : pot.src
+                                }
+                                alt={`${pot.label} Pot`}
+                                className="w-auto h-[120px]"
+                            />
+                            <p className="text-right mt-2 relative bottom-[50px] font-light text-xs text-white text-center">
+                                {pot.label}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+>>>>>>> parent of 36c707c (glow pot sequence added):src/app/[locale]/(2)/2-2/page.tsx
 
+                {/* Right Column */}
+                <div className="flex flex-col items-center">
+                    {potImagesRight.map((pot, index) => (
+                        <div
+                            key={index + potImagesLeft.length}
+                            className={`relative ${pot.pos} flex flex-col h-[120px] items-center gap-5`}
+                            onClick={() => handleClick(index + potImagesLeft.length, pot.label)}
+                        >
+                            <img
+                                src={
+                                    glowingPots.some((glow) => glow.index === index + potImagesLeft.length) &&
+                                    pot.glow
+                                        ? pot.glow
+                                        : pot.src
+                                }
+                                alt={`${pot.label} Pot`}
+                                className="w-auto h-[120px]"
+                            />
+                            <p className="mt-2 relative bottom-[50px] font-light text-xs text-white text-center">
+                                {pot.label}
+                            </p>
+                        </div>
+                    ))}
+                </div>
             </motion.div>
             {/* Button */}
             <motion.div

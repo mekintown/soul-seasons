@@ -29,7 +29,7 @@ const Scene2 = () => {
     }, [backgrounds.length]);
 
     const handleClick = () => {
-        router.push(`/${locale}/2-2-2`);
+        router.push(`/${locale}/2-2`);
     };
 
     return (
