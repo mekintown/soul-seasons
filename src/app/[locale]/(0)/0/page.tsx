@@ -16,3 +16,5 @@ const Scene0 = () => {
     </Link>
   );
 };
+
+export default Scene0
