@@ -1,4 +1,10 @@
-export const backgroundMapConfig = {
+type ImageConfig = {
+  image: string | string[];  // Can be a single image or multiple images (for animations)
+  imagePreload?: string[];   // Optional preload images
+  stopMotionDuration?: number; // Optional stop-motion animation duration
+}
+
+export const backgroundMapConfig: any = {
   "0": {
     image: "/background/0.png",
     imagePreload: [],
@@ -127,6 +133,16 @@ export const backgroundMapConfig = {
     ],
     stopMotionDuration: 1000,
     imagePreload: [],
+  },
+  "2-2-1":{
+    image: [],
+    stopMotionDuration: 1000,
+    imagePreload: []
+  },
+  "2-2-2":{
+    image: [],
+    stopMotionDuration: 1000,
+    imagePreload: []
   },
   "2-2-4": {
     image: "/img/2-2-4.webp",
