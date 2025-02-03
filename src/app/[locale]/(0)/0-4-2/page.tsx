@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import Background1 from "@/img/background/0.png";
 import { motion } from "framer-motion";
 import NextButton from "@/components/ui/NextButton";
 import NameInput from "@/components/ui/NameInput";
@@ -12,7 +13,14 @@ const Scene042 = () => {
 
   const [name, setName] = useState("");
   return (
-    <section className="w-full justify-center h-lvh flex flex-col">
+    <section
+      className="w-full justify-center h-lvh flex flex-col"
+      style={{
+        backgroundImage: `url(${Background1.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -28,7 +36,7 @@ const Scene042 = () => {
           </h1>
           <NameInput placeholder={t("input")} name={name} setName={setName} />
         </div>
-        <div className="flex justify-start items-center h-full flex-col mt-[100px]">
+        <div className="font-bold flex justify-start items-center h-full flex-col mt-[100px]">
           <NextButton url="/0-5" disabled={!name} />
         </div>
       </motion.div>

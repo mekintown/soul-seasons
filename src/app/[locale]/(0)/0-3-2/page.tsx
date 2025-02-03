@@ -1,6 +1,10 @@
 "use client";
 import Shadow from "@/components/ui/Shadow";
+import Background1 from "@/img/background/0.png";
 import MessageBox from "@/components/ui/messagebox";
+import Tab from "@/img/icons/tab.png";
+import HideTabTh from "@/img/icons/hidetabTh.png";
+import HideTabEn from "@/img/icons/hidetabEn.png";
 import { useLocale, useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import NextButton from "@/components/ui/NextButton";
@@ -9,11 +13,17 @@ const Scene032 = () => {
   const t = useTranslations("0-3-2");
 
   const locale = useLocale();
-  const imageSrc =
-    locale === "th" ? "/icons/hidetabTh.png" : "/icons/hidetabEn.png";
+  const imageSrc = locale === "th" ? HideTabTh.src : HideTabEn.src;
 
   return (
-    <section className="w-full justify-center h-lvh flex flex-col">
+    <section
+      className="w-full justify-center h-lvh flex flex-col"
+      style={{
+        backgroundImage: `url(${Background1.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <Shadow>
         <motion.div
           initial={{ opacity: 0 }}
@@ -43,7 +53,7 @@ const Scene032 = () => {
               BoxPadding="px-3 py-5"
             />
             <div className="flex justify-start items-center h-full flex-col gap-5 relative">
-              <img src="/icons/tab.png" />
+              <img src={Tab.src} />
               <div className=" absolute w-[27px] h-[27px] border-solid border-[2px] border-black rounded-[100%] top-[9px] left-[25px] " />
               <img src={imageSrc} />
               <div className=" absolute w-[220px] h-[32px] border-solid border-[2px] border-black rounded-[12px] top-[160px] " />
@@ -51,7 +61,7 @@ const Scene032 = () => {
           </div>
 
           <div className="flex justify-start items-start h-full flex-col mt-10">
-            <NextButton url="/0-4-1" />
+            <NextButton disabled={false} url="/0-4-1" />
           </div>
         </motion.div>
       </Shadow>

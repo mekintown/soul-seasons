@@ -62,6 +62,27 @@ body {
   }
 }
 
+@font-face {
+  font-family: 'Cloud';
+  src: url('/fonts/Cloud-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cloud';
+  src: url('/fonts/Cloud-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cloud';
+  src: url('/fonts/CloudScript-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer base {
   * {
     @apply border-border;
@@ -69,4 +90,33 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.custom-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 200px;
+  height: 10px;
+  background: linear-gradient(to right, #1e3a8a, #ffffff); /* Track styling */
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* WebKit browsers */
+.custom-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  background: url('/img/icons/sliderthumb.png') no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+/* Firefox */
+.custom-range::-moz-range-thumb {
+  background: url('/img/icons/sliderthumb.png') no-repeat center;
+  background-size: contain;
+  cursor: pointer;
 }

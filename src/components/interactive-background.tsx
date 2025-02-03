@@ -2,7 +2,7 @@
 
 import { backgroundMapConfig } from "@/lib/bg-config";
 import { usePathname, useRouter } from "@/i18n/routing";
-import { useEffect, useMemo, useState } from "react";
+import { SetStateAction, useEffect, useMemo, useState } from "react";
 import AnimatedImage from "./animated-image";
 
 const InteractiveBackground = () => {
@@ -10,11 +10,11 @@ const InteractiveBackground = () => {
   const router = useRouter();
   const page = path.split("/")[1] as keyof typeof backgroundMapConfig;
   const [bgImgSrc, setBgImgSrc] = useState<string>();
-
+  
   useEffect(() => {
     switch (page) {
       case "2-7":
-        backgroundMapConfig[page].image.forEach((image, index) => {
+        backgroundMapConfig[page].image.forEach((image: SetStateAction<string | undefined>, index: number) => {
           setTimeout(() => {
             setBgImgSrc(image);
             if (index === backgroundMapConfig[page].image.length - 1) {
@@ -26,7 +26,7 @@ const InteractiveBackground = () => {
         });
         break;
       case "2-9":
-        backgroundMapConfig[page].image.forEach((image, index) => {
+        backgroundMapConfig[page].image.forEach((image: SetStateAction<string | undefined>, index: number) => {
           setTimeout(() => {
             setBgImgSrc(image);
             if (index === backgroundMapConfig[page].image.length - 1) {
@@ -38,7 +38,7 @@ const InteractiveBackground = () => {
         });
         break;
       case "1-4-9":
-        backgroundMapConfig[page].image.forEach((image, index) => {
+        backgroundMapConfig[page].image.forEach((image: SetStateAction<string | undefined>, index: number) => {
           setTimeout(() => {
             setBgImgSrc(image);
             if (index === backgroundMapConfig[page].image.length - 1) {

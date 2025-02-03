@@ -1,0 +1,43 @@
+[
+    {
+      "src": "../../../../img/icons/pot/potOrange.png",
+      "label": "Orange Pot",
+      "glow": null
+    },
+    {
+      "src": "../../../../img/icons/pot/potPurple.png",
+      "label": "Purple Pot",
+      "glow": "../../../../img/icons/potGlow/purpleGlow.png"
+    },
+    {
+      "src": "../../../../img/icons/pot/potGreen.png",
+      "label": "Green Pot",
+      "glow": null
+    },
+    {
+      "src": "../../../../img/icons/pot/potRed.png",
+      "label": "Red Pot",
+      "glow": null
+    },
+    {
+      "src": "../../../../img/icons/pot/potPink.png",
+      "label": "Pink Pot",
+      "glow": null
+    },
+    {
+      "src": "../../../../img/icons/pot/potYellow.png",
+      "label": "Yellow Pot",
+      "glow": "../../../../img/icons/potGlow/yellowGlow.png"
+    },
+    {
+      "src": "../../../../img/icons/pot/potBlue.png",
+      "label": "Blue Pot",
+      "glow": null
+    },
+    {
+      "src": "../../../../img/icons/pot/potIndigo.png",
+      "label": "Indigo Pot",
+      "glow": "../../../../img/icons/potGlow/indigoGlow.png"
+    }
+  ]
+  

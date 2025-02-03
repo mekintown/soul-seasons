@@ -23,6 +23,7 @@ const buttonVariants = cva(
           "bg-primaryblue  rounded-lg text-white font-cloud font-bold animate-dissolve duration-300 ease-out animate",
         nextSecondary:
           "bg-primary text-primary-foreground shadow hover:bg-primary/90 rounded-lg text-white font-cloud font-bold animate-dissolve duration-300 ease-out animate",
+
       },
       size: {
         default: "h-9 px-4 py-2",
