@@ -3,29 +3,13 @@ import { useTranslations } from "next-intl";
 import Background2Blur from '../../../../img/background/blur2.png';
 import ChristmasTree from '../../../../img/background/christmas tree  1.png';
 import { motion } from 'framer-motion';
-import potOrange from '../../../../img/icons/pot/potOrange.png';
-import potPurple from '../../../../img/icons/pot/potPurple.png';
-import potGreen from '../../../../img/icons/pot/potGreen.png';
-import potRed from '../../../../img/icons/pot/potRed.png';
-import potPink from '../../../../img/icons/pot/potPink.png';
-import potYellow from '../../../../img/icons/pot/potYellow.png';
-import potBlue from '../../../../img/icons/pot/potBlue.png';
-import potIndigo from '../../../../img/icons/pot/potIndigo.png';
-// Glow pots 
-import potIndigoGlow from '../../../../img/icons/potGlow/potIndigoGlow.png';
-import potPurpleGlow from '../../../../img/icons/potGlow/potPurpleGlow.png';
-import potOrangeGlow from '../../../../img/icons/potGlow/potOrangeGlow.png';
-import potRedGlow from '../../../../img/icons/potGlow/potRedGlow.png';
-import potGreenGlow from '../../../../img/icons/potGlow/potGreenGlow.png';
-import potYellowGlow from '../../../../img/icons/potGlow/potYellowGlow.png';
-import potBlueGlow from '../../../../img/icons/potGlow/potBlueGlow.png';
-import potPinkGlow from '../../../../img/icons/potGlow/potPinkGlow.png';
 import { useState, useEffect } from 'react';
 import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
+import { potImagesLeft,potImagesRight } from "@/lib/pots-config";
 
 const Scene2_2Page2 = () => {
-    const t = useTranslations('2-2');
+    const t = useTranslations('2-2-2');
     const [clicks, setClicks] = useState(0);
     const [glowingPots, setGlowingPots] = useState<Array<{ index: number; name: string }>>([]); // Store glowing pots with name
     const locale = useLocale();
@@ -41,6 +25,7 @@ const Scene2_2Page2 = () => {
             if (existingIndex >= 0) {
                 // If pot is already glowing, remove it
                 setClicks(() => clicks - 1);
+                
                 return prev.filter((_, i) => i !== existingIndex);
             } else {
                 // If pot is not glowing, add it
@@ -53,20 +38,7 @@ const Scene2_2Page2 = () => {
         });
     };
 
-    const potImagesLeft = [
-        { src: potPink.src, label: "Career/Work", pos: "", glow: potPinkGlow.src },
-        { src: potIndigo.src, label: "Family", pos: "right-[50px]", glow: potIndigoGlow.src },
-        { src: potRed.src, label: "Relationship/Friends", pos: "right-[50px]", glow: potRedGlow.src },
-        { src: potOrange.src, label: "Sharing/Contributions", pos: "", glow: potOrangeGlow.src },
-    ];
-
-    const potImagesRight = [
-        { src: potBlue.src, label: "Self-Development", pos: "", glow: potBlueGlow.src },
-        { src: potYellow.src, label: "Finance/Money", pos: "left-[50px]", glow: potYellowGlow.src },
-        { src: potGreen.src, label: "Health", pos: "left-[70px]", glow: potGreenGlow.src },
-        { src: potPurple.src, label: "Spiritual", pos: "", glow: potPurpleGlow.src },
-    ];
-
+    
     return (
         <motion.div
                 initial={{ opacity: 0.8 }}
@@ -124,56 +96,76 @@ const Scene2_2Page2 = () => {
                 className="relative flex justify-center h-full w-full mx-auto gap-3"
             >
                 {/* Left Column */}
-                <div className="flex flex-col items-center">
-                    {potImagesLeft.map((pot, index) => (
-                        <div
-                            key={index}
-                            className={`relative ${pot.pos} flex flex-col h-[120px] items-center gap-5`}
-                            onClick={() => handleClick(index, pot.label)}
-                        >
-                            <img
-                                src={
-                                    glowingPots.some((glow) => glow.index === index) && pot.glow
-                                        ? pot.glow
-                                        : pot.src
-                                }
-                                alt={`${pot.label} Pot`}
-                                className="w-auto h-[120px]"
-                            />
-                            <p className="text-right mt-2 relative bottom-[50px] font-light text-xs text-white text-center">
-                                {pot.label}
-                            </p>
-                        </div>
-                    ))}
-                </div>
+                {/* Left Column */}
+<div className="flex flex-col items-center">
+    {potImagesLeft.map((pot, index) => {
+        const isGlowing = glowingPots.some((glow) => glow.index === index);
 
-                {/* Right Column */}
-                <div className="flex flex-col items-center">
-                    {potImagesRight.map((pot, index) => (
-                        <div
-                            key={index + potImagesLeft.length}
-                            className={`relative ${pot.pos} flex flex-col h-[120px] items-center gap-5`}
-                            onClick={() => handleClick(index + potImagesLeft.length, pot.label)}
-                        >
-                            <img
-                                src={
-                                    glowingPots.some((glow) => glow.index === index + potImagesLeft.length) &&
-                                    pot.glow
-                                        ? pot.glow
-                                        : pot.src
-                                }
-                                alt={`${pot.label} Pot`}
-                                className="w-auto h-[120px]"
-                            />
-                            <p className="mt-2 relative bottom-[50px] font-light text-xs text-white text-center">
-                                {pot.label}
-                            </p>
-                        </div>
-                    ))}
-                </div>
+        return (
+            <div
+                key={index}
+                className={`relative ${pot.pos} flex flex-col h-[120px] items-center gap-5`}
+                onClick={() => handleClick(index, pot.label)}
+            >
+                <img
+                    src={isGlowing ? pot.glow : pot.src}
+                    alt={`${pot.label} Pot`}
+                    className="w-auto h-[120px]"
+                />
+                
+                {/* White circle indicator */}
+                {isGlowing && (
+                    <div
+                        className="text-center rounded-[100%] absolute bg-white w-[18px] h-[18px] bottom-8 left-16"
+                    >
+                        <p className=" text-[15px]">{glowingPots.findIndex((glow) => glow.index === index)+1}</p>
+                    </div>
+                )}
+
+                <p className="text-right mt-2 relative bottom-[50px] font-light text-xs text-white text-center">
+                    {pot.label}
+                </p>
+            </div>
+        );
+    })}
+</div>
+
+{/* Right Column */}
+<div className="flex flex-col items-center">
+    {potImagesRight.map((pot, index) => {
+        const adjustedIndex = index + potImagesLeft.length; // Correctly offset right column indices
+        const isGlowing = glowingPots.some((glow) => glow.index === adjustedIndex);
+
+        return (
+            <div
+                key={adjustedIndex}
+                className={`relative ${pot.pos} flex flex-col h-[120px] items-center gap-5`}
+                onClick={() => handleClick(adjustedIndex, pot.label)}
+            >
+                <img
+                    src={isGlowing ? pot.glow : pot.src}
+                    alt={`${pot.label} Pot`}
+                    className="w-auto h-[120px]"
+                />
+                
+                {/* White circle indicator */}
+                {isGlowing && (
+                    <div
+                        className="text-center rounded-[100%] absolute bg-white w-[18px] h-[18px] bottom-8 left-16"
+                    >
+                        <p className=" text-[15px]">{glowingPots.findIndex((glow) => glow.index === adjustedIndex) + 1}</p>
+                    </div>
+                )}
+
+                <p className="mt-2 relative bottom-[50px] font-light text-xs text-white text-center">
+                    {pot.label}
+                </p>
+            </div>
+        );
+    })}
+</div>
+
             </motion.div>
-            
-
             {/* Button */}
             <motion.div
                 initial={{ opacity: 0 }}

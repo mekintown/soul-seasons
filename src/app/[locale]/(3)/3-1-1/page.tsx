@@ -2,7 +2,7 @@
 import {useEffect, useState} from 'react'
 import Background3 from "../../../../img/background/3-1.gif"
 import { motion } from 'framer-motion';
-const Scene3 = ()=>{
+const Scene3_1 = ()=>{
     const [username, setUsername] = useState("");
     const importantPerson = 'importantPerson'
     useEffect(() => {
@@ -33,4 +33,4 @@ const Scene3 = ()=>{
     )
 }
 
-export default Scene3
+export default Scene3_1
