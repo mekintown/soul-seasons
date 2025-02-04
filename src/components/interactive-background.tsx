@@ -4,12 +4,14 @@ import { backgroundMapConfig } from "@/lib/bg-config";
 import { usePathname, useRouter } from "@/i18n/routing";
 import { useEffect, useMemo, useState } from "react";
 import AnimatedImage from "./animated-image";
+import { useBackgroundStore } from "@/store/background";
 
 const InteractiveBackground = () => {
   const path = usePathname();
   const router = useRouter();
   const page = path.split("/")[1] as keyof typeof backgroundMapConfig;
   const [bgImgSrc, setBgImgSrc] = useState<string>();
+  const { backgroundState } = useBackgroundStore();
 
   useEffect(() => {
     switch (page) {
@@ -37,12 +39,15 @@ const InteractiveBackground = () => {
           }, index * backgroundMapConfig[page].stopMotionDuration);
         });
         break;
+      case "3-2-12":
+        setBgImgSrc(backgroundState || "/background/3-2-11_3.gif");
+        break;
 
       default:
         setBgImgSrc(backgroundMapConfig[page].image);
         break;
     }
-  }, [page, router]);
+  }, [page, router, backgroundState]);
 
   const imagePreloadSrc = useMemo(() => {
     const newImagePreloadSrc = backgroundMapConfig[page].imagePreload;

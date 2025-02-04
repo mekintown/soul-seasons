@@ -3,25 +3,38 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { useRouter } from "@/i18n/routing";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useBackgroundStore } from "@/store/background";
 
 const Page3_2_12 = () => {
   const t = useTranslations("3-2-12");
   const router = useRouter();
   const [hasClicked, setHasClicked] = useState(false);
-  const [pressStartTime, setPressStartTime] = useState<number | null>(null);
-  const [pressDuration, setPressDuration] = useState(0);
+  const { setBackground } = useBackgroundStore();
+  const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
 
   const handleMouseDown = () => {
-    setPressStartTime(Date.now());
+    const startTime = Date.now();
+
+    const id = setInterval(() => {
+      const duration = Date.now() - startTime;
+      if (duration < 1000) {
+        setBackground("/background/3-2-11_3.gif");
+      } else if (duration < 2000) {
+        setBackground("/background/3-2-11_2.gif");
+      } else if (duration < 3000) {
+        setBackground("/background/3-2-11_1.gif");
+      }
+    }, 100);
+
+    setIntervalId(id);
   };
 
   const handleMouseUp = () => {
-    if (pressStartTime !== null) {
-      const duration = Date.now() - pressStartTime;
-      setPressDuration(duration);
-      console.log(`Pressed for ${duration} ms`);
-      setPressStartTime(Date.now());
+    if (intervalId) {
+      setBackground("/background/3-2-11_3.gif");
+      clearInterval(intervalId);
+      setIntervalId(null);
     }
 
     if (!hasClicked) {
@@ -31,6 +44,15 @@ const Page3_2_12 = () => {
       }, 8000);
     }
   };
+
+  useEffect(() => {
+    return () => {
+      if (intervalId) {
+        setBackground("/background/3-2-11_3.gif");
+        clearInterval(intervalId);
+      }
+    };
+  }, [intervalId]);
 
   return (
     <div className="flex h-screen flex-col items-center justify-center relative">

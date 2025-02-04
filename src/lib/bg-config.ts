@@ -168,7 +168,11 @@ export const backgroundMapConfig = {
     imagePreload: ["/background/3-2-11_1.gif", "/background/3-2-11_2.gif"],
   },
   "3-2-12": {
-    image: "/background/3-2-11_3.gif",
+    image: [
+      "/background/3-2-11_3.gif",
+      "/background/3-2-11_2.gif",
+      "/background/3-2-11_1.gif",
+    ],
     imagePreload: [],
   },
 } as const;
