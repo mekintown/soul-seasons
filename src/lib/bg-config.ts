@@ -142,70 +142,37 @@ export const backgroundMapConfig = {
   },
   "2-3-3": {
     image: "/background/2-3-1.png",
-    imagePreload: [],
-  },
-  "2-3-4": {
-    image: "/background/2-3-1.png",
-    imagePreload: ["/background/2-3-5.png"],
+    imagePreload: [
+      "/background/2-3-5.png",
+      "/background/2-3-6.png",
+      "/background/2-3-7.png",
+      "/background/2-3-8.png",
+      "/background/2-3-9.png",
+      "/background/2-3-10.png",
+    ],
   },
   "2-3-5": {
-    image: "/background/2-3-5.png",
-    imagePreload: ["/background/2-3-6.png"],
-  },
-  "2-3-6": {
-    image: "/background/2-3-6.png",
-    imagePreload: ["/background/2-3-7.png"],
-  },
-  "2-3-7": {
-    image: "/background/2-3-7.png",
-    imagePreload: ["/background/2-3-8.png"],
-  },
-  "2-3-8": {
-    image: "/background/2-3-8.png",
-    imagePreload: ["/background/2-3-9.png"],
-  },
-  "2-3-9": {
-    image: "/background/2-3-9.png",
-    imagePreload: ["/background/2-3-10.png"],
-  },
-  "2-3-10": {
-    image: "/background/2-3-10.png",
-    imagePreload: ["/background/3-1-1.png"],
-  },
-  "2-7": {
     image: [
-      "/background/2-1.webp",
-      "/background/2-2.webp",
-      "/background/2-3.webp",
+      "/background/2-3-5.png",
+      "/background/2-3-6.png",
+      "/background/2-3-7.png",
+      "/background/2-3-8.png",
+      "/background/2-3-9.png",
+      "/background/2-3-10.png",
     ],
-    stopMotionDuration: 1200,
+    stopMotionDuration: 1000,
     imagePreload: [],
   },
-  "2-8": {
-    image: "/background/2-6.webp",
-    imagePreload: [
-      "/background/2-9-1.webp",
-      "/background/2-9-2.webp",
-      "/background/2-9-3.webp",
-      "/background/2-9-4.webp",
-      "/background/2-9-5.webp",
-      "/background/2-9-6.webp",
-      "/background/2-9-7.webp",
-      "/background/2-9-8.webp",
-    ],
+  "3-2-11": {
+    image: "/background/3-2-11_3.gif",
+    imagePreload: ["/background/3-2-11_1.gif", "/background/3-2-11_2.gif"],
   },
-  "2-9": {
+  "3-2-12": {
     image: [
-      "/background/2-9-1.webp",
-      "/background/2-9-2.webp",
-      "/background/2-9-3.webp",
-      "/background/2-9-4.webp",
-      "/background/2-9-5.webp",
-      "/background/2-9-6.webp",
-      "/background/2-9-7.webp",
-      "/background/2-9-8.webp",
+      "/background/3-2-11_3.gif",
+      "/background/3-2-11_2.gif",
+      "/background/3-2-11_1.gif",
     ],
-    stopMotionDuration: 1200,
     imagePreload: [],
   },
 } as const;

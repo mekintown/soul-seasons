@@ -1,32 +1,27 @@
 "use client";
-import DelayedFullScreenLink from "@/components/ui/DelayedFullScreenLink";
-import NextDisplay from "@/components/ui/nextDisplay";
-import SparklingChristmasTree from "@/components/ui/SparklingChristmasTree";
-import { getLocalStorageWithFallback } from "@/lib/localstorageUtils";
-import { motion } from "framer-motion";
+
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
+import { getLocalStorageWithFallback } from "@/lib/localstorageUtils";
+import NextDisplay from "@/components/ui/nextDisplay";
+import DelayedFullScreenLink from "@/components/ui/DelayedFullScreenLink";
 
-const Page2_3_2 = () => {
-  const t = useTranslations("2-3-2");
+const Page3_2_11 = () => {
+  const t = useTranslations("3-2-11");
 
-  const importantPerson = getLocalStorageWithFallback(
-    "importantPerson",
-    t("importantPerson")
-  );
+  const name = getLocalStorageWithFallback("name", t("name"));
 
   return (
     <div className="flex h-screen flex-col items-center justify-center relative">
       <motion.div
-        className="text-center text-base text-white absolute top-1/4"
+        className="text-center text-base text-white absolute top-[85%] w-2/3"
         initial={{ opacity: 0, z: -20 }}
         animate={{ opacity: 1, z: 0, transition: { duration: 1, delay: 1 } }}
       >
         <p>
-          {importantPerson} : {t("ifYouKnow")}
+          {name} : {t("stillRaining")}
         </p>
       </motion.div>
-
-      <SparklingChristmasTree />
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -42,9 +37,9 @@ const Page2_3_2 = () => {
         <NextDisplay />
       </motion.div>
 
-      <DelayedFullScreenLink href="2-3-3" delay={2000} />
+      <DelayedFullScreenLink href="3-2-12" delay={2000} />
     </div>
   );
 };
 
-export default Page2_3_2;
+export default Page3_2_11;
