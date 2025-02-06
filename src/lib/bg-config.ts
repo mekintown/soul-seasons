@@ -168,11 +168,84 @@ export const backgroundMapConfig = {
     imagePreload: ["/background/3-2-11_1.gif", "/background/3-2-11_2.gif"],
   },
   "3-2-12": {
+    // images use zustand state
+    imagePreload: [],
+  },
+  "4-1-1": {
     image: [
-      "/background/3-2-11_3.gif",
-      "/background/3-2-11_2.gif",
-      "/background/3-2-11_1.gif",
+      "/background/4-1-1.png",
+      "/background/4-1-2.png",
+      "/background/4-1-3.png",
+      "/background/4-1-4.gif",
     ],
+    stopMotionDuration: 1000,
+    imagePreload: [],
+  },
+
+  "4-1-4": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-5": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-6": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-7": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-8": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-9": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-10": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-11": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-12": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-13": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-14": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-15": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [
+      "/background/4-1-17.png",
+      "/background/4-1-18.png",
+      "/background/4-1-19.png",
+      "/background/4-1-20.png",
+      "/background/4-1-21.png",
+    ],
+  },
+  "4-1-16": {
+    image: [
+      "/background/4-1-4.gif",
+      "/background/4-1-17.png",
+      "/background/4-1-18.png",
+      "/background/4-1-19.png",
+      "/background/4-1-20.png",
+      "/background/4-1-21.png",
+    ],
+    stopMotionDuration: 1000,
     imagePreload: [],
   },
 } as const;
