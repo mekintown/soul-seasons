@@ -163,12 +163,95 @@ export const backgroundMapConfig = {
     stopMotionDuration: 1000,
     imagePreload: [],
   },
+  "2-7": {
+    image: [
+      "/background/2-1.webp",
+      "/background/2-2.webp",
+      "/background/2-3.webp",
+    ],
+    stopMotionDuration: 1200,
+    imagePreload: [],
+  },
+  "2-8": {
+    image: "/background/2-6.webp",
+    imagePreload: [
+      "/background/2-9-1.webp",
+      "/background/2-9-2.webp",
+      "/background/2-9-3.webp",
+      "/background/2-9-4.webp",
+      "/background/2-9-5.webp",
+      "/background/2-9-6.webp",
+      "/background/2-9-7.webp",
+      "/background/2-9-8.webp",
+    ],
+  },
+  "2-9": {
+    image: [
+      "/background/2-9-1.webp",
+      "/background/2-9-2.webp",
+      "/background/2-9-3.webp",
+      "/background/2-9-4.webp",
+      "/background/2-9-5.webp",
+      "/background/2-9-6.webp",
+      "/background/2-9-7.webp",
+      "/background/2-9-8.webp",
+    ],
+    stopMotionDuration: 1200,
+    imagePreload: [],
+  },
   "3-2-11": {
     image: "/background/3-2-11_3.gif",
     imagePreload: ["/background/3-2-11_1.gif", "/background/3-2-11_2.gif"],
   },
   "3-2-12": {
     // images use zustand state
+    imagePreload: [],
+  },
+  "3-3-1": {
+    image: "/img/3-3-1.gif",
+    imagePreload: [],
+  },
+  "3-3-2": {
+    image: "/img/3-3-1.gif",
+    imagePreload: [],
+  },
+  "3-3-3": {
+    image: "/img/3-3-1.gif",
+    imagePreload: [],
+  },
+  "3-3-4": {
+    image: "/img/3-3-1.gif",
+    imagePreload: [],
+  },
+  "3-3-5": {
+    image: "/img/3-3-1.gif",
+    imagePreload: [],
+  },
+  "3-3-6": {
+    image: "/img/3-3-1.gif",
+    imagePreload: [
+      "/img/3-3-7.webp",
+      "/img/3-3-8.webp",
+      "/img/3-3-9.webp",
+      "/img/3-3-10.webp",
+      "/img/3-3-11.webp",
+      "/img/3-3-12.webp",
+      "/img/3-3-13.webp",
+      "/img/3-3-14.webp",
+    ],
+  },
+  "3-3-7": {
+    image: [
+      "/img/3-3-7.webp",
+      "/img/3-3-8.webp",
+      "/img/3-3-9.webp",
+      "/img/3-3-10.webp",
+      "/img/3-3-11.webp",
+      "/img/3-3-12.webp",
+      "/img/3-3-13.webp",
+      "/img/3-3-14.webp",
+    ],
+    stopMotionDuration: 1000,
     imagePreload: [],
   },
   "4-1-1": {
@@ -219,10 +302,6 @@ export const backgroundMapConfig = {
     imagePreload: [],
   },
   "4-1-13": {
-    image: "/background/4-1-4.gif",
-    imagePreload: [],
-  },
-  "4-1-14": {
     image: "/background/4-1-4.gif",
     imagePreload: [],
   },
