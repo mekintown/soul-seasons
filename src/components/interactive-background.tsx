@@ -66,6 +66,18 @@ const InteractiveBackground = () => {
       case "3-2-12":
         setBgImgSrc(backgroundState || "/background/3-2-11_3.gif");
         break;
+      case "3-3-7":
+        backgroundMapConfig[page].image.forEach((image, index) => {
+          setTimeout(() => {
+            setBgImgSrc(image);
+            if (index === backgroundMapConfig[page].image.length - 1) {
+              setTimeout(() => {
+                router.push("4-1-1");
+              }, backgroundMapConfig[page].stopMotionDuration / 2);
+            }
+          }, index * backgroundMapConfig[page].stopMotionDuration);
+        });
+        break;
       case "4-1-1":
         backgroundMapConfig[page].image.forEach((image, index) => {
           setTimeout(() => {
