@@ -129,12 +129,16 @@ export const backgroundMapConfig:any = {
     imagePreload: [],
   },
   "2-2-1":{
-    image: [],
-    stopMotionDuration: 1000,
-    imagePreload: []
+    image: [
+      "/background/2-2-1-db.png",
+      "/background/2-2-1-blur.png",
+      "/background/2-2-1.png",
+    ],
+    stopMotionDuration: 2000,
+    imagePreload: ["/background/2-2-2.png"]
   },
   "2-2-2":{
-    image: [],
+    image: "/background/2-2-2.png",
     stopMotionDuration: 1000,
     imagePreload: []
   },
@@ -217,4 +221,25 @@ export const backgroundMapConfig:any = {
     ],
     stopMotionDuration: 1200,
     imagePreload: [],
-  }}
+  },
+"3-1-1": {
+  image: "/background/3-1.gif",
+  imagePreload: [],
+},
+"3-1-2": {
+  image: "/background/3-1.gif",
+  imagePreload: [],
+},
+"3-1-3": {
+  image: "/background/3-1.gif",
+  imagePreload: [],
+},
+"3-1-4": {
+  image: "/background/3-1.gif",
+  imagePreload: [],
+},
+"3-1-5": {
+  image: "/background/3-1.gif",
+  imagePreload: [],
+},
+}

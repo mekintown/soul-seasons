@@ -1,24 +1,10 @@
 'use client'
-import {useEffect, useState} from 'react'
-import Background3 from "../../../../img/background/3-1.gif"
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-const Scene3 = ()=>{
-    const [username, setUsername] = useState("");
-    const importantPerson = 'importantPerson'
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-          setUsername(localStorage.getItem("name") || "Guest");
-        }
-      }, []);
+const Scene3_1_3 = ()=>{
+    const t = useTranslations("3-1-3")
     return(
         <section className="w-full justify-start items-center h-lvh flex flex-col" 
-        style={{
-            backgroundImage: `url(${Background3.src})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          
-        }}
         >
              <motion.div
                 initial={{ opacity: 0 }}
@@ -28,7 +14,9 @@ const Scene3 = ()=>{
                 >
                     
                 <p className='w-[279px] h-auto'>
-                  กว่าจะมาถึงตรงนี้ได้ คงเหนื่อยมากเลยสินะ
+                 {t("p1.s1")}
+                 <br/>
+                 {t("p1.s2")} 
                 </p>
           
                 </motion.div>
@@ -37,4 +25,4 @@ const Scene3 = ()=>{
     )
 }
 
-export default Scene3
+export default Scene3_1_3

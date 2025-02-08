@@ -1,22 +1,10 @@
 'use client'
-import {useEffect, useState} from 'react'
-import Background3 from "../../../../img/background/3-1.gif"
 import { motion } from 'framer-motion';
-const Scene3_1 = ()=>{
-    const [username, setUsername] = useState("");
-    const importantPerson = 'importantPerson'
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-          setUsername(localStorage.getItem("name") || "Guest");
-        }
-      }, []);
+const Scene3_1_1 = ()=>{
+   
     return(
         <section className="w-full justify-start items-center h-lvh flex flex-col" 
         style={{
-            backgroundImage: `url(${Background3.src})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
           
         }}
         >
@@ -33,4 +21,4 @@ const Scene3_1 = ()=>{
     )
 }
 
-export default Scene3_1
+export default Scene3_1_1

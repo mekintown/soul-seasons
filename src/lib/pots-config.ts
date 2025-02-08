@@ -30,6 +30,6 @@ export const potImagesLeft = [
 export const potImagesRight = [
     { src: potBlue.src, label: "Self-Development", pos: "", glow: potBlueGlow.src },
     { src: potYellow.src, label: "Finance/Money", pos: "left-[50px]", glow: potYellowGlow.src },
-    { src: potGreen.src, label: "Health", pos: "left-[70px]", glow: potGreenGlow.src },
+    { src: potGreen.src, label: "Health", pos: "left-[50px]", glow: potGreenGlow.src },
     { src: potPurple.src, label: "Spiritual", pos: "", glow: potPurpleGlow.src },
 ];

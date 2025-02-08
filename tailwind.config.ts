@@ -80,7 +80,11 @@ export default {
 				'0%': { "opacity": "0" },
 			  '100%': {"opacity": "1" },
 			},
+		},
+		screens: {
+			'sm': { 'raw': '(max-height: 667px)' }, 
 		}
+		
   	}
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports

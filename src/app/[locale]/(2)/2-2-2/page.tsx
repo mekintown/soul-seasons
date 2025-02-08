@@ -1,12 +1,11 @@
 'use client';
 import { useTranslations } from "next-intl";
-import Background2Blur from '../../../../img/background/blur2.png';
-import ChristmasTree from '../../../../img/background/christmas tree  1.png';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
 import { potImagesLeft,potImagesRight } from "@/lib/pots-config";
+import ChristmasTree from '../../../../img/background/christmas tree  1.png';
 
 
 const Scene2_2Page2 = () => {
@@ -49,7 +48,6 @@ const Scene2_2Page2 = () => {
             <section
             className="relative w-full h-lvh flex flex-col justify-center items-center overflow-hidden overflow-y-auto" 
             style={{
-                backgroundImage: `url(${Background2Blur.src})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}
@@ -184,7 +182,7 @@ const Scene2_2Page2 = () => {
                 <div className="flex justify-center w-full">
                     <button
                         className={`font-bold ${clicks === 3 ? 'bg-primaryblue': 'bg-primaryGrey'} w-[173px] h-[55px] rounded-lg text-white font-bold`}
-                        onClick={() => clicks === 3 && router.push(`/${locale}/2/2-3`)}
+                        onClick={() => clicks === 3 && router.push(`/${locale}/2-2-3`)}
                     >
                         {t("btn")}
                     </button>

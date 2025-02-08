@@ -121,5 +121,46 @@
  "2-3-2": {
     "importantPerson": "Important Person",
     "ifYouKnow": "Now that you know this... best of luck!"
+  },
+  "3-1-2":{
+    "p1":{
+      "s1": "I’m sorry, ",
+      "s2":"I’ve been so busy",
+      "s3": "lately. I don’t think I’ll be able to",
+      "s4": "visit the tree this season."
+    }
+  },
+  "3-1-3": {
+    "p1": {
+      "s1": "It must have been such a tiring ",
+      "s2": "journey to get here, right?"
+    }
+  },
+  "3-1-4": {
+    "p1": {
+      "s1": "But even after all ",
+      "s2": "this effort… I still haven’t reached",
+      "s3": "my goal. Why is that…?"
+    }
+  },
+  "3-1-5": {
+    
+    "title":{
+      "s1": "From the goals you’ve set, what ",
+      "s2":"are the obstacles that keep you",
+      "s3": "from reaching them?"
+    },
+    "p1": {
+      "s1": "I'm not good enough.",
+      "s2": "I don't prioritize the important things close to me enough.",
+      "s3": "I don't love myself enough.",
+      "s4": "I fear not being accepted.",
+      "s5": "I struggle with time management.",
+      "s6": "I lack self-confidence.",
+      "s7": "I haven't found enough inspiration.",
+      "s8": "I'm too driven, to the point of losing sight of the journey.",
+      "s9": "I feel pressured by society.",
+      "s10": "I feel overwhelmed by a world that moves too fast."
+    }
   }
 }
