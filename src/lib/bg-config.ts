@@ -365,4 +365,4 @@ export const backgroundMapConfig:any = {
     stopMotionDuration: 1000,
     imagePreload: [],
   },
-} as const;
+}} as const;
