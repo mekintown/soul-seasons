@@ -1,6 +1,5 @@
 "use client";
 import Shadow from "@/components/ui/Shadow";
-import Background1 from "@/img/background/0.png";
 import MessageBox from "@/components/ui/messagebox";
 import Tab from "@/img/icons/tab.png";
 import HideTabTh from "@/img/icons/hidetabTh.png";
@@ -18,11 +17,6 @@ const Scene032 = () => {
   return (
     <section
       className="w-full justify-center h-lvh flex flex-col"
-      style={{
-        backgroundImage: `url(${Background1.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
     >
       <Shadow>
         <motion.div

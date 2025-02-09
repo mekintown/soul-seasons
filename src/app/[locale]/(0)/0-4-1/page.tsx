@@ -1,6 +1,6 @@
 "use client";
 import { useTranslations } from "next-intl";
-import Background1 from "@/img/background/0.png";
+
 import MessageBox from "@/components/ui/messagebox";
 import { motion } from "framer-motion";
 import NextButton from "@/components/ui/NextButton";
@@ -12,11 +12,6 @@ const Scene041 = () => {
   return (
     <section
       className="w-full h-lvh flex flex-col pt-[150px]"
-      style={{
-        backgroundImage: `url(${Background1.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
     >
       <motion.div
         initial={{ opacity: 0 }}

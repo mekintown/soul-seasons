@@ -13,7 +13,7 @@ const Zero6 = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          <div className=" flex justify-center items-center w-full h-full flex-col text-center">
+          <div className="font-light flex justify-center items-center w-full h-full flex-col text-center">
             <p>
               {t("p1.s1")}
               <br />
