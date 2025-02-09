@@ -162,5 +162,24 @@
       "s9": "I feel pressured by society.",
       "s10": "I feel overwhelmed by a world that moves too fast."
     }
+  },
+  "3-3-1": {
+    "name": "You",
+    "why": "“Why... does it feel\nlike the rain will never end?”"
+  },
+  "3-3-2": {
+    "name": "You",
+    "asIf": "“As if...it will keep\nfalling forever.”"
+  },
+  "3-3-3": {
+    "name": "You",
+    "asIf": "“Both the rain outside...\nand the rain within my heart.”"
+  },
+  "3-3-4": {
+    "perhaps": "Perhaps...this is the moment to\nfinally face your fears"
+  },
+  "3-3-5": {
+    "areYou": "Are you ready to let go of the umbrella\nand walk through the rain to overcome it?"
   }
+
 }
