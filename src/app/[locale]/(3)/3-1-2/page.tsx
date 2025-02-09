@@ -1,9 +1,18 @@
 'use client'
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import { useRouter } from '@/i18n/routing';
+import { useEffect } from 'react';
 const Scene3_1_2 = ()=>{
    const t = useTranslations("3-1-2")
+  const router = useRouter();
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        router.push("3-1-3");
+      }, 2000);
 
+    return () => clearTimeout(timer);
+  }, [router]);
     
     return(
         <section className="w-full justify-start items-center h-lvh flex flex-col" 
@@ -32,3 +41,4 @@ const Scene3_1_2 = ()=>{
 }
 
 export default Scene3_1_2
+

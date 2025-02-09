@@ -180,7 +180,7 @@ const Scene2_2Page2 = () => {
                 <div className="flex justify-center w-full">
                     <button
                         className={`font-bold ${clicks === 3 ? 'bg-primaryblue': 'bg-primaryGrey'} w-[173px] h-[55px] rounded-lg text-white font-bold`}
-                        onClick={() => clicks === 3 && router.push(`/${locale}/2-2-3`)}
+                        onClick={() => clicks === 3 && router.push(`/${locale}/2-2-4`)}
                     >
                         {t("btn")}
                     </button>

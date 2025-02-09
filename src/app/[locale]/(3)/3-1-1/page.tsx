@@ -1,7 +1,16 @@
 'use client'
 import { motion } from 'framer-motion';
+import { useRouter } from "@/i18n/routing";
+import { useEffect } from 'react';
 const Scene3_1_1 = ()=>{
-   
+  const router = useRouter();
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      router.push("3-1-2");
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [router]);
     return(
         <section className="w-full justify-start items-center h-lvh flex flex-col" 
         style={{
