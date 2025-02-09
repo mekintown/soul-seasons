@@ -22,7 +22,7 @@ import potPinkGlow from '../img/icons/potGlow/potPinkGlow.png';
 // Define pot configuration
 export const potImagesLeft = [
     { src: potPink.src, label: "Career/Work", pos: "", glow: potPinkGlow.src },
-    { src: potIndigo.src, label: "Family", pos: "right-[50px]", glow: potIndigoGlow.src },
+    { src: potIndigo.src, label: "Family", pos: " right-[50px]", glow: potIndigoGlow.src },
     { src: potRed.src, label: "Relationship/Friends", pos: "right-[50px]", glow: potRedGlow.src },
     { src: potOrange.src, label: "Sharing/Contributions", pos: "", glow: potOrangeGlow.src },
 ];

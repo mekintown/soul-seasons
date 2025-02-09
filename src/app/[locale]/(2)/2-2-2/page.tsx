@@ -38,7 +38,6 @@ const Scene2_2Page2 = () => {
         });
     };
 
-    
     return (
         <motion.div
                 initial={{ opacity: 0.8 }}
