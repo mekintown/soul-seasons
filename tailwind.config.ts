@@ -19,6 +19,9 @@ export default {
       boxShadow: {
         touch: "4px 4px 20px 0px #FFFFFF inset, 0px 0px 10px 5px #FFFFFF40",
       },
+      dropShadow: {
+        text: "0px 4px 4px #00000080",
+      },
       colors: {
         primaryblue: "#182649",
         background: "hsl(var(--background))",
