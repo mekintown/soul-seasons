@@ -1,6 +1,7 @@
 "use client";
 import DelayedFullScreenLink from "@/components/ui/DelayedFullScreenLink";
 import NextDisplay from "@/components/ui/nextDisplay";
+import SparklingChristmasTree from "@/components/ui/SparklingChristmasTree";
 import { getLocalStorageWithFallback } from "@/lib/localstorageUtils";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
@@ -25,6 +26,8 @@ const Page2_3_2 = () => {
         </p>
       </motion.div>
 
+      <SparklingChristmasTree />
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
@@ -34,7 +37,7 @@ const Page2_3_2 = () => {
         }}
         exit={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 1 }}
-        className="flex justify-center absolute top-[85%] inset-x-0"
+        className="flex justify-center absolute top-[90%] inset-x-0"
       >
         <NextDisplay />
       </motion.div>
