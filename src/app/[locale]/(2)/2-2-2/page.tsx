@@ -95,80 +95,79 @@ const Scene2_2Page2 = () => {
             >
                
 
-                {/* Left Column */}
-<div className="flex flex-col items-center">
-    {potImagesLeft.map((pot, index) => {
-        const isGlowing = glowingPots.some((glow) => glow.index === index);
+    {/* Left Column */}
+    <div className="flex flex-col items-center">
+        {potImagesLeft.map((pot, index) => {
+            const isGlowing = glowingPots.some((glow) => glow.index === index);
 
-        return (
-            <div
-                key={index}
-                className={`relative ${pot.pos} flex flex-col h-[120px] items-center gap-5`}
-                onClick={() => handleClick(index, pot.label)}
-            >
-                <img
-                    src={isGlowing ? pot.glow : pot.src}
-                    alt={`${pot.label} Pot`}
-                    className="w-auto h-[120px]"
-                />
-                
-                {/* White circle indicator */}
-                {isGlowing && (
-                    <div
-                        className="text-center rounded-[100%] absolute bg-white w-[18px] h-[18px] bottom-8 left-16"
-                    >
+            return (
+                <div
+                    key={index}
+                    className={`relative  ${pot.pos} flex flex-col h-[120px] items-center gap-5`}
+                    onClick={() => handleClick(index, pot.label)}
+                >
+                    <img
+                        src={isGlowing ? pot.glow : pot.src}
+                        alt={`${pot.label} Pot`}
+                        className="w-auto h-[120px]"
+                    />
+                    
+                    {/* White circle indicator */}
+                    {isGlowing && (
+                        <div
+                            className="text-center rounded-[100%] absolute bg-white w-[18px] h-[18px] bottom-8 left-16"
+                        >
 
-                        <p className=" text-[15px]">{glowingPots.findIndex((glow) => glow.index === index)+1}</p>
+                            <p className=" text-[15px]">{glowingPots.findIndex((glow) => glow.index === index)+1}</p>
 
-                    </div>
-                )}
+                        </div>
+                    )}
 
-                <p className="text-right mt-2 relative bottom-[50px] font-light text-xs text-white text-center">
-                    {pot.label}
-                </p>
-            </div>
-        );
-    })}
+                    <p className="text-right mt-2 relative bottom-[50px] font-light text-xs text-white text-center">
+                        {pot.label}
+                    </p>
+                </div>
+            );
+        })}
 </div>
 
 
 {/* Right Column */}
-<div className="flex flex-col items-center">
-    {potImagesRight.map((pot, index) => {
-        const adjustedIndex = index + potImagesLeft.length; // Correctly offset right column indices
+    <div className="flex flex-col items-center">
+        {potImagesRight.map((pot, index) => {
+            const adjustedIndex = index + potImagesLeft.length; // Correctly offset right column indices
 
-        const isGlowing = glowingPots.some((glow) => glow.index === adjustedIndex);
+            const isGlowing = glowingPots.some((glow) => glow.index === adjustedIndex);
 
-        return (
-            <div
-                key={adjustedIndex}
-                className={`relative ${pot.pos} flex flex-col h-[120px] items-center gap-5`}
-                onClick={() => handleClick(adjustedIndex, pot.label)}
-            >
-                <img
-                    src={isGlowing ? pot.glow : pot.src}
-                    alt={`${pot.label} Pot`}
-                    className="w-auto h-[120px]"
-                />
-                
-                {/* White circle indicator */}
-                {isGlowing && (
-                    <div
-                        className="text-center rounded-[100%] absolute bg-white w-[18px] h-[18px] bottom-8 left-16"
-                    >
-                        <p className=" text-[15px]">{glowingPots.findIndex((glow) => glow.index === adjustedIndex) + 1}</p>
-                    </div>
-                )}
+            return (
+                <div
+                    key={adjustedIndex}
+                    className={`relative ${pot.pos} flex flex-col h-[120px] items-center gap-5`}
+                    onClick={() => handleClick(adjustedIndex, pot.label)}
+                >
+                    <img
+                        src={isGlowing ? pot.glow : pot.src}
+                        alt={`${pot.label} Pot`}
+                        className="w-auto h-[120px]"
+                    />
+                    
+                    {/* White circle indicator */}
+                    {isGlowing && (
+                        <div
+                            className="text-center rounded-[100%] absolute bg-white w-[18px] h-[18px] bottom-8 left-16"
+                        >
+                            <p className=" text-[15px]">{glowingPots.findIndex((glow) => glow.index === adjustedIndex) + 1}</p>
+                        </div>
+                    )}
 
-                <p className="mt-2 relative bottom-[50px] font-light text-xs text-white text-center">
-                    {pot.label}
-                </p>
-            </div>
+                    <p className="mt-2 relative bottom-[50px] font-light text-xs text-white text-center">
+                        {pot.label}
+                    </p>
+                </div>
 
-        );
-    })}
-</div>
-
+            );
+        })}
+    </div>
 
             </motion.div>
             {/* Button */}
@@ -188,7 +187,7 @@ const Scene2_2Page2 = () => {
                 </div>
             </motion.div>
         </section>
-                </motion.div>
+        </motion.div>
        
     );
 };
