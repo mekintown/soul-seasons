@@ -1,5 +1,5 @@
 'use client'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import Check from '../../../../../public/icons/ei_check.png'
@@ -17,7 +17,6 @@ const Scene3_1_5 = () => {
   // Handle clicking a choice (max 3 selections)
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const selectedText = (e.currentTarget as HTMLDivElement).innerText;
-  
     setCurrentGoal(prevGoals => {
       if (prevGoals.includes(selectedText)) {
         return prevGoals.filter(goal => goal !== selectedText);
@@ -27,6 +26,9 @@ const Scene3_1_5 = () => {
       return prevGoals;
     });
   };
+  useEffect(() => {
+    return localStorage.setItem("goal", JSON.stringify(currentGoal))
+  }, [currentGoal]);
   
 
   // Detect scrolling to update the selected choice
@@ -54,7 +56,8 @@ const Scene3_1_5 = () => {
         className=" w-full flex flex-col text-white px-2 justify-start items-center sm:mt-[20px] mt-[30px] font-light text-center"
       >
         {currentGoal.map((goal, index) => (
-          <p key={index}>
+          <p key={index}
+          className='text-[16px]'>
             {index + 1}. {goal}
           </p>
         ))}

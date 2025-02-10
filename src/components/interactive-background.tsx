@@ -76,6 +76,18 @@ const InteractiveBackground = () => {
           }, index * backgroundMapConfig[page].stopMotionDuration);
         });
         break;
+        // case "3-1-1":
+        // backgroundMapConfig[page].image.forEach((image: SetStateAction<string | undefined>, index: number) => {
+        //   setTimeout(() => {
+        //     setBgImgSrc(image);
+        //     if (index === backgroundMapConfig[page].image.length - 1) {
+        //       setTimeout(() => {
+        //         router.push("2-2-2");
+        //       }, backgroundMapConfig[page].stopMotionDuration / 2);
+        //     }
+        //   }, index * backgroundMapConfig[page].stopMotionDuration);
+        // });
+        break;
       case "3-2-12":
         setBgImgSrc(backgroundState || "/background/3-2-11_3.gif");
         break;
