@@ -208,5 +208,22 @@
   "2-3-2": {
     "importantPerson": "Important Person",
     "ifYouKnow": "Now that you know this... best of luck!"
+  },
+  "3-2-2": {
+    "p1": {
+      "s1": "Close your eyes",
+      "s2": "and listen to your heartbeat.",
+      "s3": "Let yourself face the fear hidden",
+      "s4": "deep within."
+    }
+  },
+  "3-2-3": {
+    "p1": {
+      "s1": "Press on the screen...",
+      "s2": "Let each raindrop carry away the fear",
+      "s3": "hidden in your heart.",
+      "s4": "No matter how heavy your fear feels, keep",
+      "s5": "going until your spirit feels lighter."
+    }
   }
 }

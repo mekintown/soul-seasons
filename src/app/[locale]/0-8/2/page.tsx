@@ -6,7 +6,7 @@ import { useRouter } from "@/i18n/routing";
 import Image from "next/image";
 
 const Page = () => {
-  const router = useRouter(); // Initialize the router
+  const router = useRouter();
 
   const texts = [
     // 1
@@ -33,11 +33,11 @@ const Page = () => {
             minWidth: "22vh",
             marginTop: 150,
             left: "30%",
-          }} // Ensures the container spans the full height of the viewport
+          }}
         >
           {/* Background Image */}
           <img
-            src="/0-8/0-8-text.webp" // Ensure the path is correct
+            src="/0-8/0-8-text.webp"
             alt="text"
             className="absolute inset-0 w-full h-full object-cover z-0"
           />
@@ -75,7 +75,6 @@ const Page = () => {
         textAlign: "center" as CSSProperties["textAlign"],
       },
     },
-    // (Other text objects remain the same)
   ];
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -101,7 +100,7 @@ const Page = () => {
       style={{ cursor: "pointer" }}
     >
       <Image
-        src="/0-8/0-8-tree-2.webp" // Ensure the file is located in the public folder
+        src="/0-8/0-8-tree-2.webp"
         alt="Tree"
         layout="fill"
         objectFit="cover"
