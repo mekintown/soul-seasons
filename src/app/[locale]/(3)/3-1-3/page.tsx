@@ -9,7 +9,7 @@ const Scene3_1_3 = ()=>{
       useEffect(() => {
         const timer = setTimeout(() => {
           router.push("3-1-4");
-        }, 2000);
+        }, 3000);
     
         return () => clearTimeout(timer);
       }, [router]);

@@ -232,7 +232,8 @@ export const backgroundMapConfig:any = {
 "3-1-5": {
   image: "/background/3-1.gif",
   imagePreload: [],
-},"3-3-1": {
+},
+
   "3-2-11": {
     image: "/background/3-2-11_3.gif",
     imagePreload: ["/background/3-2-11_1.gif", "/background/3-2-11_2.gif"],
@@ -365,4 +366,4 @@ export const backgroundMapConfig:any = {
     stopMotionDuration: 1000,
     imagePreload: [],
   },
-}} as const;
+} as const;
