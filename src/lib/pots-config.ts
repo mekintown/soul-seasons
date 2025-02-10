@@ -21,15 +21,15 @@ import potPinkGlow from '../img/icons/potGlow/potPinkGlow.png';
 
 // Define pot configuration
 export const potImagesLeft = [
-    { src: potPink.src, label: "Career/Work", pos: "", glow: potPinkGlow.src },
-    { src: potIndigo.src, label: "Family", pos: " right-[50px]", glow: potIndigoGlow.src },
-    { src: potRed.src, label: "Relationship/Friends", pos: "right-[50px]", glow: potRedGlow.src },
-    { src: potOrange.src, label: "Sharing/Contributions", pos: "", glow: potOrangeGlow.src },
+    { src: potPink.src, label: "Career/Work", glow: potPinkGlow.src },
+    { src: potIndigo.src, label: "Family", glow: potIndigoGlow.src },
+    { src: potRed.src, label: "Relationship/Friends", glow: potRedGlow.src },
+    { src: potOrange.src, label: "Sharing/Contributions", glow: potOrangeGlow.src },
 ];
 
 export const potImagesRight = [
-    { src: potBlue.src, label: "Self-Development", pos: "", glow: potBlueGlow.src },
-    { src: potYellow.src, label: "Finance/Money", pos: "left-[50px]", glow: potYellowGlow.src },
-    { src: potGreen.src, label: "Health", pos: "left-[50px]", glow: potGreenGlow.src },
-    { src: potPurple.src, label: "Spiritual", pos: "", glow: potPurpleGlow.src },
+    { src: potBlue.src, label: "Self-Development", glow: potBlueGlow.src },
+    { src: potYellow.src, label: "Finance/Money", glow: potYellowGlow.src },
+    { src: potGreen.src, label: "Health", glow: potGreenGlow.src },
+    { src: potPurple.src, label: "Spiritual", glow: potPurpleGlow.src },
 ];

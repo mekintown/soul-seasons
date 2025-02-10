@@ -103,7 +103,7 @@ const Scene2_2Page2 = () => {
             return (
                 <div
                     key={index}
-                    className={`relative  ${pot.pos} flex flex-col h-[120px] items-center gap-5`}
+                    className={index === 2 || index === 1 ? `relative  right-[50px] flex flex-col h-[120px] items-center gap-5`: `relative flex flex-col h-[120px] items-center gap-5` }
                     onClick={() => handleClick(index, pot.label)}
                 >
                     <img
@@ -142,7 +142,7 @@ const Scene2_2Page2 = () => {
             return (
                 <div
                     key={adjustedIndex}
-                    className={`relative ${pot.pos} flex flex-col h-[120px] items-center gap-5`}
+                    className={index === 2 || index === 1 ? `relative  left-[50px] flex flex-col h-[120px] items-center gap-5`: `relative flex flex-col h-[120px] items-center gap-5`}
                     onClick={() => handleClick(adjustedIndex, pot.label)}
                 >
                     <img
