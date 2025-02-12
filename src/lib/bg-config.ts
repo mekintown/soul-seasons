@@ -233,7 +233,10 @@ export const backgroundMapConfig:any = {
   image: "/background/3-1.gif",
   imagePreload: [],
 },
-
+"logic":{
+  image: "/background/3-1.gif",
+  imagePreload: [],
+},
   "3-2-11": {
     image: "/background/3-2-11_3.gif",
     imagePreload: ["/background/3-2-11_1.gif", "/background/3-2-11_2.gif"],

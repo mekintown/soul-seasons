@@ -139,6 +139,16 @@
     "btn":"Next"
   },
   "2-2-2": {
+    "pots": {
+      "career_work": "Career/Work",
+      "family": "Family",
+      "relationship_friends": "Relationship/Friends",
+      "sharing_contributions": "Sharing/Contributions",
+      "self_development": "Self-Development",
+      "finance_money": "Finance/Money",
+      "health": "Health",
+      "spiritual": "Spiritual"
+    },
     "p1":{
       "s1":"What is the motivation behind your goal? ",
       "s2": "Help add some fertilizer to your tree.",

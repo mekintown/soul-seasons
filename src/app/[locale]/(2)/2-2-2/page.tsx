@@ -1,10 +1,11 @@
 'use client';
+
 import { useTranslations } from "next-intl";
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
-import { potImagesLeft,potImagesRight } from "@/lib/pots-config";
+import {getPotImages} from "@/lib/pots-config";
 import ChristmasTree from '../../../../img/background/christmas tree  1.png';
 
 
@@ -15,6 +16,7 @@ const Scene2_2Page2 = () => {
     const locale = useLocale();
     const router = useRouter();
     
+    const { potImagesleft: potImagesLeft, potImagesright: potImagesRight } = getPotImages(t);
     useEffect(()=>{  
             localStorage.setItem('motivationGoal', JSON.stringify(glowingPots));
          },[glowingPots]);
@@ -123,7 +125,7 @@ const Scene2_2Page2 = () => {
                         </div>
                     )}
 
-                    <p className="text-right mt-2 relative bottom-[50px] font-light text-xs text-white text-center">
+                    <p className="text-right mt-2 relative bottom-[50px] font-bold text-xs text-white text-center">
                         {pot.label}
                     </p>
                 </div>
@@ -160,7 +162,7 @@ const Scene2_2Page2 = () => {
                         </div>
                     )}
 
-                    <p className="mt-2 relative bottom-[50px] font-light text-xs text-white text-center">
+                    <p className="mt-2 relative bottom-[50px] font-bold text-xs text-white text-center">
                         {pot.label}
                     </p>
                 </div>
