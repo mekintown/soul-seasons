@@ -123,7 +123,7 @@ const Scene2_2Page2 = () => {
                     </div>
                   )}
 
-                  <p className="text-right mt-2 relative bottom-[50px] font-light text-xs text-white text-center">
+                  <p className="mt-2 relative bottom-[50px] font-light text-xs text-white text-center">
                     {pot.label}
                   </p>
                 </div>
