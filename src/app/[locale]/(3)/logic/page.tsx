@@ -1,7 +1,6 @@
 'use client'
 import { useEffect, useState } from "react";
 import { useCalculation } from "./calculation"; // Custom hook for calculations
-import Chapter from "./chapter";
 
 // Define your types (optional, but useful)
 type Motivation = {

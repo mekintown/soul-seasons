@@ -3,10 +3,6 @@
     "next": "Next",
     "tap": "Tap to continue"
   },
-  "Example": {
-    "title": "Hello world!"
-    
-  },
   "0-1":{
     "btn":"Start"
   },
@@ -114,10 +110,10 @@
      "diaryHere": "Wait, it looks like there’s a diary lying there." 
   },
   "1-4-1": {
-      "thereMightBe": "อาจจะมีเบาะแสอะไรอยู่ก็ได้ ลองเปิดอ่านดูมั้ย",
-      "name": "คุณ",
-      "importantPerson": "คนสำคัญ"
-    },
+    "thereMightBe": "There might be some clues inside.\nDo you want to open it and take a look?",
+    "name": "You",
+    "importantPerson": "Someone important"
+  },
   "1-4-2": {
     "name": "คุณ",
     "importantPerson": "คนสำคัญ"
