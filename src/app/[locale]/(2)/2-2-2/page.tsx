@@ -56,9 +56,13 @@ const Scene2_2Page2 = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0 }}
-          className="absolute bottom-[40px] w-full h-full flex justify-center items-center"
+          className="absolute w-full h-full flex justify-center items-center"
         >
-          <img src="/img/motivation/christmas-tree.webp" alt="Christmas Tree" />
+          <img
+            src="/img/motivation/christmas-tree-1.png"
+            alt="Christmas Tree"
+            className="absolute top-[47%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          />
         </motion.div>
 
         {/* Intro Text */}
@@ -92,7 +96,7 @@ const Scene2_2Page2 = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          className="relative flex justify-center h-full w-full mx-auto gap-3"
+          className="relative flex justify-center h-full w-full mx-auto mt-10 gap-3"
         >
           {/* Left Column */}
           <div className="flex flex-col items-center">
@@ -104,7 +108,9 @@ const Scene2_2Page2 = () => {
               return (
                 <div
                   key={index}
-                  className={`relative  ${pot.pos} flex flex-col h-[120px] items-center gap-5`}
+                  className={`relative flex flex-col h-[120px] items-center gap-5 ${
+                    pot.pos === "right-[50px]" ? "right-[50px]" : ""
+                  } ${pot.pos === "left-[50px]" ? "left-[50px]" : ""}`}
                   onClick={() => handleClick(index, pot.label)}
                 >
                   <img
@@ -143,7 +149,9 @@ const Scene2_2Page2 = () => {
               return (
                 <div
                   key={adjustedIndex}
-                  className={`relative ${pot.pos} flex flex-col h-[120px] items-center gap-5`}
+                  className={`relative flex flex-col h-[120px] items-center gap-5 ${
+                    pot.pos === "right-[50px]" ? "right-[50px]" : ""
+                  } ${pot.pos === "left-[50px]" ? "left-[50px]" : ""}`}
                   onClick={() => handleClick(adjustedIndex, pot.label)}
                 >
                   <img
