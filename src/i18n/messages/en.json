@@ -144,6 +144,7 @@
       "s6": "You: \"That sounds like a great idea.",
       "s7": "See you then.\""
     }
+  },
   "1-2-1": {
     "name": "You",
     "importantPerson": "Someone important"
@@ -231,6 +232,7 @@
       "s4": "No matter how heavy your fear feels, keep",
       "s5": "going until your spirit feels lighter."
     }
+  },
   "3-1-2":{
     "p1":{
       "s1": "I’m sorry, ",
