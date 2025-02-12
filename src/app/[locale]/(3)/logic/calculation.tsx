@@ -27,7 +27,7 @@ export const useCalculation = (
 const [sortedSubConcepts, setSortedSubConcepts] = useState<WeightedSubConcept[]>([]);
   const [subConceptMotivation, setSubConceptMotivation] = useState<string[]>([]);
     const [subConceptObstacles, setSubConceptObstacles] = useState<string[]>([]);
-    const [seasons,setSeasons] = useState<string>('');
+    const [seasons, setSeasons] = useState<string | string[]>('');
     const [chapter, setChapter] = useState<string>('');
 
   useEffect(() => {
@@ -85,6 +85,7 @@ const [sortedSubConcepts, setSortedSubConcepts] = useState<WeightedSubConcept[]>
     const sortedWeight = combinedWeighted.sort((a, b) => b.weight - a.weight);
     
     const season = Seasons(sortedWeight);
+    // eslint-disable-next-line @typescript-eslint/no-shadow
     const chapter = Chapter(sortedWeight);
     setSortedSubConcepts(combinedWeighted);
     setSeasons(season);
