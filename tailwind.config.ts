@@ -1,27 +1,29 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
 export default {
-    darkMode: ["class"],
-    content: [
+  darkMode: ["class"],
+  content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-  	extend: {
-		backgroundImage: {
-			'linear-radial-gradient': `
+    extend: {
+      backgroundImage: {
+        "linear-radial-gradient": `
           linear-gradient(0deg, var(--white, #FFFFFF), var(--white, #FFFFFF)),
           radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 72%, rgba(0, 0, 0, 0.2) 100%)
         `,
 
 		},
-		background:{
-			
-		},
+		background: {},
+      boxShadow: {
+        touch: "4px 4px 20px 0px #FFFFFF inset, 0px 0px 10px 5px #FFFFFF40",
+      },
 		
   		colors: {
 			primaryblue: '#182649',
+      primaryGrey: '#757e87',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -64,7 +66,7 @@ export default {
 			},
 		},
 		fontFamily: {
-			th: ["var(--cloud)", 'Kanit', 'sans-serif'],
+			th: ['cloud', 'sans-serif'],
 			en: ['"Source Serif 4"', 'serif']
 		},
 		borderRadius: {
@@ -83,9 +85,12 @@ export default {
 				'0%': { "opacity": "0" },
 			  '100%': {"opacity": "1" },
 			},
+		},
+    screens: {
+			'sm': { 'raw': '(max-height: 667px)' }, 
 		}
   	}
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+} satisfies Config
