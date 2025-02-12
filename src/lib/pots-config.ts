@@ -8,7 +8,7 @@ export const potImagesLeft = [
   {
     src: "/icons/pot/potIndigo.png",
     label: "Family",
-    pos: " right-[50px]",
+    pos: "right-[50px]",
     glow: "/icons/potGlow/potIndigoGlow.png",
   },
   {
