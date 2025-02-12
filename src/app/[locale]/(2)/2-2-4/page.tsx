@@ -14,8 +14,6 @@ const Scene2_2Page4: React.FC = () => {
   const motivationGoals: motivationGoal[] = JSON.parse(
     getLocalStorageWithFallback("motivationGoal", "[]")
   );
-  // eslint-disable-next-line no-console
-  console.log(motivationGoals);
   // available colors: blue, yellow, purple, green, red, orange, pink, cyan
   const colors = motivationGoals.map((motivationGoal) => {
     switch (motivationGoal.name) {
@@ -43,8 +41,6 @@ const Scene2_2Page4: React.FC = () => {
   const [sparkleImgs, setSparkleImgs] = useState<string[]>([]);
   const [pouringImg, setPouringImg] = useState<string>();
   const router = useRouter();
-  // eslint-disable-next-line no-console
-  console.log(pouringImg);
   useEffect(() => {
     for (const [i, color] of colors.entries()) {
       for (let j = 0; j <= 3; j++) {
