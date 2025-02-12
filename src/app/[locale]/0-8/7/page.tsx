@@ -6,7 +6,7 @@ import { useRouter } from "@/i18n/routing";
 import Image from "next/image";
 
 const Page = () => {
-  const router = useRouter(); // Initialize the router
+  const router = useRouter();
 
   const texts = [
     // 1
@@ -100,7 +100,7 @@ const Page = () => {
       style={{ cursor: "pointer" }}
     >
       <Image
-        src="/0-8/0-8-tree-7.webp" // Ensure the file is located in the public folder
+        src="/0-8/0-8-tree-7.webp"
         alt="Tree"
         layout="fill"
         objectFit="cover"
