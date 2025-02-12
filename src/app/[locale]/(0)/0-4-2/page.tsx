@@ -12,7 +12,9 @@ const Scene042 = () => {
 
   const [name, setName] = useState("");
   return (
-    <section className="w-full justify-center h-lvh flex flex-col">
+    <section
+      className="w-full justify-center h-lvh flex flex-col"
+    >
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -28,7 +30,7 @@ const Scene042 = () => {
           </h1>
           <NameInput placeholder={t("input")} name={name} setName={setName} />
         </div>
-        <div className="flex justify-start items-center h-full flex-col mt-[100px]">
+        <div className="font-bold flex justify-start items-center h-full flex-col mt-[100px]">
           <NextButton url="/0-5" disabled={!name} />
         </div>
       </motion.div>

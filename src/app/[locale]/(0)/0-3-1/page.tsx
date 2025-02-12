@@ -9,7 +9,10 @@ const Scene031 = () => {
   const t = useTranslations("0-3-1");
 
   return (
-    <section className="w-full justify-center h-lvh flex flex-col">
+    <section
+      className="w-full justify-center h-lvh flex flex-col"
+      
+    >
       <Shadow>
         <motion.div
           initial={{ opacity: 0 }}
@@ -18,12 +21,14 @@ const Scene031 = () => {
             duration: 1,
             delay: 1,
           }}
-          className="flex justify-center items-center h-full flex-col gap-5"
+          className="flex justify-center items-center h-full flex-col"
         >
-          <div className="flex justify-end h-full items-center flex-col  w-[320px] mt-40">
-            <h1 className="text-primaryblue justify-center text-[28px] mb-[10px] font-bold">
+          <div className="flex justify-end h-full flex-col">
+            <h1 className="text-primaryblue justify-center text-[28px]  font-bold">
               {t("title")}
             </h1>
+          </div>
+          <div className="flex justify-center h-full items-center flex-col  w-[320px] ">
             <MessageBox
               message={
                 <div className="flex flex-col text-primaryblue font-light text-[18px] w-auto leading-6 space-y-3">
@@ -46,8 +51,8 @@ const Scene031 = () => {
               BoxPadding="px-5 py-5"
             />
           </div>
-          <div className="flex justify-start mt-[90px] items-start h-full flex-col">
-            <NextButton url="/0-3-2" />
+          <div className="flex justify-start mt-10 items-start h-full flex-col">
+            <NextButton disabled={false} url="/0-3-2" />
           </div>
         </motion.div>
       </Shadow>

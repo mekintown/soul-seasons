@@ -3,6 +3,84 @@
     "next": "Next",
     "tap": "Tap to continue"
   },
+  "0-1":{
+    "btn":"Start"
+  },
+  "0-2":{
+    "title": "Trigger Warning",
+    "p1": {
+      "s1": "This website explores the journey of",
+      "s2": " rediscovering your lost self",
+      "and": " and",
+      "s3": " reflecting on the worries",
+      "or": " and",
+      "s4": "fears within your mind"
+    },
+    "p2":{
+      "s1": "The content revolves around",
+      "s2": " unachieved goals,facing obstacles and failures.",
+      "s3": " It should not be overanalyzed in terms of both the storyline and real life."
+    },
+    "p3":{
+      "s1": "If you feel uncomfortable at any point, you may stop immediately because ",
+      "s2": "your emotions come first. "
+    },
+    "btn": "Noted"
+  },
+  "0-3-1": {
+    "title": "Recommendation",
+    "p1":{
+      "s1":"This website takes approximately",
+      "s2":" 7-12 minutes.",
+      "s3":" For the best experience,",
+      "s4":" we recommend playing in a quiet environment,",
+      "s5": " turning on the background sound for an immersive atmosphere,",
+      "and": " and",
+      "s6": " letting your heart follow your feelings."
+    }
+  },
+  "0-3-2":{
+    "title": "For iOS Users",
+    "p1": {
+      "s1": "we suggest accessing the website via",
+      "s2": " Safari",
+      "s3": " and hiding the toolbar for an optimal display"
+    }
+  },
+  "0-4-1":{
+    "p1": {
+      "s1": "Welcome to",
+      "s2": "An interactive website that takes you on a journey to ",
+      "s3": " rediscover the parts of yourself that may have been lost along the way. ",
+      "s4": " Explore a world of imagination and the changing seasons of life to",
+      "s5": " reconnect with who you truly are."
+    }
+  },
+  "0-4-2":{
+    "title": "What should we call you?",
+    "input": "within xx characters"
+  },
+  "0-5":{
+    "p1":{
+      "s1": "Before we begin, take a  ",
+      "s2": "moment to think about ",
+      "s3": "your feelings.",
+      "s4": " How much",
+      "push": " strees ",
+      "or": "or ",
+      "stress": "pressure ",
+      "s5": "are you feeling right now?"
+    } 
+  },
+  "0-6": {
+    "p1": {
+      "s1": "A tree rises slowly, in silence it grows,",
+      "s2": "Its roots dig deep where no eye knows.",
+      "s3": "In sunlight it basks, in storms it sways,",
+      "s4": "Learning patience through seasons' plays."
+    }
+  },
+  
   "1-2-1": {
     "name": "You",
     "importantPerson": "Someone important"
@@ -19,81 +97,6 @@
   "1-2-6": {
     "dontSee": "It seems like they can’t see you. What happened? Can you remember anything?"
   },
-  "0-1": {
-    "btn": "Start"
-  },
-  "0-2": {
-    "title": "Trigger Warning",
-    "p1": {
-      "s1": "This website explores the journey of",
-      "s2": " rediscovering your lost self",
-      "and": " and",
-      "s3": " reflecting on the worries",
-      "or": " and",
-      "s4": "fears within your mind"
-    },
-    "p2": {
-      "s1": "The content revolves around",
-      "s2": " unachieved goals,facing obstacles and failures.",
-      "s3": " It should not be overanalyzed in terms of both the storyline and real life."
-    },
-    "p3": {
-      "s1": "If you feel uncomfortable at any point, you may stop immediately because ",
-      "s2": "your emotions come first. "
-    },
-    "btn": "Noted"
-  },
-  "0-3-1": {
-    "title": "Recommendation",
-    "p1": {
-      "s1": "This website takes approximately",
-      "s2": " 7-12 minutes.",
-      "s3": " For the best experience,",
-      "s4": " we recommend playing in a quiet environment,",
-      "s5": " turning on the background sound for an immersive atmosphere,",
-      "and": " and",
-      "s6": " letting your heart follow your feelings."
-    }
-  },
-  "0-3-2": {
-    "title": "For iOS Users",
-    "p1": {
-      "s1": "we suggest accessing the website via",
-      "s2": " Safari",
-      "s3": " and hiding the toolbar for an optimal display"
-    }
-  },
-  "0-4-1": {
-    "p1": {
-      "s1": "Welcome to",
-      "s2": "An interactive website that takes you on a journey to ",
-      "s3": " rediscover the parts of yourself that may have been lost along the way. ",
-      "s4": " Explore a world of imagination and the changing seasons of life to",
-      "s5": " reconnect with who you truly are."
-    }
-  },
-  "0-4-2": {
-    "title": "What should we call you?",
-    "input": "within xx characters"
-  },
-  "0-5": {
-    "p1": {
-      "s1": "Before we begin, ",
-      "s2": "take a moment to think about your feelings. How much ",
-      "push": "pressure ",
-      "or": "or ",
-      "stress": "stress ",
-      "s3": "are you feeling right now?"
-    }
-  },
-  "0-6": {
-    "p1": {
-      "s1": "A tree rises slowly, in silence it grows,",
-      "s2": "Its roots dig deep where no eye knows.",
-      "s3": "In sunlight it basks, in storms it sways,",
-      "s4": "Learning patience through seasons' plays."
-    }
-  },
   "1-3-1": {
     "name": "You",
     "importantPerson": "Someone important"
@@ -103,23 +106,19 @@
     "importantPerson": "Someone important",
     "name": "You"
   },
-  "1-3-6": { "diaryHere": "Wait, it looks like there’s a diary lying there." },
+  "1-3-6": {
+     "diaryHere": "Wait, it looks like there’s a diary lying there." 
+  },
   "1-4-1": {
     "thereMightBe": "There might be some clues inside.\nDo you want to open it and take a look?",
     "name": "You",
     "importantPerson": "Someone important"
   },
-  "2-1": {
-    "p1": {
-      "s1": "What is the motivation behind your goal? ",
-      "s2": "Help add some fertilizer to your tree.",
-      "s3": ""
-    }
-  },
   "1-4-2": {
     "name": "You",
     "importantPerson": "Someone important"
   },
+
   "1-4-4": {
     "theDiary": "The diary records the story of you and\nsomeone important planting a tree together",
     "planting": "Planting a tree is like\nstarting something new.\nWhen you planted this tree,\nyou wrote down your goal\nin the diary."
@@ -127,12 +126,21 @@
   "1-4-6": {
     "whatIsAGoal": "What is a goal you are currently\nworking on but haven’t achieved yet?"
   },
-  "2-2": {
-    "p1": {
-      "s1": "What is the motivation behind your goal? ",
+  "2-2-1": {
+    "p1":{
+      "s1":"What is the motivation behind your goal? ",
       "s2": "Help add some fertilizer to your tree.",
       "s3": ""
-    }
+    },
+    "btn":"Next"
+  },
+  "2-2-2": {
+    "p1":{
+      "s1":"What is the motivation behind your goal? ",
+      "s2": "Help add some fertilizer to your tree.",
+      "s3": ""
+    },
+    "btn":"Next"
   },
   "2-3-1": {
     "importantPerson": "Important Person",
@@ -140,9 +148,49 @@
     "motivations": "They",
     "isMotivations": "are the motivations driving you toward your goal, aren’t they?"
   },
-  "2-3-2": {
+ "2-3-2": {
     "importantPerson": "Important Person",
     "ifYouKnow": "Now that you know this... best of luck!"
+  },
+  "3-1-2":{
+    "p1":{
+      "s1": "I’m sorry, ",
+      "s2":"I’ve been so busy",
+      "s3": "lately. I don’t think I’ll be able to",
+      "s4": "visit the tree this season."
+    }
+  },
+  "3-1-3": {
+    "p1": {
+      "s1": "It must have been such a tiring ",
+      "s2": "journey to get here, right?"
+    }
+  },
+  "3-1-4": {
+    "p1": {
+      "s1": "But even after all ",
+      "s2": "this effort… I still haven’t reached",
+      "s3": "my goal. Why is that…?"
+    }
+  },
+  "3-1-5": {
+    "title":{
+      "s1": "From the goals you’ve set, what ",
+      "s2":"are the obstacles that keep you",
+      "s3": "from reaching them?"
+    },
+    "p1": {
+      "s1": "I'm not good enough.",
+      "s2": "I don't prioritize the important things close to me enough.",
+      "s3": "I don't love myself enough.",
+      "s4": "I fear not being accepted.",
+      "s5": "I struggle with time management.",
+      "s6": "I lack self-confidence.",
+      "s7": "I haven't found enough inspiration.",
+      "s8": "I'm too driven, to the point of losing sight of the journey.",
+      "s9": "I feel pressured by society.",
+      "s10": "I feel overwhelmed by a world that moves too fast."
+    }
   },
   "3-2-11": {
     "name": "You",
@@ -150,6 +198,24 @@
   },
   "3-2-12": {
     "rainDoll": "Maybe... try tapping on the rain doll?"
+  },
+  "3-3-1": {
+    "name": "You",
+    "why": "“Why... does it feel\nlike the rain will never end?”"
+  },
+  "3-3-2": {
+    "name": "You",
+    "asIf": "“As if...it will keep\nfalling forever.”"
+  },
+  "3-3-3": {
+    "name": "You",
+    "asIf": "“Both the rain outside...\nand the rain within my heart.”"
+  },
+  "3-3-4": {
+    "perhaps": "Perhaps...this is the moment to\nfinally face your fears"
+  },
+  "3-3-5": {
+    "areYou": "Are you ready to let go of the umbrella\nand walk through the rain to overcome it?"
   },
   "4-1-5": {
     "goodJob": "You’ve been so brave... having the courage to make a decisive step about something you’ve been uncertain about for so long"
@@ -181,23 +247,5 @@
   "4-1-14": { "dontKnow": "I don’t know if anyone has ever told you this..." },
   "4-1-15": {
     "wantYouToKnow": "but I need you to know that, despite everything you’ve been through, you’ve blossomed and grown into something truly beautiful. So proud of you. 😊"
-  },
-  "3-3-1": {
-    "name": "You",
-    "why": "“Why... does it feel\nlike the rain will never end?”"
-  },
-  "3-3-2": {
-    "name": "You",
-    "asIf": "“As if...it will keep\nfalling forever.”"
-  },
-  "3-3-3": {
-    "name": "You",
-    "asIf": "“Both the rain outside...\nand the rain within my heart.”"
-  },
-  "3-3-4": {
-    "perhaps": "Perhaps...this is the moment to\nfinally face your fears"
-  },
-  "3-3-5": {
-    "areYou": "Are you ready to let go of the umbrella\nand walk through the rain to overcome it?"
   }
 }

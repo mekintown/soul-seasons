@@ -3,6 +3,7 @@
 import { backgroundMapConfig } from "@/lib/bg-config";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image, { ImageProps } from "next/image";
 import { useEffect, useState } from "react";
 
@@ -55,7 +56,7 @@ const AnimatedImage = ({
           <Image src={currentSrc} alt={alt} {...props} />
         </motion.div>
       </AnimatePresence>
-      {preloadSrcs.map((source) => (
+      {preloadSrcs.map((source: string | StaticImport) => (
         <Image
           key={`preload-${source}`}
           src={source}
