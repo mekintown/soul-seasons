@@ -1,6 +1,5 @@
 "use client";
 import DelayedFullScreenLink from "@/components/ui/DelayedFullScreenLink";
-import NextDisplay from "@/components/ui/nextDisplay";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { getLocalStorageWithFallback } from "@/lib/localstorageUtils";
