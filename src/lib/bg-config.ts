@@ -1,4 +1,4 @@
-export const backgroundMapConfig = {
+export const backgroundMapConfig: any = {
   "0": {
     image: "/background/0.png",
     imagePreload: [],
@@ -156,6 +156,24 @@ export const backgroundMapConfig = {
     stopMotionDuration: 1000,
     imagePreload: [],
   },
+  "2-2-1": {
+    image: [
+      "/background/2-2-1-db.png",
+      "/background/2-2-1-blur.png",
+      "/background/2-2-1.png",
+    ],
+    stopMotionDuration: 2000,
+    imagePreload: ["/background/2-2-2.png"],
+  },
+  "2-2-2": {
+    image: "/background/2-2-2.png",
+    stopMotionDuration: 1000,
+    imagePreload: [],
+  },
+  "2-2-4": {
+    image: "/background/2-2-4.webp",
+    imagePreload: ["/background/2-3-1.png"],
+  },
   "2-3-1": {
     image: "/background/2-3-1.png",
     imagePreload: [],
@@ -166,35 +184,26 @@ export const backgroundMapConfig = {
   },
   "2-3-3": {
     image: "/background/2-3-1.png",
-    imagePreload: [],
-  },
-  "2-3-4": {
-    image: "/background/2-3-1.png",
-    imagePreload: ["/background/2-3-5.png"],
+    imagePreload: [
+      "/background/2-3-5.png",
+      "/background/2-3-6.png",
+      "/background/2-3-7.png",
+      "/background/2-3-8.png",
+      "/background/2-3-9.png",
+      "/background/2-3-10.png",
+    ],
   },
   "2-3-5": {
-    image: "/background/2-3-5.png",
-    imagePreload: ["/background/2-3-6.png"],
-  },
-  "2-3-6": {
-    image: "/background/2-3-6.png",
-    imagePreload: ["/background/2-3-7.png"],
-  },
-  "2-3-7": {
-    image: "/background/2-3-7.png",
-    imagePreload: ["/background/2-3-8.png"],
-  },
-  "2-3-8": {
-    image: "/background/2-3-8.png",
-    imagePreload: ["/background/2-3-9.png"],
-  },
-  "2-3-9": {
-    image: "/background/2-3-9.png",
-    imagePreload: ["/background/2-3-10.png"],
-  },
-  "2-3-10": {
-    image: "/background/2-3-10.png",
-    imagePreload: ["/background/3-1-1.png"],
+    image: [
+      "/background/2-3-5.png",
+      "/background/2-3-6.png",
+      "/background/2-3-7.png",
+      "/background/2-3-8.png",
+      "/background/2-3-9.png",
+      "/background/2-3-10.png",
+    ],
+    stopMotionDuration: 1000,
+    imagePreload: [],
   },
   "2-7": {
     image: [
@@ -310,12 +319,157 @@ export const backgroundMapConfig = {
     stopMotionDuration: 1000,
     imagePreload: []
   },
+  "3-1-1": {
+    image: "/background/3-1.gif",
+    imagePreload: [],
+  },
+  "3-1-2": {
+    image: "/background/3-1.gif",
+    imagePreload: [],
+  },
+  "3-1-3": {
+    image: "/background/3-1.gif",
+    imagePreload: [],
+  },
+  "3-1-4": {
+    image: "/background/3-1.gif",
+    imagePreload: [],
+  },
+  "3-1-5": {
+    image: "/background/3-1.gif",
+    imagePreload: [],
+  },
+
   "3-2-11": {
+    image: "/background/3-2-11_3.gif",
+    imagePreload: ["/background/3-2-11_1.gif", "/background/3-2-11_2.gif"],
+  },
+  "3-2-12": {
+    // images use zustand state
+    imagePreload: [],
+  },
+  "3-3-1": {
+    image: "/background/3-3-1.gif",
+    imagePreload: [],
+  },
+  "3-3-2": {
+    image: "/background/3-3-1.gif",
+    imagePreload: [],
+  },
+  "3-3-3": {
+    image: "/background/3-3-1.gif",
+    imagePreload: [],
+  },
+  "3-3-4": {
+    image: "/background/3-3-1.gif",
+    imagePreload: [],
+  },
+  "3-3-5": {
+    image: "/background/3-3-1.gif",
+    imagePreload: [],
+  },
+  "3-3-6": {
+    image: "/background/3-3-1.gif",
+    imagePreload: [
+      "/background/3-3-7.webp",
+      "/background/3-3-8.webp",
+      "/background/3-3-9.webp",
+      "/background/3-3-10.webp",
+      "/background/3-3-11.webp",
+      "/background/3-3-12.webp",
+      "/background/3-3-13.webp",
+      "/background/3-3-14.webp",
+    ],
+  },
+  "3-3-7": {
     image: [
-      "/background/3-2-6-1.png",
-      "/background/3-2-6-2.png",
+      "/background/3-3-7.webp",
+      "/background/3-3-8.webp",
+      "/background/3-3-9.webp",
+      "/background/3-3-10.webp",
+      "/background/3-3-11.webp",
+      "/background/3-3-12.webp",
+      "/background/3-3-13.webp",
+      "/background/3-3-14.webp",
     ],
     stopMotionDuration: 1000,
-    imagePreload: []
+    imagePreload: [],
+  },
+  "4-1-1": {
+    image: [
+      "/background/4-1-1.png",
+      "/background/4-1-2.png",
+      "/background/4-1-3.png",
+      "/background/4-1-4.gif",
+    ],
+    stopMotionDuration: 1000,
+    imagePreload: [],
+  },
+
+  "4-1-4": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-5": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-6": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-7": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-8": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-9": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-10": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-11": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-12": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-13": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-14": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [],
+  },
+  "4-1-15": {
+    image: "/background/4-1-4.gif",
+    imagePreload: [
+      "/background/4-1-17.png",
+      "/background/4-1-18.png",
+      "/background/4-1-19.png",
+      "/background/4-1-20.png",
+      "/background/4-1-21.png",
+    ],
+  },
+  "4-1-16": {
+    image: [
+      "/background/4-1-4.gif",
+      "/background/4-1-17.png",
+      "/background/4-1-18.png",
+      "/background/4-1-19.png",
+      "/background/4-1-20.png",
+      "/background/4-1-21.png",
+    ],
+    stopMotionDuration: 1000,
+    imagePreload: [],
   },
 } as const;
