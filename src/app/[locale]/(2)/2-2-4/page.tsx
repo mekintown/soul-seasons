@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 "use client";
 import { useRouter } from "@/i18n/routing";
 import { getLocalStorageWithFallback } from "@/lib/localstorageUtils";
@@ -51,8 +50,6 @@ const Scene2_2Page4: React.FC = () => {
             if (j === 3) {
               setSparkleImgs((oldSparkleImgs) => {
                 const newSparkle = `/img/motivation/sparkle-${color}-1x.webp`;
-                console.log(oldSparkleImgs);
-                console.log(newSparkle);
                 return oldSparkleImgs.includes(newSparkle)
                   ? oldSparkleImgs
                   : [...oldSparkleImgs, newSparkle];
@@ -88,7 +85,6 @@ const Scene2_2Page4: React.FC = () => {
           alt="christmas-tree"
         />
       </div>
-      console.log()
       {pouringImg ? (
         <div className="w-full h-full absolute -bottom-[72px]">
           <AnimatePresence mode="popLayout">
