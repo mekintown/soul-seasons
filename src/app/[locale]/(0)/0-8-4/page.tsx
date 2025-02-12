@@ -4,15 +4,26 @@ import { motion } from "framer-motion";
 import { useState, useEffect, CSSProperties } from "react";
 import { useRouter } from "@/i18n/routing";
 import Image from "next/image";
-import SlideUnlock from "@/components/ui/slide-to-unlock";
 
-const OnePage = () => {
+const Page = () => {
   const router = useRouter();
-  const [isUnlocked, setIsUnlocked] = useState(false); // Track if the slider is unlocked
-  const [currentTextIndex, setCurrentTextIndex] = useState(0);
 
   const texts = [
     // 1
+    {
+      text: (
+        <>
+          <span className="font-th text-[#182649] opacity-40"></span>
+        </>
+      ),
+      style: {
+        fontSize: "18px",
+        marginTop: 30,
+        marginBottom: 82,
+        textAlign: "center" as CSSProperties["textAlign"],
+      },
+    },
+    // 2
     {
       text: (
         <div
@@ -20,8 +31,8 @@ const OnePage = () => {
           style={{
             minHeight: "10vh",
             minWidth: "22vh",
-            marginTop: 240,
-            right: "25%",
+            marginBottom: 400,
+            left: "35%",
           }}
         >
           {/* Background Image */}
@@ -39,7 +50,7 @@ const OnePage = () => {
               textAlign: "center",
             }}
           >
-            เริ่มต้นได้ดี
+            สำเร็จไปอีกขั้นแล้วนะ
           </span>
         </div>
       ),
@@ -50,7 +61,7 @@ const OnePage = () => {
         textAlign: "center" as CSSProperties["textAlign"],
       },
     },
-    // 2
+    // 3
     {
       text: (
         <>
@@ -66,16 +77,14 @@ const OnePage = () => {
     },
   ];
 
-  useEffect(() => {
-    if (!isUnlocked) {
-      return; // Start only after unlocking
-    }
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
 
+  useEffect(() => {
     const interval = setInterval(() => {
       const nextIndex = currentTextIndex + 1;
 
       if (nextIndex === texts.length) {
-        router.push("/0-8/2");
+        router.push("/0-8/5");
         clearInterval(interval);
         return;
       }
@@ -83,7 +92,7 @@ const OnePage = () => {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [currentTextIndex, texts.length, router, isUnlocked]);
+  }, [currentTextIndex, texts.length, router]);
 
   return (
     <div
@@ -91,32 +100,31 @@ const OnePage = () => {
       style={{ cursor: "pointer" }}
     >
       <Image
-        src="/0-8/0-8-tree-1.webp"
+        src="/0-8/0-8-tree-4.webp"
         alt="Tree"
         layout="fill"
         objectFit="cover"
-        className="absolute z-0 opacity-50"
+        className="absolute z-0"
       />
-      {!isUnlocked && (
-        <SlideUnlock
-          onUnlock={() => setIsUnlocked(true)}
-          className="absolute top-[85%] left-1/2 transform -translate-x-1/2"
-        />
-      )}
-      {isUnlocked && (
-        <motion.div
-          key={currentTextIndex}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.7, ease: "easeInOut" }}
-          style={{ ...texts[currentTextIndex].style, position: "relative" }}
-        >
-          {texts[currentTextIndex].text}
-        </motion.div>
-      )}
+
+      <motion.div
+        key={currentTextIndex}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{
+          duration: 0.7,
+          ease: "easeInOut",
+        }}
+        style={{
+          ...texts[currentTextIndex].style,
+          position: "relative",
+        }}
+      >
+        {texts[currentTextIndex].text}
+      </motion.div>
     </div>
   );
 };
 
-export default OnePage;
+export default Page;

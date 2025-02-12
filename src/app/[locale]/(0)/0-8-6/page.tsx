@@ -4,15 +4,26 @@ import { motion } from "framer-motion";
 import { useState, useEffect, CSSProperties } from "react";
 import { useRouter } from "@/i18n/routing";
 import Image from "next/image";
-import SlideUnlock from "@/components/ui/slide-to-unlock";
 
-const OnePage = () => {
+const Page = () => {
   const router = useRouter();
-  const [isUnlocked, setIsUnlocked] = useState(false); // Track if the slider is unlocked
-  const [currentTextIndex, setCurrentTextIndex] = useState(0);
 
   const texts = [
     // 1
+    {
+      text: (
+        <>
+          <span className="font-th text-[#182649] opacity-40"></span>
+        </>
+      ),
+      style: {
+        fontSize: "18px",
+        marginTop: 30,
+        marginBottom: 82,
+        textAlign: "center" as CSSProperties["textAlign"],
+      },
+    },
+    // 2
     {
       text: (
         <div
@@ -20,8 +31,8 @@ const OnePage = () => {
           style={{
             minHeight: "10vh",
             minWidth: "22vh",
-            marginTop: 240,
-            right: "25%",
+            marginBottom: 250,
+            left: "30%",
           }}
         >
           {/* Background Image */}
@@ -39,7 +50,7 @@ const OnePage = () => {
               textAlign: "center",
             }}
           >
-            เริ่มต้นได้ดี
+            ต้องพยายามอีกแค่ไหนกัน
           </span>
         </div>
       ),
@@ -50,7 +61,57 @@ const OnePage = () => {
         textAlign: "center" as CSSProperties["textAlign"],
       },
     },
-    // 2
+    // 3
+    {
+      text: (
+        <div>
+          <div className="relative w-full h-full flex justify-center items-center min-h-[10vh] min-w-[22vh] mb-[60px] right-[30%]">
+            {/* Background Image */}
+            <img
+              src="/0-8/0-8-text.webp"
+              alt=""
+              className="absolute inset-0 w-full h-full object-cover z-0"
+            />
+
+            {/* Text Content */}
+            <span
+              className="font-th text-[#182649] z-10 text-center"
+              style={{
+                fontSize: "18px",
+              }}
+            >
+              เหนื่อยจัง
+            </span>
+          </div>
+
+          <div className="relative w-full h-full flex justify-center items-center opacity-50 min-h-[10vh] min-w-[22vh] mb-[400px] left-[30%]">
+            {/* Background Image */}
+            <img
+              src="/0-8/0-8-text.webp"
+              alt=""
+              className="absolute inset-0 w-full h-full object-cover z-0"
+            />
+
+            {/* Text Content */}
+            <span
+              className="font-th text-[#182649] z-10 text-center"
+              style={{
+                fontSize: "18px",
+              }}
+            >
+              ต้องพยายามอีกแค่ไหนกัน
+            </span>
+          </div>
+        </div>
+      ),
+      style: {
+        fontSize: "18px",
+        marginTop: 5,
+        marginBottom: 137,
+        textAlign: "center" as CSSProperties["textAlign"],
+      },
+    },
+    // 4
     {
       text: (
         <>
@@ -66,16 +127,14 @@ const OnePage = () => {
     },
   ];
 
-  useEffect(() => {
-    if (!isUnlocked) {
-      return; // Start only after unlocking
-    }
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
 
+  useEffect(() => {
     const interval = setInterval(() => {
       const nextIndex = currentTextIndex + 1;
 
       if (nextIndex === texts.length) {
-        router.push("/0-8/2");
+        router.push("/0-8/7");
         clearInterval(interval);
         return;
       }
@@ -83,7 +142,7 @@ const OnePage = () => {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [currentTextIndex, texts.length, router, isUnlocked]);
+  }, [currentTextIndex, texts.length, router]);
 
   return (
     <div
@@ -91,32 +150,31 @@ const OnePage = () => {
       style={{ cursor: "pointer" }}
     >
       <Image
-        src="/0-8/0-8-tree-1.webp"
+        src="/0-8/0-8-tree-6.webp"
         alt="Tree"
         layout="fill"
         objectFit="cover"
-        className="absolute z-0 opacity-50"
+        className="absolute z-0"
       />
-      {!isUnlocked && (
-        <SlideUnlock
-          onUnlock={() => setIsUnlocked(true)}
-          className="absolute top-[85%] left-1/2 transform -translate-x-1/2"
-        />
-      )}
-      {isUnlocked && (
-        <motion.div
-          key={currentTextIndex}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.7, ease: "easeInOut" }}
-          style={{ ...texts[currentTextIndex].style, position: "relative" }}
-        >
-          {texts[currentTextIndex].text}
-        </motion.div>
-      )}
+
+      <motion.div
+        key={currentTextIndex}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{
+          duration: 0.7,
+          ease: "easeInOut",
+        }}
+        style={{
+          ...texts[currentTextIndex].style,
+          position: "relative",
+        }}
+      >
+        {texts[currentTextIndex].text}
+      </motion.div>
     </div>
   );
 };
 
-export default OnePage;
+export default Page;
