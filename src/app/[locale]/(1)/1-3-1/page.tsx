@@ -18,7 +18,7 @@ const Page1_3_1 = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       router.push("1-3-2");
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [router]);
