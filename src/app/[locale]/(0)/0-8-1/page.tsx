@@ -9,11 +9,11 @@ import { useLocale } from "next-intl"; // Import useLocale
 const Page0_8_1 = () => {
   const [isUnlocked, setIsUnlocked] = useState(false);
   const router = useRouter();
-  const locale = useLocale(); // Get the current locale
+  const locale = useLocale();
 
   const handleUnlock = () => {
     setIsUnlocked(true);
-    router.push(`/${locale}/0-8-2`); // Navigate with locale prefix
+    router.push(`/${locale}/0-8-2`);
   };
 
   return (
