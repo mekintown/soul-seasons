@@ -40,7 +40,7 @@ const Marker: React.FC<MessageBoxProps> = ({ stressScore }) => {
           stroke-linecap="round"
         />
       </svg>
-      <div className="absolute top-0 h-full w-full text-primaryblue font-light text-lg">
+      <div className="absolute top-0 h-full w-full text-primaryblue font-light text-lg text-center">
         {stressScore}
       </div>
     </>
