@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { getLocalStorageWithFallback } from "@/lib/localstorageUtils";
 import { motion } from "framer-motion";
+import { motivationColorMapping } from "@/lib/color";
 
 interface MotivationGoal {
   index: string;
@@ -20,20 +21,8 @@ const SparklingChristmasTree: React.FC<SparklingChristmasTreeProps> = ({
     getLocalStorageWithFallback("motivationGoal", "[]")
   );
 
-  // TODO: Extract this into a util
-  const colorMapping: Record<string, string> = {
-    Family: "blue",
-    "Finance/Money": "yellow",
-    "Spirituality/Religion": "purple",
-    Health: "green",
-    "Relationships/Friends": "red",
-    "Sharing/Contribution": "orange",
-    "Career/Work": "pink",
-    "Self-Development": "cyan",
-  };
-
   const selectedColors = motivationGoals
-    .map((goal) => colorMapping[goal.name] || "blue")
+    .map((goal) => motivationColorMapping(goal.name))
     .slice(0, 3);
 
   return (
