@@ -8,12 +8,12 @@ type SortedWeight = {
     // Separate items into Motivation and Obstacle (case-insensitive)
     const motivationWeights = sortedWeights
       .filter(item => item.category.toLowerCase() === "motivation")
-      .sort((a, b) => b.weight - a.weight);
-  
+     
+      
     const obstacleWeights = sortedWeights
       .filter(item => item.category.toLowerCase() === "obstacle")
-      .sort((a, b) => b.weight - a.weight);
-  
+      
+      
     // If there is no data for either category, default to "กลาง" (Mid)
     if (motivationWeights.length === 0 && obstacleWeights.length === 0) {
       return "กลาง";

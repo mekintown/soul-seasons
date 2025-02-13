@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
-import { useCalculation } from "./calculation"; // Custom hook for calculations
-
+import { useCalculation } from "../../../../lib/calculation"; // Custom hook for calculations
+import { useTranslations } from "next-intl";
 // Define your types (optional, but useful)
 type Motivation = {
   index: number;
@@ -12,7 +12,8 @@ const Logic = () => {
   // Initialize state with proper types
   const [motivation, setMotivation] = useState<Motivation[]>([]);
   const [obstacles, setObstacles] = useState<string[]>([]);
-  const [speed, setSpeed] = useState(1);
+  const [speed, setSpeed] = useState(10);
+  const t = useTranslations();
 //   speed need to get from localstorage
 
   useEffect(() => {

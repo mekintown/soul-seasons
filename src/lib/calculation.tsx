@@ -40,22 +40,35 @@ const [sortedSubConcepts, setSortedSubConcepts] = useState<WeightedSubConcept[]>
     let selectedMotSubConcept: string[] = [];
     let selectedObsSubConcept: string[] = [];
 
+    switch (distinctMotSubConcepts.length) {
+      case 2:
+        selectedMotSubConcept = distinctMotSubConcepts;
+        break;
+      case 3:
+        selectedMotSubConcept = motivation
+          .slice(0, 2)
+          .map((mot) => motivationMap[mot.name]);
+        break;
+      default:
+        selectedMotSubConcept = distinctMotSubConcepts;
+        break;
+    }
     
-    if (distinctMotSubConcepts.length === 2) {
-      selectedMotSubConcept = distinctMotSubConcepts;
-    } else if (distinctMotSubConcepts.length === 3) {
-      selectedMotSubConcept = motivation.slice(0, 2).map((mot) => motivationMap[mot.name]);
-    } else {
-      selectedMotSubConcept = distinctMotSubConcepts;
+    switch (distinctObsSubConcepts.length) {
+      case 2:
+        selectedObsSubConcept = distinctObsSubConcepts.flat();
+        break;
+      case 3:
+        selectedObsSubConcept = obstacles
+          .slice(0, 2)
+          .map((obs) => obstacleMapping[obs])
+          .flat();
+        break;
+      default:
+        selectedObsSubConcept = distinctObsSubConcepts.flat();
+        break;
     }
-
-    if (distinctObsSubConcepts.length === 2) {
-      selectedObsSubConcept = distinctObsSubConcepts.flat();
-    } else if (distinctObsSubConcepts.length === 3) {
-      selectedObsSubConcept = obstacles.slice(0, 2).map((obs) => obstacleMapping[obs]).flat();
-    } else {
-      selectedObsSubConcept = distinctObsSubConcepts.flat();
-    }
+    
     setSubConceptMotivation(selectedMotSubConcept);
     setSubConceptObstacles(selectedObsSubConcept);
     const motivationWeight = 0.9;            
@@ -85,11 +98,10 @@ const [sortedSubConcepts, setSortedSubConcepts] = useState<WeightedSubConcept[]>
     const sortedWeight = combinedWeighted.sort((a, b) => b.weight - a.weight);
     
     const season = Seasons(sortedWeight);
-    // eslint-disable-next-line @typescript-eslint/no-shadow
-    const chapter = Chapter(sortedWeight);
+    const chapters = Chapter(sortedWeight);
     setSortedSubConcepts(combinedWeighted);
     setSeasons(season);
-    setChapter(chapter);
+    setChapter(chapters);
     
 
 

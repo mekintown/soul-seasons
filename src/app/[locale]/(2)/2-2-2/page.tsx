@@ -6,7 +6,6 @@ import { useState, useEffect } from 'react';
 import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
 import {getPotImages} from "@/lib/pots-config";
-import ChristmasTree from '../../../../img/background/christmas tree  1.png';
 
 
 const Scene2_2Page2 = () => {
@@ -59,7 +58,7 @@ const Scene2_2Page2 = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0 }}
                 className="absolute bottom-[40px] w-full h-full flex justify-center items-center">
-                    <img src={ChristmasTree.src} alt="Christmas Tree"/>
+                    <img src="/img/motivation/christmas-tree-1.png" alt="Christmas Tree"/>
               </motion.div>
 
             {/* Intro Text */}
