@@ -240,13 +240,37 @@
   },
   "3-3-3": {
     "name": "You",
-    "asIf": "“Both the rain outside...\nand the rain within my heart.”"
+    "both": "“Both the rain outside...\nand the rain within my heart.”"
   },
   "3-3-4": {
     "perhaps": "Perhaps...this is the moment to\nfinally face your fears"
   },
   "3-3-5": {
     "areYou": "Are you ready to let go of the umbrella\nand walk through the rain to overcome it?"
+  },
+  "6-3-2": {
+    "butBefore": "But before you open the gift, we’d like you\nto take a moment to reflect on your\nfeelings right now, after navigating through\nthe changing seasons of your mind."
+  },
+  "6-3-3": {
+    "after": "After gaining insight into your goals,\ninspirations, and fears."
+  },
+  "6-3-4": {
+    "howDo": "How do you feel about this journey?\n1 Not satisfied at all - 10 Extremely happy"
+  },
+  "6-3-5": {
+    "andAt": "And at this moment, how much stress or\nworry do you feel in your mind?\n1 being the least - 10 being the most"
+  },
+  "6-3-7": {
+    "iSee": "I see now. So, this is how you’ve been\nfeeling. But no matter how you feel right\nnow, the most important thing is that\nyou’ve come to understand your own\nfeelings."
+  },
+  "6-3-8": {
+    "feeling": "Feeling lost might seem scary, but we all\nexperience that sometimes.\nYou might feel lost again in the future, "
+  },
+  "6-3-9": {
+    "butLet": "but let today’s journey be the start of\nrediscovering yourself."
+  },
+  "6-3-10": {
+    "iHope": "I hope you’ll take time to reflect on your\nfeelings and not lose yourself so often."
   },
   "6-1-1": {
     "importantPerson": "Important Person",
