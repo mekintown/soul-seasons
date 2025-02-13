@@ -1,5 +1,6 @@
 "use client";
 import { useRouter } from "@/i18n/routing";
+import { motivationColorMapping } from "@/lib/color";
 import { getLocalStorageWithFallback } from "@/lib/localstorageUtils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
@@ -14,29 +15,11 @@ const Scene2_2Page4: React.FC = () => {
   const motivationGoals: motivationGoal[] = JSON.parse(
     getLocalStorageWithFallback("motivationGoal", "[]")
   );
-  // available colors: blue, yellow, purple, green, red, orange, pink, cyan
-  const colors = motivationGoals.map((motivationGoal) => {
-    switch (motivationGoal.name) {
-      case "Family":
-        return "blue";
-      case "Finance/Money":
-        return "yellow";
-      case "Spirituality":
-        return "purple";
-      case "Health":
-        return "green";
-      case "Relationship/Friends":
-        return "red";
-      case "Sharing/Contribution":
-        return "orange";
-      case "Career/Work":
-        return "pink";
-      case "Self-Development":
-        return "cyan";
-      default:
-        return "blue";
-    }
+
+  const colors = motivationGoals.map((motivation) => {
+    return motivationColorMapping(motivation.name);
   });
+
   const stopMotionDuration = 600;
   const [sparkleImgs, setSparkleImgs] = useState<string[]>([]);
   const [pouringImg, setPouringImg] = useState<string>();
@@ -44,25 +27,22 @@ const Scene2_2Page4: React.FC = () => {
   useEffect(() => {
     for (const [i, color] of colors.entries()) {
       for (let j = 0; j <= 3; j++) {
-        setTimeout(
-          () => {
-            setPouringImg(`/img/motivation/${j}-${color}-1x.webp`);
-            if (j === 3) {
-              setSparkleImgs((oldSparkleImgs) => {
-                const newSparkle = `/img/motivation/sparkle-${color}-1x.webp`;
-                return oldSparkleImgs.includes(newSparkle)
-                  ? oldSparkleImgs
-                  : [...oldSparkleImgs, newSparkle];
-              });
-            }
-            if (i === colors.length - 1 && j === 3) {
-              setTimeout(() => {
-                router.push("2-3-2");
-              }, stopMotionDuration / 2);
-            }
-          },
-          (i * 4 + j + 1) * stopMotionDuration
-        );
+        setTimeout(() => {
+          setPouringImg(`/img/motivation/${j}-${color}-1x.webp`);
+          if (j === 3) {
+            setSparkleImgs((oldSparkleImgs) => {
+              const newSparkle = `/img/motivation/sparkle-${color}-1x.webp`;
+              return oldSparkleImgs.includes(newSparkle)
+                ? oldSparkleImgs
+                : [...oldSparkleImgs, newSparkle];
+            });
+          }
+          if (i === colors.length - 1 && j === 3) {
+            setTimeout(() => {
+              router.push("2-3-2");
+            }, stopMotionDuration / 2);
+          }
+        }, (i * 4 + j + 1) * stopMotionDuration);
       }
     }
   }, []);

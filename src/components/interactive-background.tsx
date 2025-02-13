@@ -14,6 +14,20 @@ const InteractiveBackground = () => {
   const { backgroundState } = useBackgroundStore();
   useEffect(() => {
     switch (page) {
+      case "1-3-2":
+        backgroundMapConfig[page].image.forEach(
+          (image: SetStateAction<string | undefined>, index: number) => {
+            setTimeout(() => {
+              setBgImgSrc(image);
+              if (index === backgroundMapConfig[page].image.length - 1) {
+                setTimeout(() => {
+                  router.push("1-3-6");
+                }, backgroundMapConfig[page].stopMotionDuration / 2);
+              }
+            }, index * backgroundMapConfig[page].stopMotionDuration);
+          }
+        );
+        break;
       case "1-4-9":
         backgroundMapConfig[page].image.forEach(
           (image: SetStateAction<string | undefined>, index: number) => {
@@ -102,7 +116,6 @@ const InteractiveBackground = () => {
           }
         );
         break;
-
       case "4-1-1":
         backgroundMapConfig[page].image.forEach(
           (image: SetStateAction<string | undefined>, index: number) => {
