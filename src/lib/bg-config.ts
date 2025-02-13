@@ -78,10 +78,9 @@ export const backgroundMapConfig: any = {
     imagePreload: ["/background/1-3-6.png"],
     stopMotionDuration: 1000,
   },
-
   "1-3-6": {
     image: "/background/1-3-6.png",
-    imagePreload: ["/background/1-4-1.png"],
+    imagePreload: ["/background/1-4-1.webp"],
   },
   "1-4-1": {
     image: "/background/1-4-1.webp",
