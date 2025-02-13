@@ -1,54 +1,7 @@
 'use client'
-import { useEffect, useState } from "react";
 import { useCalculation } from "../../../../lib/calculation"; // Custom hook for calculations
-import { useTranslations } from "next-intl";
-// Define your types (optional, but useful)
-type Motivation = {
-  index: number;
-  name: string;
-};
-
 const Logic = () => {
-  // Initialize state with proper types
-  const [motivation, setMotivation] = useState<Motivation[]>([]);
-  const [obstacles, setObstacles] = useState<string[]>([]);
-  const [speed, setSpeed] = useState(10);
-  const t = useTranslations();
-//   speed need to get from localstorage
-
-  useEffect(() => {
-    // Retrieve JSON strings from localStorage
-    const storedMotivation = localStorage.getItem('motivationGoal');
-    const storedObstacles = localStorage.getItem('goal');
-
-    if (storedMotivation) {
-      try {
-        const parsedMotivation = JSON.parse(storedMotivation);
-        // Optionally, add an index if needed.
-        setMotivation(
-          parsedMotivation.map((item: any, index: number) => ({
-            ...item,
-            index,
-          }))
-        );
-      } catch (error) {
-        console.error("Error parsing motivation:", error);
-      }
-    }
-
-    if (storedObstacles) {
-      try {
-        const parsedObstacles = JSON.parse(storedObstacles);
-        setObstacles(parsedObstacles);
-      } catch (error) {
-        console.error("Error parsing obstacles:", error);
-      }
-    }
-  }, []);
-
-  // Destructure the returned object from useCalculation
-  const { subConceptMotivation, subConceptObstacles, sortedSubConcepts,seasons,chapter } = useCalculation(motivation, obstacles, speed);
-
+  const { subConceptMotivation, subConceptObstacles, sortedSubConcepts,seasons,chapter } = useCalculation();
   return (
     <section className="w-full justify-center text-white items-center h-lvh flex flex-col">
       {/* Render the calculated Sub-Concept Motivation */}

@@ -202,12 +202,13 @@
       "s10": "I feel overwhelmed by a world that moves too fast."
     }
   },
-  "3-2-11": {
-    "name": "You",
-    "stillRaining": "The rain keeps pouring so heavily... How can I make it calm down?"
-  },
-  "3-2-12": {
-    "rainDoll": "Maybe... try tapping on the rain doll?"
+  "logic":{
+    "Heart & Home" : "Heart & Home",
+    "Trophies and Triumphs": "Trophies and Triumphs",
+    "Inspiring Flames": "Inspiring Flames",
+    "A Refilled Heart": "A Refilled Heart",
+    "Ribbons and Paper Boxes": "Ribbons and Paper Boxes",
+    "Life’s Canvas": "Life’s Canvas"    
   },
   "3-3-1": {
     "name": "You",

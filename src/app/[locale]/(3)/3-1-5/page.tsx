@@ -10,9 +10,9 @@ const Scene3_1_5 = () => {
   const [currentGoal, setCurrentGoal] = useState<string[]>([])
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const t = useTranslations("3-1-5")
+  const t = useTranslations("3-2-2")
   
-
+  
   // Create an array of translations from p1.s1 to p1.s10.
   const choice = Array.from({ length: 10 }, (_, i) => t(`p1.s${i + 1}`))
 

@@ -4,32 +4,67 @@ import { obstacleMapping } from "./obstacles";
 import Seasons from "./season";
 import Chapter from "./chapter";
 
-
-// Define the type for motivation.
 type Motivation = {
   index: number;
   name: string;
 };
 
-// Define the type for weighted sub-concepts.
 type WeightedSubConcept = {
   category: "motivation" | "obstacle";
   subConcept: string;
   weight: number;
 };
 
-export const useCalculation = (
-  motivation: Motivation[],
-  obstacles: string[],
-  speed: number
-) => {
-
-const [sortedSubConcepts, setSortedSubConcepts] = useState<WeightedSubConcept[]>([]);
+export const useCalculation = () => {
+  const [sortedSubConcepts, setSortedSubConcepts] = useState<WeightedSubConcept[]>([]);
   const [subConceptMotivation, setSubConceptMotivation] = useState<string[]>([]);
-    const [subConceptObstacles, setSubConceptObstacles] = useState<string[]>([]);
-    const [seasons, setSeasons] = useState<string | string[]>('');
-    const [chapter, setChapter] = useState<string>('');
+  const [subConceptObstacles, setSubConceptObstacles] = useState<string[]>([]);
+  const [seasons, setSeasons] = useState<string | string[]>('');
+  const [chapter, setChapter] = useState<string>('');
+  const [motivation, setMotivation] = useState<Motivation[]>([]);
+  const [obstacles, setObstacles] = useState<string[]>([]);
+  const [speed, setSpeed] = useState(10);
 
+  // Effect to load data from localStorage once on mount.
+  useEffect(() => {
+    const storedMotivation = localStorage.getItem('motivationGoal');
+    const storedObstacles = localStorage.getItem('goal');
+    const speedClicked = localStorage.getItem('speed');
+
+    if (storedMotivation) {
+      try {
+        const parsedMotivation = JSON.parse(storedMotivation);
+        setMotivation(
+          parsedMotivation.map((item: any, index: number) => ({
+            ...item,
+            index,
+          }))
+        );
+      } catch (error) {
+        console.error("Error parsing motivation:", error);
+      }
+    }
+
+    if (storedObstacles) {
+      try {
+        const parsedObstacles = JSON.parse(storedObstacles);
+        setObstacles(parsedObstacles);
+      } catch (error) {
+        console.error("Error parsing obstacles:", error);
+      }
+    }
+
+    if (speedClicked) {
+      try {
+        const parsedSpeed = JSON.parse(speedClicked);
+        setSpeed(parsedSpeed);
+      } catch (error) {
+        console.error("Error parsing speed:", error);
+      }
+    }
+  }, []); // Run only once on mount.
+
+  // Effect to handle calculations based on state changes.
   useEffect(() => {
     const motivationSubConcepts = motivation.map((mot) => motivationMap[mot.name]);
     const obstacleSubConcepts = obstacles.map((obs) => obstacleMapping[obs]);
@@ -71,6 +106,7 @@ const [sortedSubConcepts, setSortedSubConcepts] = useState<WeightedSubConcept[]>
     
     setSubConceptMotivation(selectedMotSubConcept);
     setSubConceptObstacles(selectedObsSubConcept);
+    
     const motivationWeight = 0.9;            
     const obstacleWeight = 0.1 * speed;        
 
@@ -99,13 +135,11 @@ const [sortedSubConcepts, setSortedSubConcepts] = useState<WeightedSubConcept[]>
     
     const season = Seasons(sortedWeight);
     const chapters = Chapter(sortedWeight);
-    setSortedSubConcepts(combinedWeighted);
+    
+    setSortedSubConcepts(sortedWeight);
     setSeasons(season);
     setChapter(chapters);
-    
+  }, [motivation, obstacles, speed]); // Run whenever these dependencies change.
 
-
-  }, [motivation, obstacles, speed]);
-
-  return { sortedSubConcepts, subConceptMotivation, subConceptObstacles,seasons,chapter};
+  return { sortedSubConcepts, subConceptMotivation, subConceptObstacles, seasons, chapter };
 };
