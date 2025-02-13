@@ -144,6 +144,20 @@ const InteractiveBackground = () => {
           }
         );
         break;
+      case "6-1-2":
+        backgroundMapConfig[page].image.forEach(
+          (image: SetStateAction<string | undefined>, index: number) => {
+            setTimeout(() => {
+              setBgImgSrc(image);
+              if (index === backgroundMapConfig[page].image.length - 1) {
+                setTimeout(() => {
+                  router.push("6-2-1");
+                }, backgroundMapConfig[page].stopMotionDuration / 2);
+              }
+            }, index * backgroundMapConfig[page].stopMotionDuration);
+          }
+        );
+        break;
 
       default:
         setBgImgSrc(backgroundMapConfig[page].image);
