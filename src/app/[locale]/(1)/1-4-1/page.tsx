@@ -1,3 +1,4 @@
+
 "use client"
 import DelayedFullScreenLink from "@/components/ui/DelayedFullScreenLink"
 import { getLocalStorageWithFallback } from "@/lib/localstorageUtils"
@@ -41,3 +42,4 @@ const Scene1_4Page1: React.FC = () => {
 }
 
 export default Scene1_4Page1
+
