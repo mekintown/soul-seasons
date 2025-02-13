@@ -6,8 +6,8 @@ import { useTranslations } from "next-intl"
 import React, { useState } from "react"
 
 const Scene6_3Page4: React.FC = () => {
-  const t = useTranslations("6-3-4")
-  const [feedbackScore, setFeedbackScore] = useState<number>(5)
+  const t = useTranslations("6-3-5")
+  const [stressAfterScore, setstressAfterScore] = useState<number>(5)
   const [mouseDown, setMouseDown] = useState(false)
 
   return (
@@ -21,7 +21,7 @@ const Scene6_3Page4: React.FC = () => {
         <div className="flex h-auto w-full px-6">
           <div className="items-cemter flex h-full w-full flex-col justify-center">
             <p className="text-center text-lg text-white font-light whitespace-break-spaces drop-shadow-text leading-[24.68px]">
-              {t("howDo")}
+              {t("andAt")}
             </p>
           </div>
         </div>
@@ -33,10 +33,10 @@ const Scene6_3Page4: React.FC = () => {
         exit={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 1 }}>
         <Bar
-          stressScore={feedbackScore}
-          setStressScore={setFeedbackScore}
+          stressScore={stressAfterScore}
+          setStressScore={setstressAfterScore}
           setMouseDown={setMouseDown}
-          localStorageKey="feedbackScore"
+          localStorageKey="stressAfterScore"
         />
       </motion.div>
       <motion.div
@@ -45,7 +45,7 @@ const Scene6_3Page4: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 1 }}>
-        <NextButton url="6-3-5" disabled={!mouseDown} />
+        <NextButton url="6-3-7" disabled={!mouseDown} />
       </motion.div>
     </div>
   )
