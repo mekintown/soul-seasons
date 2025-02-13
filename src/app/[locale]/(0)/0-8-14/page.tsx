@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-const Page0_8_2 = () => {
-  const t = useTranslations("0-8-2");
+const Page0_8_14 = () => {
+  const t = useTranslations("0-8-14");
 
   return (
     <div
@@ -12,7 +12,7 @@ const Page0_8_2 = () => {
       style={{ cursor: "pointer" }}
     >
       <Image
-        src="/0-8/0-8-tree-1.webp"
+        src="/0-8/0-8-tree-4.webp"
         alt="Tree"
         layout="fill"
         objectFit="cover"
@@ -22,7 +22,6 @@ const Page0_8_2 = () => {
       <motion.div
         style={{
           textAlign: "center",
-          marginTop: 400,
         }}
         initial={{ opacity: 0, z: -20 }}
         animate={{ opacity: 1, z: 0, transition: { duration: 1, delay: 1 } }}
@@ -33,7 +32,7 @@ const Page0_8_2 = () => {
             minHeight: "10vh",
             minWidth: "22vh",
             marginBottom: 400,
-            right: "30%",
+            left: "50%",
           }}
         >
           <img
@@ -54,4 +53,4 @@ const Page0_8_2 = () => {
   );
 };
 
-export default Page0_8_2;
+export default Page0_8_14;

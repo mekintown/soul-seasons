@@ -145,6 +145,37 @@
       "s7": "See you then.\""
     }
   },
+  "0-8-2": {
+    "p1": {
+      "s1": "Off to a good start."
+    }
+  },
+  "0-8-5": {
+    "p1": {
+      "s1": "Great job."
+    }
+  },
+  "0-8-8": {
+    "p1": {
+      "s1": "This is so much fun!"
+    }
+  },
+  "0-8-10": {
+    "p1": {
+      "s1": "Keep trying!"
+    }
+  },
+  "0-8-11": {
+    "p1": {
+      "s1": "Keep trying!",
+      "s2": "I'm going to make it happen."
+    }
+  },
+  "0-8-14": {
+    "p1": {
+      "s1": "Another step closer to success."
+    }
+  },
   "1-2-1": {
     "name": "You",
     "importantPerson": "Someone important"

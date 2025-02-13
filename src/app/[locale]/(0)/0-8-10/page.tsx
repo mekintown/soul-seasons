@@ -3,16 +3,17 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-const Page0_8_2 = () => {
-  const t = useTranslations("0-8-2");
+const Page0_8_10 = () => {
+  const t = useTranslations("0-8-10");
 
   return (
     <div
       className="flex justify-center items-center relative w-full min-h-screen"
       style={{ cursor: "pointer" }}
     >
+      {/* Background tree image */}
       <Image
-        src="/0-8/0-8-tree-1.webp"
+        src="/0-8/0-8-tree-3.webp"
         alt="Tree"
         layout="fill"
         objectFit="cover"
@@ -33,7 +34,7 @@ const Page0_8_2 = () => {
             minHeight: "10vh",
             minWidth: "22vh",
             marginBottom: 400,
-            right: "30%",
+            left: "50%",
           }}
         >
           <img
@@ -54,4 +55,4 @@ const Page0_8_2 = () => {
   );
 };
 
-export default Page0_8_2;
+export default Page0_8_10;

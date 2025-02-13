@@ -9,7 +9,7 @@ const Layout = async ({ children, params }: LayoutProps) => {
   const { locale } = await params;
 
   return (
-    <BaseLayout locale={locale} messageScope="0-8-3">
+    <BaseLayout locale={locale} messageScope="0-8-11">
       {children}
     </BaseLayout>
   );

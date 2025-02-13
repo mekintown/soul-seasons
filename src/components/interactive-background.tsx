@@ -78,7 +78,6 @@ const InteractiveBackground = () => {
           }
         );
         break;
-
       case "2-7":
         backgroundMapConfig[page].image.forEach(
           (image: SetStateAction<string | undefined>, index: number) => {

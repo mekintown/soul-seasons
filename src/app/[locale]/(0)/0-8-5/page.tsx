@@ -1,157 +1,19 @@
 "use client";
-
 import { motion } from "framer-motion";
-import { useState, useEffect, CSSProperties } from "react";
-import { useRouter } from "@/i18n/routing";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
-const Page = () => {
-  const router = useRouter();
-
-  const texts = [
-    // 1
-    {
-      text: (
-        <>
-          <span className="font-th text-[#182649] opacity-40"></span>
-        </>
-      ),
-      style: {
-        fontSize: "18px",
-        marginTop: 30,
-        marginBottom: 82,
-        textAlign: "center" as CSSProperties["textAlign"],
-      },
-    },
-    // 2
-    {
-      text: (
-        <div
-          className="relative w-full h-full flex justify-center items-center"
-          style={{
-            minHeight: "10vh",
-            minWidth: "22vh",
-            marginBottom: 270,
-            right: "35%",
-          }}
-        >
-          {/* Background Image */}
-          <img
-            src="/0-8/0-8-text.webp"
-            alt="text"
-            className="absolute inset-0 w-full h-full object-cover z-0"
-          />
-
-          {/* Text Content */}
-          <span
-            className="font-th text-[#182649] z-10"
-            style={{
-              fontSize: "18px",
-              textAlign: "center",
-            }}
-          >
-            พลาดซะแล้ว
-          </span>
-        </div>
-      ),
-      style: {
-        fontSize: "18px",
-        marginTop: 5,
-        marginBottom: 137,
-        textAlign: "center" as CSSProperties["textAlign"],
-      },
-    },
-    // 3
-    {
-      text: (
-        <>
-          <span className="font-th text-[#182649] opacity-40"></span>
-        </>
-      ),
-      style: {
-        fontSize: "18px",
-        marginTop: 30,
-        marginBottom: 82,
-        textAlign: "center" as CSSProperties["textAlign"],
-      },
-    },
-    // 4
-    {
-      text: (
-        <div
-          className="relative w-full h-full flex justify-center items-center"
-          style={{
-            minHeight: "10vh",
-            minWidth: "22vh",
-            marginBottom: 270,
-          }}
-        >
-          {/* Background Image */}
-          <img
-            src="/0-8/0-8-text.webp"
-            alt="text"
-            className="absolute inset-0 w-full h-full object-cover z-0"
-          />
-
-          {/* Text Content */}
-          <span
-            className="font-th text-[#182649] z-10"
-            style={{
-              fontSize: "18px",
-              textAlign: "center",
-            }}
-          >
-            ทำไมเรายังตามคนอื่นไม่ทัน
-          </span>
-        </div>
-      ),
-      style: {
-        fontSize: "18px",
-        marginTop: 5,
-        marginBottom: 137,
-        textAlign: "center" as CSSProperties["textAlign"],
-      },
-    },
-    // 5
-    {
-      text: (
-        <>
-          <span className="font-th text-[#182649] opacity-40"></span>
-        </>
-      ),
-      style: {
-        fontSize: "18px",
-        marginTop: 30,
-        marginBottom: 82,
-        textAlign: "center" as CSSProperties["textAlign"],
-      },
-    },
-  ];
-
-  const [currentTextIndex, setCurrentTextIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const nextIndex = currentTextIndex + 1;
-
-      if (nextIndex === texts.length) {
-        router.push("/0-8/6");
-        clearInterval(interval);
-        return;
-      }
-      setCurrentTextIndex(nextIndex);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [currentTextIndex, texts.length, router]);
+const Page0_8_5 = () => {
+  const t = useTranslations("0-8-5");
 
   return (
     <div
       className="flex justify-center items-center relative w-full min-h-screen"
       style={{ cursor: "pointer" }}
     >
+      {/* Background tree image */}
       <Image
-        src="/0-8/0-8-tree-5.webp"
+        src="/0-8/0-8-tree-2.webp"
         alt="Tree"
         layout="fill"
         objectFit="cover"
@@ -159,23 +21,38 @@ const Page = () => {
       />
 
       <motion.div
-        key={currentTextIndex}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{
-          duration: 0.7,
-          ease: "easeInOut",
-        }}
         style={{
-          ...texts[currentTextIndex].style,
-          position: "relative",
+          textAlign: "center",
+          marginTop: 400,
         }}
+        initial={{ opacity: 0, z: -20 }}
+        animate={{ opacity: 1, z: 0, transition: { duration: 1, delay: 1 } }}
       >
-        {texts[currentTextIndex].text}
+        <div
+          className="relative w-full h-full flex justify-center items-center"
+          style={{
+            minHeight: "10vh",
+            minWidth: "22vh",
+            marginBottom: 400,
+            left: "50%",
+          }}
+        >
+          <img
+            src="/0-8/0-8-text.webp"
+            alt="text background"
+            className="absolute inset-0 w-full h-full object-cover z-0"
+          />
+
+          <span
+            className="font-th text-[#182649] z-10"
+            style={{ fontSize: "18px", textAlign: "center" }}
+          >
+            {t("p1.s1")}
+          </span>
+        </div>
       </motion.div>
     </div>
   );
 };
 
-export default Page;
+export default Page0_8_5;
