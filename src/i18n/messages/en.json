@@ -168,12 +168,39 @@
   "0-8-11": {
     "p1": {
       "s1": "Keep trying!",
-      "s2": "I'm going to make it happen."
+      "s2": "I'm going to",
+      "s3": "make it happen."
     }
   },
   "0-8-14": {
     "p1": {
       "s1": "Another step closer to success."
+    }
+  },
+  "0-8-17": {
+    "p1": {
+      "s1": "Oops, I messed up."
+    }
+  },
+  "0-8-19": {
+    "p1": {
+      "s1": "Why am I still behind others?"
+    }
+  },
+  "0-8-22": {
+    "p1": {
+      "s1": "How much more effort is needed?"
+    }
+  },
+  "0-8-23": {
+    "p1": {
+      "s1": "How much more effort is needed?",
+      "s2": "I'm so tired."
+    }
+  },
+  "0-8-26": {
+    "p1": {
+      "s1": "Don't give up!"
     }
   },
   "1-2-1": {

@@ -12,6 +12,7 @@ const InteractiveBackground = () => {
   const page = path.split("/")[1] as keyof typeof backgroundMapConfig;
   const [bgImgSrc, setBgImgSrc] = useState<string>();
   const { backgroundState } = useBackgroundStore();
+
   useEffect(() => {
     switch (page) {
       case "3-2-2":
@@ -23,19 +24,16 @@ const InteractiveBackground = () => {
       case "3-2-8":
       case "3-2-9":
       case "3-2-10":
-      case "3-2-11":
-        let imageIndex = 0; // Track the current image index
+      case "3-2-11": {
+        let imageIndex = 0;
         const stopMotionInterval = setInterval(() => {
-          // Update the background image
           setBgImgSrc(backgroundMapConfig[page].image[imageIndex]);
-
-          // Move to the next image, looping back to the start if necessary
           imageIndex =
             (imageIndex + 1) % backgroundMapConfig[page].image.length;
         }, backgroundMapConfig[page].stopMotionDuration);
-
-        // Clear interval when component unmounts (optional cleanup)
         return () => clearInterval(stopMotionInterval);
+      }
+
       case "1-4-9":
         backgroundMapConfig[page].image.forEach(
           (image: SetStateAction<string | undefined>, index: number) => {
@@ -123,7 +121,6 @@ const InteractiveBackground = () => {
           }
         );
         break;
-
       case "4-1-1":
         backgroundMapConfig[page].image.forEach(
           (image: SetStateAction<string | undefined>, index: number) => {
@@ -152,7 +149,6 @@ const InteractiveBackground = () => {
           }
         );
         break;
-
       default:
         setBgImgSrc(backgroundMapConfig[page].image);
         break;
@@ -160,9 +156,9 @@ const InteractiveBackground = () => {
   }, [page, router, backgroundState]);
 
   const imagePreloadSrc = useMemo(() => {
-    const newImagePreloadSrc = backgroundMapConfig[page].imagePreload;
-    return newImagePreloadSrc;
+    return backgroundMapConfig[page].imagePreload;
   }, [page]);
+
   return (
     <>
       {bgImgSrc && (

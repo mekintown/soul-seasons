@@ -11,7 +11,6 @@ const Page0_8_1 = () => {
 
   const handleUnlock = () => {
     setIsUnlocked(true);
-    // Navigate to page /0-8-2
     router.push("/0-8-2");
   };
 
@@ -35,14 +34,12 @@ const Page0_8_1 = () => {
       )}
       {isUnlocked && (
         <motion.div
-          // If you're using text animations, ensure currentTextIndex and texts are defined
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.7, ease: "easeInOut" }}
           style={{ position: "relative" }}
         >
-          {/* Render your unlocked content here */}
           Unlocked!
         </motion.div>
       )}

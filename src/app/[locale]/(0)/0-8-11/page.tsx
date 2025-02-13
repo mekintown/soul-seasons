@@ -2,16 +2,24 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useRouter } from "@/i18n/routing";
+import { useEffect } from "react";
 
 const Page0_8_11 = () => {
   const t = useTranslations("0-8-11");
+  const router = useRouter();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      router.push("0-8-12");
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [router]);
 
   return (
-    <div
-      className="flex justify-center items-center relative w-full min-h-screen"
-      style={{ cursor: "pointer" }}
-    >
-      {/* Background tree image */}
+    <div className="flex justify-center items-center relative w-full min-h-screen cursor-pointer">
+      {/* Background Tree Image */}
       <Image
         src="/0-8/0-8-tree-3.webp"
         alt="Tree"
@@ -20,23 +28,19 @@ const Page0_8_11 = () => {
         className="absolute z-0"
       />
 
+      {/* First Animated Block */}
       <motion.div
-        style={{
-          textAlign: "center",
-          marginTop: 400,
-          opacity: 50,
-        }}
+        className="text-center mt-[400px]"
         initial={{ opacity: 0, z: -20 }}
         animate={{ opacity: 1, z: 0, transition: { duration: 1, delay: 1 } }}
       >
         <div
-          className="relative w-full h-full flex justify-center items-center"
+          className="relative flex justify-center items-center"
           style={{
             minHeight: "10vh",
             minWidth: "22vh",
-            marginBottom: 400,
-            left: "100%",
-            opacity: 50,
+            marginBottom: "400px",
+            left: "100%", // adjust if needed
           }}
         >
           <img
@@ -54,19 +58,18 @@ const Page0_8_11 = () => {
         </div>
       </motion.div>
 
+      {/* Second Animated Block */}
       <motion.div
-        style={{
-          textAlign: "center",
-        }}
+        className="text-center"
         initial={{ opacity: 0, z: -20 }}
         animate={{ opacity: 1, z: 0, transition: { duration: 1, delay: 1 } }}
       >
         <div
-          className="relative w-full h-full flex justify-center items-center"
+          className="relative flex justify-center items-center"
           style={{
             minHeight: "10vh",
             minWidth: "22vh",
-            marginBottom: 400,
+            marginBottom: "400px",
             right: "90%",
           }}
         >
@@ -77,10 +80,16 @@ const Page0_8_11 = () => {
           />
 
           <span
-            className="font-th text-[#182649] z-10"
+            className="font-th text-[#182649] z-10 block"
             style={{ fontSize: "18px", textAlign: "center" }}
           >
             {t("p1.s2")}
+          </span>
+          <span
+            className="font-th text-[#182649] z-10 block"
+            style={{ fontSize: "18px", textAlign: "center" }}
+          >
+            {t("p1.s3")}
           </span>
         </div>
       </motion.div>

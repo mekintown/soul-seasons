@@ -1,44 +1,43 @@
 "use client";
-import DelayedFullScreenLink from "@/components/ui/DelayedFullScreenLink";
+
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { useState } from "react";
+import { useBackgroundStore } from "@/store/background";
 
 const Page3_2_3 = () => {
-  const t = useTranslations("3-2-3");
+  const { setBackground } = useBackgroundStore();
+  const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
+
+  const handleMouseDown = () => {
+    const id = setTimeout(() => {
+      setBackground("/background/3-2-11_3.gif"); // Change background after 2 seconds
+    }, 2000);
+
+    setIntervalId(id);
+  };
+
+  const handleMouseUp = () => {
+    if (intervalId) {
+      clearTimeout(intervalId);
+      setIntervalId(null);
+    }
+    setBackground("/background/3-2-11_1.gif"); // Reset background when released
+  };
 
   return (
     <div className="flex h-screen flex-col items-center justify-center relative">
       <motion.div
-        style={{
-          fontSize: "18px",
-          marginTop: 5,
-          marginBottom: 137,
-          textAlign: "center",
-        }}
-        initial={{ opacity: 0, z: -20 }}
-        animate={{ opacity: 1, z: 0, transition: { duration: 1, delay: 1 } }}
-      >
-        <p style={{ color: "#FFFFFF" }}>{t("p1.s1")}</p>
-        <p style={{ color: "#FFFFFF" }}>{t("p1.s2")}</p>
-        <p style={{ color: "#FFFFFF" }}>{t("p1.s3")}</p>
-        <br />
-        <p style={{ color: "#FFFFFF" }}>{t("p1.s4")}</p>
-        <p style={{ color: "#FFFFFF" }}>{t("p1.s5")}</p>
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-[39%] right-[4%] w-16 h-16"
+        className="absolute bottom-[35%] right-[33%] w-16 h-16"
         initial={{ opacity: 0, y: 0 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.5, duration: 1 }}
+        animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
       >
-        <Link href="/1-4-4">
-          <div className="w-full h-full rounded-full opacity-50 bg-[#D9D9D9]" />
-        </Link>
+        <button
+          className="w-full h-full rounded-full opacity-50 bg-[#D9D9D9]"
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp} // Prevents issues when mouse leaves
+        />
       </motion.div>
-      <DelayedFullScreenLink href="3-2-4" delay={2000} />
     </div>
   );
 };

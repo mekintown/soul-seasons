@@ -6,10 +6,11 @@ interface LayoutProps extends PropsWithChildren {
 }
 
 const Layout = async ({ children, params }: LayoutProps) => {
-  const { locale } = await params;
+  const resolvedParams = await params; // Ensure params is resolved before use
+  const { locale } = resolvedParams;
 
   return (
-    <BaseLayout locale={locale} messageScope="3-2-5">
+    <BaseLayout locale={locale} messageScope="3-2-4">
       {children}
     </BaseLayout>
   );

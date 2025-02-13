@@ -1,13 +1,24 @@
 "use client";
 import Image from "next/image";
+import { useRouter } from "@/i18n/routing";
+import { useEffect } from "react";
 
 const Page0_8_3 = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      router.push("0-8-4");
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [router]);
+
   return (
     <div
       className="flex justify-center items-center relative w-full min-h-screen"
       style={{ cursor: "pointer" }}
     >
-      {/* Background tree image */}
       <Image
         src="/0-8/0-8-tree-1.webp"
         alt="Tree"

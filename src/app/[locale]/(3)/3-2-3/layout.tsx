@@ -2,14 +2,12 @@ import BaseLayout from "@/components/BaseLayout";
 import { PropsWithChildren } from "react";
 
 interface LayoutProps extends PropsWithChildren {
-  params: Promise<{ locale: string }>;
+  params: { locale: string }; // Ensure params is NOT a Promise
 }
 
-const Layout = async ({ children, params }: LayoutProps) => {
-  const { locale } = await params;
-
+const Layout = ({ children, params }: LayoutProps) => {
   return (
-    <BaseLayout locale={locale} messageScope="3-2-3">
+    <BaseLayout locale={params.locale} messageScope="3-2-3">
       {children}
     </BaseLayout>
   );
