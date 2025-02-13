@@ -24,6 +24,7 @@ export default {
       },
       colors: {
         primaryblue: "#182649",
+        primaryGrey: "#757e87",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -66,7 +67,7 @@ export default {
         },
       },
       fontFamily: {
-        th: ["Kanit", "sans-serif"],
+        th: ["cloud", "sans-serif"],
         en: ['"Source Serif 4"', "serif"],
       },
       borderRadius: {
@@ -85,6 +86,9 @@ export default {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+      },
+      screens: {
+        sm: { raw: "(max-height: 667px)" },
       },
     },
   },

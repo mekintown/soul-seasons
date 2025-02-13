@@ -1,5 +1,6 @@
 "use client";
 import { useRouter } from "@/i18n/routing";
+import { motivationColorMapping } from "@/lib/color";
 import { getLocalStorageWithFallback } from "@/lib/localstorageUtils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
@@ -14,29 +15,11 @@ const Scene2_2Page4: React.FC = () => {
   const motivationGoals: motivationGoal[] = JSON.parse(
     getLocalStorageWithFallback("motivationGoal", "[]")
   );
-  // available colors: blue, yellow, purple, green, red, orange, pink, cyan
-  const colors = motivationGoals.map((motivationGoal) => {
-    switch (motivationGoal.name) {
-      case "Family":
-        return "blue";
-      case "Finance/Money":
-        return "yellow";
-      case "Spirituality/Religion":
-        return "purple";
-      case "Health":
-        return "green";
-      case "Relationships/Friends":
-        return "red";
-      case "Sharing/Contribution":
-        return "orange";
-      case "Career/Work":
-        return "pink";
-      case "Self-Development":
-        return "cyan";
-      default:
-        return "blue";
-    }
+
+  const colors = motivationGoals.map((motivation) => {
+    return motivationColorMapping(motivation.name);
   });
+
   const stopMotionDuration = 600;
   const [sparkleImgs, setSparkleImgs] = useState<string[]>([]);
   const [pouringImg, setPouringImg] = useState<string>();
@@ -47,10 +30,12 @@ const Scene2_2Page4: React.FC = () => {
         setTimeout(() => {
           setPouringImg(`/img/motivation/${j}-${color}-1x.webp`);
           if (j === 3) {
-            setSparkleImgs((oldSparkleImgs) => [
-              ...oldSparkleImgs,
-              `/img/motivation/sparkle-${color}-1x.webp`,
-            ]);
+            setSparkleImgs((oldSparkleImgs) => {
+              const newSparkle = `/img/motivation/sparkle-${color}-1x.webp`;
+              return oldSparkleImgs.includes(newSparkle)
+                ? oldSparkleImgs
+                : [...oldSparkleImgs, newSparkle];
+            });
           }
           if (i === colors.length - 1 && j === 3) {
             setTimeout(() => {
@@ -67,7 +52,7 @@ const Scene2_2Page4: React.FC = () => {
       {sparkleImgs.map((sparkleImg) => (
         <div
           className="w-[130%] h-[130%] absolute -bottom-[200px]"
-          key={sparkleImg}
+          key={`${sparkleImg}-sparkle`}
         >
           <Image src={sparkleImg} fill objectFit="contain" alt="sparkle" />
         </div>
@@ -84,7 +69,7 @@ const Scene2_2Page4: React.FC = () => {
         <div className="w-full h-full absolute -bottom-[72px]">
           <AnimatePresence mode="popLayout">
             <motion.div
-              key={pouringImg}
+              key={`${pouringImg}-sparkle`}
               initial={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
