@@ -20,16 +20,14 @@ const LocaleLayout = async ({ children, params }: LayoutProps) => {
   const fontClass = locale === "th" ? "font-th" : "font-en";
 
   return (
-
     <html lang={locale}>
       <body className="relative mx-auto min-h-screen w-full max-w-md overflow-x-hidden overscroll-none">
         <Sounds />
         <div className="absolute right-8 top-12 z-50 flex w-full items-center justify-end">
-          <LangToggle/>
+          <LangToggle />
           <SoundToggle />
         </div>
         <div className={`${fontClass} relative z-10`}>{children}</div>
-
       </body>
     </html>
   );

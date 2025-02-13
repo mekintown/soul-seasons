@@ -17,22 +17,18 @@ const NextButton = ({
 }: Props) => {
   const t = useTranslations("base");
 
-  if (disabled) {
-    return (
-      <div>
-        <Button disabled={true} variant={variant} size="xl">
-          <p>{label ? label : t("next")}</p>
-        </Button>
-      </div>
-    );
-  }
-
   return (
-    <Link href={url}>
-      <Button disabled={false} variant={variant} size="xl">
-        <p>{label ? label : t("next")}</p>
-      </Button>
-    </Link>
+    <div className="flex flex-col items-center">
+      {disabled ? (
+        <Button disabled variant={variant}>
+          {label || t("next")}
+        </Button>
+      ) : (
+        <Link href={url}>
+          <Button variant={variant}>{label || t("next")}</Button>
+        </Link>
+      )}
+    </div>
   );
 };
 

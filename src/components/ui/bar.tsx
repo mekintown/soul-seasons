@@ -4,18 +4,24 @@ import Marker from "./marker"
 
 interface BarProps {
   stressScore: number
+  localStorageKey?: string
   setStressScore: (score: number) => void
   setMouseDown: (mouseDown: boolean) => void
 }
 
-const Bar: React.FC<BarProps> = ({ stressScore, setStressScore, setMouseDown }) => {
+const Bar: React.FC<BarProps> = ({
+  stressScore,
+  localStorageKey = "stressScore",
+  setStressScore,
+  setMouseDown,
+}) => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setStressScore(Number(e.target.value))
     setMouseDown(true)
   }
 
   useEffect(() => {
-    localStorage.setItem("stressScore", stressScore.toString())
+    localStorage.setItem(localStorageKey, stressScore.toString())
   }, [stressScore])
 
   return (
