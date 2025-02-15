@@ -230,6 +230,22 @@
   "4-1-15": {
     "wantYouToKnow": "but I need you to know that, despite everything you’ve been through, you’ve blossomed and grown into something truly beautiful. So proud of you. 😊"
   },
+  "5-2-1": {
+    "lookAt": " : “Look at this,\n",
+    "ourTree": ". Our tree has grown a\nlot.”",
+    "name": "You",
+    "importantPerson": "Someone important"
+  },
+  "5-2-2": {
+    "doYou": " : “Do you\nremember what we talked about\nbefore? Do you think its fruits are ready\nto harvest?”",
+    "importantPerson": "Someone important"
+  },
+  "5-2-3": {
+    "lets": "Let’s give it a shake and find out!\n(Tap the screen)"
+  },
+  "5-2-4": {
+    "haveYou": "Or… should we just do nothing?"
+  },
   "3-3-1": {
     "name": "You",
     "why": "“Why... does it feel\nlike the rain will never end?”"
