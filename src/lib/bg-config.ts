@@ -415,11 +415,10 @@ export const backgroundMapConfig: any = {
   },
   "3-2-3": {
     image: [
-      "/background/3-2-1.png",
-      "/background/3-2-2.png",
+      "/background/3-2-11_1.gif"
     ],
     stopMotionDuration: 1000,
-    imagePreload: [],
+    imagePreload: ["/background/3-2-11_2.gif", "/background/3-2-11_3.gif"]
   },
   "3-2-4": {
     image: [
@@ -492,8 +491,8 @@ export const backgroundMapConfig: any = {
     imagePreload: [],
   },
   "3-1-3": {
-    image: "/background/3-2-11_1.gif",
-    imagePreload: ["/background/3-2-11_3.gif", "/background/3-2-11_2.gif"],
+    image: "/background/3-1.gif",
+    imagePreload: [],
   },
   "3-1-4": {
     image: "/background/3-1.gif",
@@ -634,6 +633,12 @@ export const backgroundMapConfig: any = {
       "/background/4-1-21.png",
     ],
     stopMotionDuration: 1000,
+    imagePreload: [],
+  },
+  "5-1-1": {
+    image: [
+      "/background/5-1-1.png"
+    ],
     imagePreload: [],
   },
 } as const;

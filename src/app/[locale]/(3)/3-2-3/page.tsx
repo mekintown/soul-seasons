@@ -6,36 +6,26 @@ import { useBackgroundStore } from "@/store/background";
 
 const Page3_2_3 = () => {
   const { setBackground } = useBackgroundStore();
-  const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
+  const [isPressed, setIsPressed] = useState(false);
 
-  const handleMouseDown = () => {
-    const id = setTimeout(() => {
-      setBackground("/background/3-2-11_3.gif"); // Change background after 2 seconds
-    }, 2000);
-
-    setIntervalId(id);
-  };
-
-  const handleMouseUp = () => {
-    if (intervalId) {
-      clearTimeout(intervalId);
-      setIntervalId(null);
-    }
-    setBackground("/background/3-2-11_1.gif"); // Reset background when released
+  const handlePress = () => {
+    setIsPressed(true);
+    setBackground("/background/3-2-11_3.gif"); // Change background immediately on press
   };
 
   return (
     <div className="flex h-screen flex-col items-center justify-center relative">
       <motion.div
-        className="absolute bottom-[35%] right-[33%] w-16 h-16"
+        className="absolute bottom-[39%] right-[4%] w-16 h-16"
         initial={{ opacity: 0, y: 0 }}
-        animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.5, duration: 1 }}
       >
-        <button
-          className="w-full h-full rounded-full opacity-50 bg-[#D9D9D9]"
-          onMouseDown={handleMouseDown}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseUp} // Prevents issues when mouse leaves
+        {/* Press Button - Changes Background Instantly */}
+        <div
+          onClick={handlePress}
+          className="w-full h-full rounded-full opacity-50 bg-[#D9D9D9] cursor-pointer"
         />
       </motion.div>
     </div>
