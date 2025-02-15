@@ -43,7 +43,7 @@ const Scene5_2Page4: React.FC = () => {
           transform transition duration-700 ease-in  delay-500`}>
         <Image src="/background/fruit.webp" fill objectFit="contain" alt="christmas-tree" />
       </div>
-      {clickCount >= 0 ? (
+      {clickCount > 0 ? (
         <motion.div
           className="absolute top-[73%]"
           initial={{ opacity: 0, y: 0 }}
@@ -59,6 +59,16 @@ const Scene5_2Page4: React.FC = () => {
           </div>
         </motion.div>
       ) : null}
+      <motion.div
+        className="absolute bottom-[35%] right-[12%]"
+        initial={{ opacity: 0, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0, duration: 1 }}>
+        <div className="animate-pulse">
+          <div className="bg-gradient-to-b from-[#D9D9D9] to-[#737373] w-[67px] h-[67px] rounded-full opacity-50 bg-blend-luminosity shadow-touch" />
+        </div>
+      </motion.div>
     </div>
   )
 }

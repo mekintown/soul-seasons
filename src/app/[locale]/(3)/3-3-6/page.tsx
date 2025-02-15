@@ -12,7 +12,7 @@ const Scene3_3Page6: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 1, y: 0 }}
         transition={{ delay: 0, duration: 1 }}>
-        <Link href="3-3-7">
+        <Link href="3-3-7" className="animate-pulse">
           <div className="bg-gradient-to-b from-[#D9D9D9] to-[#737373] w-[167px] h-[167px] rounded-full opacity-50 bg-blend-luminosity shadow-touch" />
         </Link>
       </motion.div>
