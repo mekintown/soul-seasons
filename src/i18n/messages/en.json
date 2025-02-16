@@ -271,9 +271,39 @@
   "4-1-15": {
     "wantYouToKnow": "but I need you to know that, despite everything you’ve been through, you’ve blossomed and grown into something truly beautiful. So proud of you. 😊"
   },
-  "6-1-1": {
-    "importantPerson": "Important Person",
-    "sometimes": "Sometimes life has its own timing. Look at this fruit—we shook the tree like crazy, but it just dropped on its own in the end when its time comes."
+  "5-2-1": {
+    "lookAt": " : “Look at this,\n",
+    "ourTree": ". Our tree has grown a\nlot.”",
+    "name": "You",
+    "importantPerson": "Someone important"
+  },
+  "5-2-2": {
+    "doYou": " : “Do you\nremember what we talked about\nbefore? Do you think its fruits are ready\nto harvest?”",
+    "importantPerson": "Someone important"
+  },
+  "5-2-3": {
+    "lets": "Let’s give it a shake and find out!\n(Tap the screen)"
+  },
+  "5-2-4": {
+    "haveYou": "Or… should we just do nothing?"
+  },
+  "3-3-1": {
+    "name": "You",
+    "why": "“Why... does it feel\nlike the rain will never end?”"
+  },
+  "3-3-2": {
+    "name": "You",
+    "asIf": "“As if...it will keep\nfalling forever.”"
+  },
+  "3-3-3": {
+    "name": "You",
+    "both": "“Both the rain outside...\nand the rain within my heart.”"
+  },
+  "3-3-4": {
+    "perhaps": "Perhaps...this is the moment to\nfinally face your fears"
+  },
+  "3-3-5": {
+    "areYou": "Are you ready to let go of the umbrella\nand walk through the rain to overcome it?"
   },
   "6-3-2": {
     "butBefore": "But before you open the gift, we’d like you\nto take a moment to reflect on your\nfeelings right now, after navigating through\nthe changing seasons of your mind."
