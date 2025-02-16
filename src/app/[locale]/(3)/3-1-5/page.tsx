@@ -10,7 +10,7 @@ const Scene3_1_5 = () => {
   const [currentGoal, setCurrentGoal] = useState<string[]>([])
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const t = useTranslations("3-2-2")
+  const t = useTranslations("3-1-5")
   
   
   // Create an array of translations from p1.s1 to p1.s10.

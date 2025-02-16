@@ -3,7 +3,6 @@ type SortedWeight = {
   subConcept: string;
   weight: number;
 };
-
 const Season = (sortedWeights: SortedWeight[]) => {
   // Get the top two sorted weights.
   const top = sortedWeights.slice(0, 2);

@@ -1,6 +1,8 @@
 'use client'
 import { useCalculation } from "../../../../lib/calculation"; // Custom hook for calculations
+import { useTranslations } from "next-intl";
 const Logic = () => {
+  const t = useTranslations('');
   const { subConceptMotivation, subConceptObstacles, sortedSubConcepts,seasons,chapter } = useCalculation();
   return (
     <section className="w-full justify-center text-white items-center h-lvh flex flex-col">
@@ -36,9 +38,11 @@ const Logic = () => {
         <p>No sorted sub concepts found</p>
       )}
        <h1 className="text-[24px]">Season:</h1>
-        {seasons}
+        {t(`logic.${seasons}`)}
         <h1 className="text-[24px]">Chapter:</h1>
-        {chapter}
+        {t(`logic.chapter.${chapter}`)}
+        
+
     </section>
   );
 };

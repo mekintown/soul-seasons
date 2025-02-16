@@ -8,15 +8,11 @@ type SortedWeight = {
     // Separate items into Motivation and Obstacle (case-insensitive)
     const motivationWeights = sortedWeights
       .filter(item => item.category.toLowerCase() === "motivation")
-     
-      
     const obstacleWeights = sortedWeights
       .filter(item => item.category.toLowerCase() === "obstacle")
-      
-      
     // If there is no data for either category, default to "กลาง" (Mid)
     if (motivationWeights.length === 0 && obstacleWeights.length === 0) {
-      return "กลาง";
+      return "middle";
     }
     
     // Use defaults if one of the arrays is empty
@@ -25,12 +21,12 @@ type SortedWeight = {
   
     // Determine stage based on weighted scores:
     if (topObstacle.weight > topMotivation.weight) {
-      return "ต้น";
+      return "start";
     } else {
       if (topMotivation.subConcept.trim() === topObstacle.subConcept.trim()) {
-        return "บานสะพรั่ง";
+        return "end";
       } else {
-        return "กลาง";
+        return "middle";
       }
     }
   };

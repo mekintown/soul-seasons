@@ -208,7 +208,12 @@
     "Inspiring Flames": "Inspiring Flames",
     "A Refilled Heart": "A Refilled Heart",
     "Ribbons and Paper Boxes": "Ribbons and Paper Boxes",
-    "Life’s Canvas": "Life’s Canvas"
+    "Life’s Canvas": "Life’s Canvas",
+    "chapter":{
+     "start":"start",
+     "middle":"middle",
+      "end":"end"
+    }
   },
   "3-2-11": {
     "name": "You",
