@@ -10,7 +10,7 @@ const Page0_7_4 = () => {
   return (
     <div className="flex h-screen flex-col items-center justify-center relative">
       <motion.div
-        className="text-center text-black absolute top-[30%] w-2/3"
+        className="text-center text-black absolute top-[30%] "
         style={{
           fontSize: "18px",
         }}
