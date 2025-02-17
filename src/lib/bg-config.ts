@@ -32,7 +32,7 @@ export const backgroundMapConfig: any = {
     imagePreload: [],
   },
   "0-6": {
-    image: "/background/0.png",
+    image: "/background/0-7-1.png",
     imagePreload: [],
   },
   "0-7-1": {
@@ -200,7 +200,11 @@ export const backgroundMapConfig: any = {
     imagePreload: [],
   },
   "2-2-1": {
-    image: ["/background/2-2-1-db.png", "/background/2-2-1-blur.png", "/background/2-2-1.png"],
+    image: [
+      "/background/2-2-1-db.png",
+      "/background/2-2-1-blur.png",
+      "/background/2-2-1.png",
+    ],
     stopMotionDuration: 2000,
     imagePreload: ["/background/2-2-2.png"],
   },
@@ -245,7 +249,11 @@ export const backgroundMapConfig: any = {
     imagePreload: [],
   },
   "2-7": {
-    image: ["/background/2-1.webp", "/background/2-2.webp", "/background/2-3.webp"],
+    image: [
+      "/background/2-1.webp",
+      "/background/2-2.webp",
+      "/background/2-3.webp",
+    ],
     stopMotionDuration: 1200,
     imagePreload: [],
   },
@@ -519,4 +527,4 @@ export const backgroundMapConfig: any = {
     stopMotionDuration: 1200,
     imagePreload: [],
   },
-} as const
+} as const;
