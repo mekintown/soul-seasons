@@ -24,7 +24,7 @@ const Page3_2_4 = () => {
   };
 
   const handleMouseDown = () => {
-    setIsTransparent(true); // Start fade-out animation
+    setIsTransparent(true);
 
     let startTime = Date.now();
     if (timeoutId) {
@@ -93,9 +93,9 @@ const Page3_2_4 = () => {
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
           className="w-full h-full rounded-full cursor-pointer"
-          initial={{ opacity: 0.5 }} // Starts slightly visible
-          animate={{ opacity: isTransparent ? 0 : 0.5 }} // Slowly fades out on click
-          transition={{ duration: 0.7, ease: "easeInOut" }} // Smooth transition effect
+          initial={{ opacity: 0.5 }}
+          animate={{ opacity: isTransparent ? 0 : 0.5 }}
+          transition={{ duration: 0.7, ease: "easeInOut" }}
           style={{
             backgroundColor: "#D9D9D9",
           }}
