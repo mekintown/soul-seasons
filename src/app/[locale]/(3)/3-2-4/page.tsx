@@ -11,6 +11,7 @@ const Page3_2_4 = () => {
   const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
   const [soFarBGNum, setSoFarBGNum] = useState<0 | 1 | 2>(0);
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
+  const [isTransparent, setIsTransparent] = useState(false); // Controls the button fade-out
 
   const bgOrder = {
     0: "/background/3-2-11_1.gif",
@@ -23,6 +24,8 @@ const Page3_2_4 = () => {
   };
 
   const handleMouseDown = () => {
+    setIsTransparent(true); // Start fade-out animation
+
     let startTime = Date.now();
     if (timeoutId) {
       clearTimeout(timeoutId);
@@ -85,11 +88,17 @@ const Page3_2_4 = () => {
         exit={{ opacity: 0, transition: { duration: 1 } }}
         transition={{ duration: 0.5 }}
       >
-        <div
+        <motion.div
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
-          className="w-full h-full rounded-full opacity-50 bg-[#D9D9D9] cursor-pointer"
+          className="w-full h-full rounded-full cursor-pointer"
+          initial={{ opacity: 0.5 }} // Starts slightly visible
+          animate={{ opacity: isTransparent ? 0 : 0.5 }} // Slowly fades out on click
+          transition={{ duration: 0.7, ease: "easeInOut" }} // Smooth transition effect
+          style={{
+            backgroundColor: "#D9D9D9",
+          }}
         />
       </motion.div>
     </div>
