@@ -1,15 +1,18 @@
+import { Categories, Category } from "./enum";
 type SortedWeight = {
-    category: string;
-    subConcept: string;
+    category: Category;
+    subConcept: Categories;
     weight: number;
   };
+
+
   
   const Chapter = (sortedWeights: SortedWeight[]): string => {
     // Separate items into Motivation and Obstacle (case-insensitive)
     const motivationWeights = sortedWeights
-      .filter(item => item.category.toLowerCase() === "motivation")
+      .filter(item => item.category.toLowerCase() === Category.Motivation)
     const obstacleWeights = sortedWeights
-      .filter(item => item.category.toLowerCase() === "obstacle")
+      .filter(item => item.category.toLowerCase() === Category.Obstacle)
     // If there is no data for either category, default to "กลาง" (Mid)
     if (motivationWeights.length === 0 && obstacleWeights.length === 0) {
       return "middle";

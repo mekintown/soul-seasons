@@ -3,6 +3,7 @@ import { motivationMap } from "./motivations";
 import { obstacleMapping } from "./obstacles";
 import Seasons from "./season";
 import Chapter from "./chapter";
+import { Categories,Category } from "./enum";
 
 type Motivation = {
   index: number;
@@ -10,20 +11,21 @@ type Motivation = {
 };
 
 type WeightedSubConcept = {
-  category: "motivation" | "obstacle";
-  subConcept: string;
+  category: Category;
+  subConcept: Categories;
   weight: number;
 };
 
 export const useCalculation = () => {
   const [sortedSubConcepts, setSortedSubConcepts] = useState<WeightedSubConcept[]>([]);
-  const [subConceptMotivation, setSubConceptMotivation] = useState<string[]>([]);
+  const [subConceptMotivation, setSubConceptMotivation] = useState<Categories[]>([]);
   const [subConceptObstacles, setSubConceptObstacles] = useState<string[]>([]);
   const [seasons, setSeasons] = useState<string | string[]>('');
   const [chapter, setChapter] = useState<string>('');
   const [motivation, setMotivation] = useState<Motivation[]>([]);
   const [obstacles, setObstacles] = useState<string[]>([]);
   const [speed, setSpeed] = useState(10);
+  const [dataLoaded, setDataLoaded] = useState(false);  
 
   // Effect to load data from localStorage once on mount.
   useEffect(() => {
@@ -40,7 +42,7 @@ export const useCalculation = () => {
             index,
           }))
         );
-      } catch (error) {
+    } catch (error) {
         console.error("Error parsing motivation:", error);
       }
     }
@@ -62,18 +64,22 @@ export const useCalculation = () => {
         console.error("Error parsing speed:", error);
       }
     }
-  }, []); // Run only once on mount.
+    setDataLoaded(true); 
+  }, []); 
 
   // Effect to handle calculations based on state changes.
   useEffect(() => {
+    if (!dataLoaded) {
+      return
+    };
     const motivationSubConcepts = motivation.map((mot) => motivationMap[mot.name]);
     const obstacleSubConcepts = obstacles.map((obs) => obstacleMapping[obs]);
 
     const distinctMotSubConcepts = Array.from(new Set(motivationSubConcepts));
     const distinctObsSubConcepts = Array.from(new Set(obstacleSubConcepts));
 
-    let selectedMotSubConcept: string[] = [];
-    let selectedObsSubConcept: string[] = [];
+    let selectedMotSubConcept: Categories[] = [];
+    let selectedObsSubConcept: Categories[] = [];
 
     switch (distinctMotSubConcepts.length) {
       case 2:
@@ -113,7 +119,7 @@ export const useCalculation = () => {
     // Create weighted objects for each sub-concept.
     const weightedMotivations: WeightedSubConcept[] = selectedMotSubConcept.map(
       (sub) => ({
-        category: "motivation",
+        category: Category.Motivation,
         subConcept: sub,
         weight: motivationWeight,
       })
@@ -121,7 +127,7 @@ export const useCalculation = () => {
 
     const weightedObstacles: WeightedSubConcept[] = selectedObsSubConcept.map(
       (sub) => ({
-        category: "obstacle",
+        category: Category.Obstacle,
         subConcept: sub,
         weight: obstacleWeight,
       })
@@ -132,7 +138,6 @@ export const useCalculation = () => {
 
     // Sort from highest to lowest weight.
     const sortedWeight = combinedWeighted.sort((a, b) => b.weight - a.weight);
-    
     const season = Seasons(sortedWeight);
     const chapters = Chapter(sortedWeight);
     

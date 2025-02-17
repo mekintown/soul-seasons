@@ -7,6 +7,9 @@ import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
 import {getPotImages} from "@/lib/pots-config";
 
+enum PotLabel {
+
+}
 
 const Scene2_2Page2 = () => {
     const t = useTranslations('2-2-2');
@@ -105,7 +108,7 @@ const Scene2_2Page2 = () => {
                 <div
                     key={index}
                     className={index === 2 || index === 1 ? `relative  right-[50px] flex flex-col h-[120px] items-center gap-5`: `relative flex flex-col h-[120px] items-center gap-5` }
-                    onClick={() => handleClick(index, pot.label)}
+                    onClick={() => handleClick(index, pot.motivation)}
                 >
                     <img
                         src={isGlowing ? pot.glow : pot.src}
@@ -144,7 +147,7 @@ const Scene2_2Page2 = () => {
                 <div
                     key={adjustedIndex}
                     className={index === 2 || index === 1 ? `relative  left-[50px] flex flex-col h-[120px] items-center gap-5`: `relative flex flex-col h-[120px] items-center gap-5`}
-                    onClick={() => handleClick(adjustedIndex, pot.label)}
+                    onClick={() => handleClick(adjustedIndex, pot.motivation)}
                 >
                     <img
                         src={isGlowing ? pot.glow : pot.src}
