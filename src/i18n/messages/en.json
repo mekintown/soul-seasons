@@ -264,6 +264,35 @@
   "3-3-5": {
     "areYou": "Are you ready to let go of the umbrella\nand walk through the rain to overcome it?"
   },
+  "6-2-1": {
+    "p1": {
+      "s1": "A tree rises slowly, in silence it grows,",
+      "s2": "Its roots dig deep where no eye knows.",
+      "s3": "In sunlight it basks, in storms it sways,",
+      "s4": "Learning patience through seasons' plays.",
+      "s5": "Like life, it stretches, reaching skyward high,",
+      "s6": "Yet anchored in earth where truths lie.",
+      "s7": "Through winter’s grip and summer’s gleam,",
+      "s8": "A tree holds steady in every dream."
+    }
+  },
+  "6-2-4": {
+    "p1": {
+      "s1": "\"You're back\""
+    }
+  },
+  "6-2-5": {
+    "p1": {
+      "s1": "\"How was it? Were you tired?\""
+    }
+  },
+  "6-2-6": {
+    "p1": {
+      "s1": "\"To you, who have found yourself once ",
+      "s2": "again, we have a keepsake to commemorate",
+      "s3": "this journey that we’d like to give you.\""
+    }
+  },
   "6-3-2": {
     "butBefore": "But before you open the gift, we’d like you\nto take a moment to reflect on your\nfeelings right now, after navigating through\nthe changing seasons of your mind."
   },

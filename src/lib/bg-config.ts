@@ -437,6 +437,22 @@ export const backgroundMapConfig: any = {
       "/background/6-1-4.png",
     ],
   },
+  "6-2-1": {
+    image: "/background/6-2-1.png",
+    imagePreload: ["/background/6-2-4.png"]
+  },
+  "6-2-4": {
+    image: "/background/6-2-4.png",
+    imagePreload: []
+  },
+  "6-2-5": {
+    image: "/background/6-2-4.png",
+    imagePreload: []
+  },
+  "6-2-6": {
+    image: "/background/6-2-4.png",
+    imagePreload: []
+  },
   "6-1-2": {
     image: [
       "/background/6-1-1.png",
@@ -445,6 +461,14 @@ export const backgroundMapConfig: any = {
       "/background/6-1-4.png",
     ],
     stopMotionDuration: 1200,
+    imagePreload: [],
+  },
+  "7-3-1": {
+    image: "/background/7-3.png",
+    imagePreload: [],
+  },
+  "7-3-2": {
+    image: "/background/7-3.png",
     imagePreload: [],
   },
 } as const
