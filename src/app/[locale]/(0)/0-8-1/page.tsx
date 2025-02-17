@@ -1,18 +1,16 @@
 "use client";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import Image from "next/image";
-import SlideUnlock from "@/components/ui/slide-to-unlock";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
 
 const Page0_8_1 = () => {
-  const [isUnlocked, setIsUnlocked] = useState(false);
-  const router = useRouter();
+  // TODO: Fix this
+  // const [isUnlocked, setIsUnlocked] = useState(false);
+  // const router = useRouter();
 
-  const handleUnlock = () => {
-    setIsUnlocked(true);
-    router.push("/0-8-2");
-  };
+  // const handleUnlock = () => {
+  //   setIsUnlocked(true);
+  //   router.push("/0-8-2");
+  // };
 
   return (
     <div
@@ -26,11 +24,12 @@ const Page0_8_1 = () => {
         objectFit="cover"
         className="absolute z-0"
       />
-      {!isUnlocked && (
-        <SlideUnlock
-          onUnlock={handleUnlock}
-          className="absolute top-[85%] left-1/2 transform -translate-x-1/2"
-        />
+      {/* {!isUnlocked && (
+        // <SlideUnlock
+        //   onUnlock={handleUnlock}
+        //   className="absolute top-[85%] left-1/2 transform -translate-x-1/2"
+        // />
+        <></>
       )}
       {isUnlocked && (
         <motion.div
@@ -42,7 +41,7 @@ const Page0_8_1 = () => {
         >
           Unlocked!
         </motion.div>
-      )}
+      )} */}
     </div>
   );
 };
