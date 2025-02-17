@@ -413,6 +413,100 @@
   "3-3-5": {
     "areYou": "Are you ready to let go of the umbrella\nand walk through the rain to overcome it?"
   },
+  "5-1-1": {
+    "importantPerson" : "Important Person",
+    "name" : "UserName",
+    "p1" : {
+      "s1": ", is that you?"
+    }
+  },
+  "5-1-2": {
+    "importantPerson" : "Important Person",
+    "name" : "UserName",
+    "p1" : {
+      "s1": "It really is!"
+    }
+  },
+  "5-1-3": {
+    "importantPerson" : "Important Person",
+    "name" : "UserName",
+    "p1" : {
+      "s1": ", where have",
+      "s2": "you been?"
+    }
+  },
+  "5-1-4": {
+    "name" : "UserName",
+    "p1" : {
+      "s1": "Well... I'm not sure."
+    }
+  },
+  "5-1-5": {
+    "name" : "UserName",
+    "p1" : {
+      "s1": "At first, I thought reaching the",
+      "s2": "goal was the most important thing."
+    }
+  },
+  "5-1-6": {
+    "name" : "UserName",
+    "p1" : {
+      "s1": "But..."
+    }
+  },
+  "5-1-7": {
+    "name" : "UserName",
+    "p1" : {
+      "s1": "It turned out that I became so focused",
+      "s2": "on it that I forget what I truly wanted why I",
+      "s3": "set this goal in the first place."
+    }
+  },
+  "5-1-8": {
+    "name" : "UserName",
+    "p1" : {
+      "s1": "I forgot to take care of myself,",
+      "s2": "both physically and emotionally",
+      "s3": "embracing everyone except myself."
+    }
+  },
+  "5-1-9": {
+    "name" : "UserName",
+    "p1" : {
+      "s1": "And it seems like my sense of",
+      "s2": "self slowly started to fade away."
+    }
+  },
+  "5-1-10": {
+    "name" : "UserName",
+    "p1" : {
+      "s1": "Maybe I've been rushing through things",
+      "s2": "or focusing too much on something, to the",
+      "s3": "point that I don't have time to reflect on who",
+      "s4": "I really am or what I trly am."
+    }
+  },
+  "5-1-11": {
+    "importantPerson" : "Important Person",
+    "p1" : {
+      "s1": "So, how has",
+      "s2": "taking time to think helped you?"
+    }
+  },
+  "5-1-12": {
+    "name": "UserName",
+    "p1" : {
+      "s1": "Well... it's what brought",
+      "s2": "me back here."
+    }
+  },
+  "5-1-13": {
+    "importantPerson" : "Important Person",    
+    "p1" : {
+      "s1": "Is that so?",
+      "s2": "Well, welcome back!"
+    }
+  },
   "6-3-2": {
     "butBefore": "But before you open the gift, we’d like you\nto take a moment to reflect on your\nfeelings right now, after navigating through\nthe changing seasons of your mind."
   },
