@@ -1,17 +1,21 @@
-'use client'
+"use client";
 import { useCalculation } from "../../../../lib/calculation"; // Custom hook for calculations
 import { useTranslations } from "next-intl";
 const Logic = () => {
-  const t = useTranslations('');
-  const { subConceptMotivation, subConceptObstacles, sortedSubConcepts,seasons,chapter } = useCalculation();
+  const t = useTranslations("");
+  const {
+    subConceptMotivation,
+    subConceptObstacles,
+    sortedSubConcepts,
+    seasons,
+    chapter,
+  } = useCalculation();
   return (
     <section className="w-full justify-center text-white items-center h-lvh flex flex-col">
       {/* Render the calculated Sub-Concept Motivation */}
       <h1 className="text-[24px]">Sub Concept Motivation:</h1>
       {subConceptMotivation.length > 0 ? (
-        subConceptMotivation.map((concept, idx) => (
-          <p key={idx}>{concept}</p>
-        ))
+        subConceptMotivation.map((concept, idx) => <p key={idx}>{concept}</p>)
       ) : (
         <p>No sub concept found</p>
       )}
@@ -19,9 +23,7 @@ const Logic = () => {
       {/* Render the calculated Sub-Concept Obstacles */}
       <h1 className="text-[24px]">Sub Concept Obstacles:</h1>
       {subConceptObstacles.length > 0 ? (
-        subConceptObstacles.map((concept, idx) => (
-          <p key={idx}>{concept}</p>
-        ))
+        subConceptObstacles.map((concept, idx) => <p key={idx}>{concept}</p>)
       ) : (
         <p>No sub concept found</p>
       )}
@@ -37,12 +39,10 @@ const Logic = () => {
       ) : (
         <p>No sorted sub concepts found</p>
       )}
-       <h1 className="text-[24px]">Season:</h1>
-        {t(`logic.${seasons}`)}
-        <h1 className="text-[24px]">Chapter:</h1>
-        {t(`logic.chapter.${chapter}`)}
-        
-
+      <h1 className="text-[24px]">Season:</h1>
+      {t(`logic.${seasons}`)}
+      <h1 className="text-[24px]">Chapter:</h1>
+      {t(`logic.chapter.${chapter}`)}
     </section>
   );
 };

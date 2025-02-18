@@ -1,13 +1,13 @@
-"use client"
-import NextButton from "@/components/ui/NextButton"
-import { TextareaWithCounter } from "@/components/ui/textareaWithCounter"
-import { motion } from "framer-motion"
-import { useTranslations } from "next-intl"
-import React, { useState } from "react"
+"use client";
+import NextButton from "@/components/ui/NextButton";
+import { TextareaWithCounter } from "@/components/ui/textareaWithCounter";
+import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+import React, { useState } from "react";
 
 const Scene6_3Page6: React.FC = () => {
-  const t = useTranslations("6-3-6")
-  const [feedbackText, setFeedbackText] = useState("")
+  const t = useTranslations("6-3-6");
+  const [feedbackText, setFeedbackText] = useState("");
 
   return (
     <div className="flex h-screen w-full flex-col items-center justify-center">
@@ -30,11 +30,12 @@ const Scene6_3Page6: React.FC = () => {
         initial={{ opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 1 }}>
+        transition={{ delay: 0.5, duration: 1 }}
+      >
         <TextareaWithCounter
           onChange={(e) => {
-            setFeedbackText(e.target.value)
-            localStorage.setItem("feedbackText", e.target.value)
+            setFeedbackText(e.target.value);
+            localStorage.setItem("feedbackText", e.target.value);
           }}
           value={feedbackText}
           maxCount={80}
@@ -46,11 +47,12 @@ const Scene6_3Page6: React.FC = () => {
         initial={{ opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 1 }}>
+        transition={{ delay: 0.5, duration: 1 }}
+      >
         <NextButton url="6-3-7" disabled={feedbackText.length === 0} />
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default Scene6_3Page6
+export default Scene6_3Page6;

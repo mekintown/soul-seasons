@@ -1,12 +1,12 @@
-"use client"
-import { useEffect } from "react"
-import Marker from "./marker"
+"use client";
+import { useEffect } from "react";
+import Marker from "./marker";
 
 interface BarProps {
-  stressScore: number
-  localStorageKey?: string
-  setStressScore: (score: number) => void
-  setMouseDown: (mouseDown: boolean) => void
+  stressScore: number;
+  localStorageKey?: string;
+  setStressScore: (score: number) => void;
+  setMouseDown: (mouseDown: boolean) => void;
 }
 
 const Bar: React.FC<BarProps> = ({
@@ -16,13 +16,13 @@ const Bar: React.FC<BarProps> = ({
   setMouseDown,
 }) => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setStressScore(Number(e.target.value))
-    setMouseDown(true)
-  }
+    setStressScore(Number(e.target.value));
+    setMouseDown(true);
+  };
 
   useEffect(() => {
-    localStorage.setItem(localStorageKey, stressScore.toString())
-  }, [stressScore])
+    localStorage.setItem(localStorageKey, stressScore.toString());
+  }, [stressScore]);
 
   return (
     <div className="flex flex-col gap-1">
@@ -32,7 +32,8 @@ const Bar: React.FC<BarProps> = ({
           className="absolute -top-12 rounded-full"
           style={{
             left: `calc(${stressScore * 10}% - 20px)`, // Adjust position dynamically
-          }}>
+          }}
+        >
           <Marker stressScore={stressScore} />
         </div>
         <input
@@ -55,7 +56,7 @@ const Bar: React.FC<BarProps> = ({
         <span>10</span>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Bar
+export default Bar;
