@@ -518,7 +518,42 @@ export const backgroundMapConfig: any = {
   },
   "5-2-7": {
     image: "/background/5-2-1.webp",
+    imagePreload: ["/background/6-1-1.png"],
+  },
+  "6-1-1": {
+    image: "/background/6-1-1.png",
+    imagePreload: [
+      "/background/6-1-1.png",
+      "/background/6-1-2.png",
+      "/background/6-1-3.png",
+      "/background/6-1-4.png",
+    ],
+  },
+  "6-1-2": {
+    image: [
+      "/background/6-1-1.png",
+      "/background/6-1-2.png",
+      "/background/6-1-3.png",
+      "/background/6-1-4.png",
+    ],
+    stopMotionDuration: 1200,
+    imagePreload: ["/background/6-2-1.png"],
+  },
+  "6-2-1": {
+    image: "/background/6-2-1.png",
+    imagePreload: ["/background/6-2-4.png"],
+  },
+  "6-2-4": {
+    image: "/background/6-2-4.png",
     imagePreload: [],
+  },
+  "6-2-5": {
+    image: "/background/6-2-4.png",
+    imagePreload: [],
+  },
+  "6-2-6": {
+    image: "/background/6-2-4.png",
+    imagePreload: ["/img/6-3-1.webp"],
   },
   "6-3-1": {
     image: "/img/6-3-1.webp",
@@ -563,40 +598,5 @@ export const backgroundMapConfig: any = {
   "6-3-11": {
     image: "/img/6-3-1.webp",
     imagePreload: [],
-  },
-  "6-1-1": {
-    image: "/background/6-1-1.png",
-    imagePreload: [
-      "/background/6-1-1.png",
-      "/background/6-1-2.png",
-      "/background/6-1-3.png",
-      "/background/6-1-4.png",
-    ],
-  },
-  "6-1-2": {
-    image: [
-      "/background/6-1-1.png",
-      "/background/6-1-2.png",
-      "/background/6-1-3.png",
-      "/background/6-1-4.png",
-    ],
-    stopMotionDuration: 1200,
-    imagePreload: [],
-  },
-  "6-2-1": {
-    image: "/background/6-2-1.png",
-    imagePreload: ["/background/6-2-4.png"]
-  },
-  "6-2-4": {
-    image: "/background/6-2-4.png",
-    imagePreload: []
-  },
-  "6-2-5": {
-    image: "/background/6-2-4.png",
-    imagePreload: []
-  },
-  "6-2-6": {
-    image: "/background/6-2-4.png",
-    imagePreload: []
   },
 } as const;
