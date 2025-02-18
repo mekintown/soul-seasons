@@ -27,22 +27,25 @@ const Scene2_2Page4: React.FC = () => {
   useEffect(() => {
     for (const [i, color] of colors.entries()) {
       for (let j = 0; j <= 3; j++) {
-        setTimeout(() => {
-          setPouringImg(`/img/motivation/${j}-${color}-1x.webp`);
-          if (j === 3) {
-            setSparkleImgs((oldSparkleImgs) => {
-              const newSparkle = `/img/motivation/sparkle-${color}-1x.webp`;
-              return oldSparkleImgs.includes(newSparkle)
-                ? oldSparkleImgs
-                : [...oldSparkleImgs, newSparkle];
-            });
-          }
-          if (i === colors.length - 1 && j === 3) {
-            setTimeout(() => {
-              router.push("2-3-2");
-            }, stopMotionDuration / 2);
-          }
-        }, (i * 4 + j + 1) * stopMotionDuration);
+        setTimeout(
+          () => {
+            setPouringImg(`/img/motivation/${j}-${color}-1x.webp`);
+            if (j === 3) {
+              setSparkleImgs((oldSparkleImgs) => {
+                const newSparkle = `/img/motivation/sparkle-${color}-1x.webp`;
+                return oldSparkleImgs.includes(newSparkle)
+                  ? oldSparkleImgs
+                  : [...oldSparkleImgs, newSparkle];
+              });
+            }
+            if (i === colors.length - 1 && j === 3) {
+              setTimeout(() => {
+                router.push("2-3-2");
+              }, stopMotionDuration / 2);
+            }
+          },
+          (i * 4 + j + 1) * stopMotionDuration
+        );
       }
     }
   }, []);

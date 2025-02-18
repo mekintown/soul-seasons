@@ -9,10 +9,7 @@ const Scene02 = () => {
   const t = useTranslations("0-2");
 
   return (
-    <section
-      className="w-full justify-center h-lvh flex flex-col"
-      
-    >
+    <section className="w-full justify-center h-lvh flex flex-col">
       <Shadow>
         <motion.div
           initial={{ opacity: 0 }}
