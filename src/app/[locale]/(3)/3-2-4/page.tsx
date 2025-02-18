@@ -12,6 +12,7 @@ const Page3_2_4 = () => {
   const [soFarBGNum, setSoFarBGNum] = useState<0 | 1 | 2>(0);
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
   const [isTransparent, setIsTransparent] = useState(false);
+  let startTime = 0;
 
   const bgOrder = {
     0: "/background/3-2-11_1.gif",
@@ -26,7 +27,7 @@ const Page3_2_4 = () => {
   const handleMouseDown = () => {
     setIsTransparent(true);
 
-    let startTime = Date.now();
+    startTime = Date.now();
     if (timeoutId) {
       clearTimeout(timeoutId);
       setTimeoutId(null);
@@ -53,6 +54,8 @@ const Page3_2_4 = () => {
       clearTimeout(timeoutId);
       setTimeoutId(null);
     }
+
+    localStorage.setItem("speed", String((Date.now() - startTime) / 1000));
 
     if (soFarBGNum === 0) {
       const id1 = setTimeout(() => {
