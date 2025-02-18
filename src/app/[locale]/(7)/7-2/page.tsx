@@ -1,42 +1,42 @@
-"use client"
-import Image from "next/image"
-import { motion } from "framer-motion"
-import { useLocale } from "next-intl"
-import React, { useEffect, useState } from "react"
-import NextButton from "@/components/ui/NextButton"
-import { Share2 } from "lucide-react"
+"use client";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { useLocale } from "next-intl";
+import React, { useEffect, useState } from "react";
+import NextButton from "@/components/ui/NextButton";
+import { Share2 } from "lucide-react";
 
 const Scene7_2: React.FC = () => {
-  const locale = useLocale()
-  const [result, setResult] = useState<string>()
-  const DOWNLOAD_FILENAME = "results.jpeg"
+  const locale = useLocale();
+  const [result, setResult] = useState<string>();
+  const DOWNLOAD_FILENAME = "results.jpeg";
 
   const shareImage = async () => {
     if (!result) {
-      return
+      return;
     }
-    const dataBlob = await (await fetch(result)).blob()
+    const dataBlob = await (await fetch(result)).blob();
 
     const image = new File([dataBlob], DOWNLOAD_FILENAME, {
       type: dataBlob.type,
-    })
+    });
     const shareData: ShareData = {
       title: "Soul Seasons",
       text: "Soul Seasons",
       files: [image],
-    }
+    };
 
     try {
-      navigator.share(shareData)
+      navigator.share(shareData);
     } catch (err) {
-      console.error("Error: " + err)
+      console.error("Error: " + err);
     }
-  }
+  };
 
   useEffect(() => {
     // const parser = new UAParser(navigator.userAgent)
     // setUserAgentData(parser.getDevice().model)
-    setResult(`/img/results-${locale}/D 7-2-1-1.webp`)
+    setResult(`/img/results-${locale}/D 7-2-1-1.webp`);
     // get results
 
     // switch (score) {
@@ -64,7 +64,7 @@ const Scene7_2: React.FC = () => {
     //   case 10:
     //     setPostcardNo("7");
     // }
-  }, [])
+  }, []);
 
   return (
     <div className="flex h-screen w-full flex-col items-center justify-center">
@@ -76,8 +76,15 @@ const Scene7_2: React.FC = () => {
               opacity: 1,
               transition: { duration: 0.5, delay: 0.5 },
             }}
-            className="absolute inset-0 h-full w-full overflow-hidden rounded-[20px]">
-            <Image src={result} alt="Results" objectFit="contain" fill className="h-full w-full" />
+            className="absolute inset-0 h-full w-full overflow-hidden rounded-[20px]"
+          >
+            <Image
+              src={result}
+              alt="Results"
+              objectFit="contain"
+              fill
+              className="h-full w-full"
+            />
           </motion.div>
         )}
       </div>
@@ -89,16 +96,24 @@ const Scene7_2: React.FC = () => {
               opacity: 1,
               transition: { duration: 0.5, delay: 0.5 },
             }}
-            className="mb-4 flex justify-center space-x-3">
+            className="mb-4 flex justify-center space-x-3"
+          >
             <a href={result} download={DOWNLOAD_FILENAME}>
               <svg
                 width="44"
                 height="44"
                 viewBox="0 0 44 44"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <g id="Group 25">
-                  <circle id="Ellipse 30" cx="22" cy="22" r="22" fill="#F8F8F7" />
+                  <circle
+                    id="Ellipse 30"
+                    cx="22"
+                    cy="22"
+                    r="22"
+                    fill="#F8F8F7"
+                  />
                   <g id="&#240;&#159;&#166;&#134; icon &#34;download outline&#34;">
                     <g id="Group">
                       <path
@@ -123,7 +138,8 @@ const Scene7_2: React.FC = () => {
             </a>
             <button
               onClick={shareImage}
-              className="bg-white rounded-full size-[44px] flex items-center justify-center">
+              className="bg-white rounded-full size-[44px] flex items-center justify-center"
+            >
               <Share2 className="w-6 h-6 text-primaryblue" />
             </button>
           </motion.div>
@@ -134,12 +150,13 @@ const Scene7_2: React.FC = () => {
             opacity: 1,
             transition: { duration: 0.5, delay: 0.5 },
           }}
-          className="flex justify-center">
+          className="flex justify-center"
+        >
           <NextButton url="7-3-1" />
         </motion.div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Scene7_2
+export default Scene7_2;

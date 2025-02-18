@@ -16,7 +16,8 @@ const Scene6_3Page6: React.FC = () => {
         initial={{ opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 1 }}>
+        transition={{ delay: 0.5, duration: 1 }}
+      >
         <div className="flex h-auto w-full px-6">
           <div className="items-cemter flex h-full w-full flex-col justify-center">
             <p className="text-center text-lg text-white font-light whitespace-break-spaces drop-shadow-text leading-[24.68px]">
