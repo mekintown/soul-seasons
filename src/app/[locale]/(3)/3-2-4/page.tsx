@@ -11,7 +11,7 @@ const Page3_2_4 = () => {
   const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
   const [soFarBGNum, setSoFarBGNum] = useState<0 | 1 | 2>(0);
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
-  const [isTransparent, setIsTransparent] = useState(false); // Controls the button fade-out
+  const [isTransparent, setIsTransparent] = useState(false);
 
   const bgOrder = {
     0: "/background/3-2-11_1.gif",
@@ -54,7 +54,19 @@ const Page3_2_4 = () => {
       setTimeoutId(null);
     }
 
-    if (soFarBGNum === 1) {
+    if (soFarBGNum === 0) {
+      const id1 = setTimeout(() => {
+        setSoFarBGNum((prev) => (prev === 0 ? 1 : prev));
+
+        const id2 = setTimeout(() => {
+          setSoFarBGNum((prev) => (prev === 1 ? 2 : prev));
+        }, 1000);
+
+        setTimeoutId(id2);
+      }, 1000);
+
+      setTimeoutId(id1);
+    } else if (soFarBGNum === 1) {
       const id = setTimeout(() => {
         setSoFarBGNum((prev) => (prev === 1 ? 2 : prev));
       }, 1000);
