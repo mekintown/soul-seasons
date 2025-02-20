@@ -107,13 +107,13 @@ const Scene2_2Page2 = () => {
             return (
                 <div
                     key={index}
-                    className={index === 2 || index === 1 ? `relative  right-[50px] flex flex-col h-[120px] items-center gap-5`: `relative flex flex-col h-[120px] items-center gap-5` }
+                    className={index === 2 || index === 1 ? `relative cursor-pointer right-[50px] flex flex-col h-[120px] items-center gap-5`: `relative flex flex-col h-[120px] items-center gap-5` }
                     onClick={() => handleClick(index, pot.motivation)}
                 >
                     <img
                         src={isGlowing ? pot.glow : pot.src}
                         alt={`${pot.label} Pot`}
-                        className="w-auto h-[120px]"
+                        className="w-auto cursor-pointer h-[120px]"
                     />
                     
                     {/* White circle indicator */}
@@ -152,7 +152,7 @@ const Scene2_2Page2 = () => {
                     <img
                         src={isGlowing ? pot.glow : pot.src}
                         alt={`${pot.label} Pot`}
-                        className="w-auto h-[120px]"
+                        className="w-auto cursor-pointer h-[120px]"
                     />
                     
                     {/* White circle indicator */}
