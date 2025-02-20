@@ -29,3 +29,13 @@ export enum MarbleImg {
     Marble6 = "/icons/marble/marble6.png"
   }
 
+export const seasonImg = {
+   "Inspiring Flame": {"img": ['/icons/seasons/bonfire.png','/icons/seasons/feather.png'], "w": ["w-[102.41px]", "w-[64.02px"]},
+    "Trophies and Triumphs" : {"img":['/icons/seasons/trophies.png','/icons/seasons/confetti.png'], "w": ["w-[74.88px]", "w-[78px"]},
+    "Heart & Home": {"img":['/icons/seasons/home.png','/icons/seasons/fireflies.png'],"w": ["w-[78.15px]", "w-[85.38px"]},
+    "Life Canvas": {"img": ['/icons/seasons/canvas.png','/icons/seasons/origami.png'], "w": ["w-[146.09px]", "w-[81.09px]"]},
+    "Refilled Heart": {"img":['/icons/seasons/picnic.png','/icons/seasons/flowerpetal.png'], "w": ["w-[140px]","w-[82.42px]"]},
+    "Ribbons and Paper Boxes":{ "img":['/icons/seasons/gift.png','/icons/seasons/foam.png'], "w": ["w-[81.49px]","w-[85.97px]"] }
+
+};
+

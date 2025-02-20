@@ -459,7 +459,11 @@ export const backgroundMapConfig: any = {
     image: "/background/7-1-1.png",
     imagePreload: [],
   },
-  "7-1-2":{
+  "7-1-3":{
+    image: "/background/7-1-2.png",
+    imagePreload: [],
+  },
+  "7-1-4":{
     image: "/background/7-1-2.png",
     imagePreload: [],
   }

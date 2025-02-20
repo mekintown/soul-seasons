@@ -311,9 +311,9 @@
   "6-3-10": {
     "iHope": "I hope you’ll take time to reflect on your\nfeelings and not lose yourself so often."
   },
-  "7-1-2":{
+  "7-1-3":{
     "title":{
-      "Inspiring flame": {
+      "Inspiring Flame": {
         "s1": "Cedar ",
         "s2": "The Season of Bonfires and Inspiration"
       },
@@ -339,7 +339,7 @@
       }
     },
   "p1": {
-      "Inspiring flame": {
+      "Inspiring Flame": {
         "s1": "Orange-red flames dance above the firewood, with ",
         "s2": "crackling embers harmonizing with the cold ",
         "s3": "breeze. Warmth radiates outward, illuminating",
@@ -418,7 +418,176 @@
           "s11": ""
         }
       }
+    },
+    "7-1-4":{
+      "title":{
+        "Inspiring Flame":{
+          "s1":"Bonfire",
+          "s2": "Feather"
+        },
+       "Trophies and Triumphs": {
+        "s1": "Trophies",
+        "s2": "Confetti"
+       },
+       "Heart & Home": {
+        "s1": "Home",
+        "s2": "Fireflies"
+       },
+       "Life Canvas": {
+        "s1": "Canvas",
+        "s2": "Origami"
+       },
+       "Refilled Heart":{
+        "s1": "Picnic Basket",
+        "s2": "Flower Petals"
+       },
+       "Ribbons and Paper Boxes": {
+        "s1": "Gift Boxes",
+        "s2": "Foam Balls"
+       }
+      },
+
+    "p1":{
+      "Inspiring Flame": {
+        "s1": "A bonfire has the power ",
+        "s2": "to burn away the old and",
+        "s3": "transform it into energy",
+        "s4": "for new beginnings."
+      },
+      "Trophies and Triumphs":{
+        "s1": "Trophies remind us that",
+        "s2": "we have achieved the",
+        "s3": "goals we set, whether",
+        "s4": "bsmall or grand."
+      },
+      "Heart & Home":{
+        "s1": "A place of refuge and comfort.",
+        "s2": "",
+        "s3": "",
+        "s4": ""
+      },
+      "Life Canvas":{
+        "s1": "A space for artists to create,",
+        "s2": "express thoughts, emotions,",
+        "s3": "and imagination.",
+        "s4": ""
+      },
+      "Refilled Heart":{
+        "s1": "We go for picnics to spend ",
+        "s2": "quality time together, ",
+        "s3": "letting our hearts rest.",
+        "s4": ""
+      },
+      "Ribbons and Paper Boxes":{
+        "s1": "Thoughtfully prepared ",
+        "s2": "with care, inside and out.",
+        "s3": "",
+        "s4": ""
+      }
+    },
+    "p2":{
+      "Inspiring Flame": {
+        "s1": "A feather drifts freely,",
+        "s2": "light and unbound,",
+        "s3": "soaring without limits.",
+        "s4": ""
+      },
+      "Trophies and Triumphs":{
+        "s1": "We scatter vibrant,",
+        "s2": "multicolored confetti to",
+        "s3": "share those joyful ",
+        "s4": "moments with others."
+      },
+      "Heart & Home":{
+        "s1": "Found in warm and ",
+        "s2": "nurturing environments.",
+        "s3": "",
+        "s4": ""
+      },
+      "Life Canvas":{
+        "s1": "A simple sheet of paper that, ",
+        "s2": "when folded with care, ",
+        "s3": "transforms into intricate",
+        "s4": "and beautiful shapes."
+      },
+      "Refilled Heart":{
+        "s1": "The Crape Myrtle ",
+        "s2": "blossoms are gifted to",
+        "s3": "Venus, symbolizing ",
+        "s4": "everlasting love."
+      },
+      "Ribbons and Paper Boxes":{
+        "s1": "Colorful, diverse, and ",
+        "s2": "beautiful together."
+      }
+    },
+    "p3":{
+      "Inspiring Flame": {
+        "s1": "This season signifies the bonfire burning in your",
+        "s2": "heart, fueled by the firewood of various aspects of",
+        "s3": "your life—whether it’s your unwavering dedication",
+        "s4": "to your work or the inner transformation that ",
+        "s5": "connects you to something greater than yourself.",
+        "s6": "This flame of inspiration will help you discover the",
+        "s7": "meaning of life and ignite change that leaves a ",
+        "s8": "lasting impact on the world."
+      },
+      "Trophies and Triumphs":{
+        "s1": "This season signifies progress and the abundant",
+        "s2": "drive within you. You possess a clear vision of",
+        "s3": "your desires and remain undaunted in chasing ",
+        "s4": "them. The strong roots of your personal growth",
+        "s5": "are nurtured by self-love and care. Step by step, ",
+        "s6": "you advance and develop in admirable ways.",
+        "s7": "",
+        "s8": ""
+      },
+      "Heart & Home":{
+        "s1": "This season reflects the dedication and love",
+        "s2": "within you. You stay committed to your ",
+        "s3": "goals with determination and perseverance ",
+        "s4": "while also cherishing the important people ",
+        "s5": "in your life, who serve as your source of",
+        "s6": "strength. Care and love have always been ",
+        "s7": "an integral part of who you are.",
+        "s8": ""
+      },
+      "Life Canvas":{
+        "s1": "This season represents the harmony of",
+        "s2": "both physical and mental readiness,",
+        "s3": "forming the foundation that makes life’s ",
+        "s4": "painting bright and lively. The continuous",
+        "s5": "pursuit of self-growth and the awareness of",
+        "s6": "what truly connects with your soul are like",
+        "s7": "new colors waiting to be mixed, blending",
+        "s8": "into a masterpiece. When you bring all ",
+        "s9": "these elements together, the picture you",
+        "s10": "create will not only be beautiful but also",
+        "s11": "meaningful and inspiring to others."
+      },
+      "Refilled Heart":{
+        "s1": "This season signifies strong bonds and the ",
+        "s2": "nurturing of body and soul. You have",
+        "s3": "discovered happiness in the little things",
+        "s4": "around you by caring for yourself and ",
+        "s5": "those close to you. This garden of the heart",
+        "s6": "is a sanctuary you have lovingly cultivated",
+        "s7": "with genuine care and affection.",
+        "s8": ""
+      },
+      "Ribbons and Paper Boxes":{
+        "s1": "This season reflects the boundless love ",
+        "s2": "within you, always ready to be shared",
+        "s3": "with those around you—family, friends,",
+        "s4": "or even strangers. The love you give is",
+        "s5": "not just contained in a box or a gift; it ",
+        "s6": "comes from the pure intention of ",
+        "s7": "comes from the pure intention of ",
+        "s8": "brightening someone’s world."
+      }
     }
+
+  }
   }
   
 
