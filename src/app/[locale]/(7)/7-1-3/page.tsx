@@ -2,9 +2,8 @@
 import { useCalculation } from "@/lib/calculation";
 import { useTranslations } from "next-intl";
 import { MarbleImg } from "@/lib/enum";
-import { useEffect, useState } from "react";
 const Scene7_1_2 = () => {
-  const [blur,setBlur] = useState(true)
+
   const marbleImg = { 
     "Inspiring flame": MarbleImg.Marble1, 
     "Trophies and Triumphs": MarbleImg.Marble2, 
@@ -16,12 +15,7 @@ const Scene7_1_2 = () => {
 
   const t = useTranslations(`7-1-3`);
   const { seasons } = useCalculation();
-  useEffect(()=>{
-    setTimeout(()=>{
-      setBlur(false)
-    },500)
-  },[])
-
+ 
   return (
     <section className="relative w-full h-lvh flex flex-col justify-center items-center">
      
@@ -33,14 +27,14 @@ const Scene7_1_2 = () => {
             <img
               src={marbleImg[seasons as keyof typeof marbleImg]}
               alt="7-1-2"
-              className={`w-[148px] h-auto ${blur?"filter blur-sm dissolve": ""}`}
+              className={`w-[148px] h-auto `}
             />
-            <p className={`font-bold text-primaryblue text-[18px] mb-1 ${blur?"filter blur-sm dissolve": ""}`}>
+            <p className={`font-bold text-primaryblue text-[18px] mb-1 `}>
               {t(`title.${seasons}.s1`)}
               <br />
               {t(`title.${seasons}.s2`)}
             </p>
-            <p className={`text-primaryblue font-light text-[14px] ${blur?"filter blur-sm dissolve": ""}`}>
+            <p className={`text-primaryblue font-light text-[14px] `}>
               {t(`p1.${seasons}.s1`)}
               <br /> {t(`p1.${seasons}.s2`)}
               <br /> {t(`p1.${seasons}.s3`)}

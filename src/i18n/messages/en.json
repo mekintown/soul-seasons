@@ -311,6 +311,114 @@
   "6-3-10": {
     "iHope": "I hope you’ll take time to reflect on your\nfeelings and not lose yourself so often."
   },
+  "7-1-2":{
+    "title":{
+      "Inspiring Flame": {
+        "s1": "Cedar ",
+        "s2": "The Season of Bonfires and Inspiration"
+      },
+      "Trophies and Triumphs" :{
+        "s1": "Olive ",
+        "s2": "The Season of Trophies and Triumphs"
+      },
+      "Heart & Home" :{
+        "s1": "Oak ",
+        "s2": "The Season of a Warm and Strong Home"
+      },
+      "Life Canvas":{
+        "s1": "Maple",
+        "s2": "The Season of Canvases and Life’s Colors"
+      },
+      "Refilled Heart":{
+        "s1": "Crape Mrytle",
+        "s2": "The Season of A Refilled Heart"
+      },
+      "Ribbons and Paper Boxes":{
+        "s1": "Wisteria",
+        "s2": "The Season of Ribbons and Gift Boxes"
+      }
+    },
+  "p1": {
+      "Inspiring Flame": {
+        "s1": "Orange-red flames dance above the firewood, with ",
+        "s2": "crackling embers harmonizing with the cold ",
+        "s3": "breeze. Warmth radiates outward, illuminating",
+        "s4": "the dark night and bringing it to life in an instant.",
+        "s5": "Just like the fire within you, glowing brightly,",
+        "s6": "ready to shine and create something new—filled",
+        "s7": "with hope and determination—guiding the path ",
+        "s8": "you are building with your own hands.",
+        "s9": "",
+        "s10": "",
+        "s11": ""
+      }, 
+        "Trophies and Triumphs": {
+          "s1": "The sun casts radiant golden light ",
+          "s2": "through a gentle veil of mist, gradually unveiling",
+          "s3": " Hall of Honor with its doors agape in ",
+          "s4": "welcome. In this season, you have earned ",
+          "s5": "trophies that serve as accolades and ",
+          "s6": "emblems of success—ripe rewards borne of ",
+          "s7": "your relentless pursuit of grand ambitions.",
+          "s8": "",
+          "s9": "",
+          "s10": "",
+          "s11": ""
+        },
+        "Heart & Home": {
+          "s1": "The warmth of the fireplace has begun to",
+          "s2": "fade, yet the home feels even cozier, as if it ",
+          "s3": "has embraced you in its familiar shelter. You",
+          "s4": "are in a season of stability and success—both",
+          "s5": "in your goals and your relationships. After ",
+          "s6": "all the effort you have put in, you have built ",
+          "s7": "a home that is both warm and strong, a safe",
+          "s8": "space for yourself and your loved ones.",
+          "s9": "",
+          "s10": "",
+          "s11": ""
+        },
+        "Life Canvas": {
+          "s1": "A gentle breeze flows through a blank canvas ",
+          "s2": "standing under the sunlight. The soft white",
+          "s3": "surface glows, waiting for the first stroke of the",
+          "s4": "brush to bring it to life with vibrant colors. At",
+          "s5": "the heart of this season of creation, listening to ",
+          "s6": "your inner voice is the first step in painting your",
+          "s7": "life. Just like an artist who carefully breathes life ",
+          "s8": "into their imagination, your canvas is one of a",
+          "s9": "kind—beautiful in its own unique way. Every",
+          "s10": "color you add is a joy you create for yourself in",
+          "s11": "this season."
+        },
+        "Refilled Heart": {
+          "s1": "The lingering fragrance of flowers drifts on ",
+          "s2": "the breeze in a garden teeming with life, ",
+          "s3": "laughter, and warmth. It feels as if the once",
+          "s4": "chaotic world has paused for a moment, ",
+          "s5": "leaving only this overwhelming sense of ",
+          "s6": "fulfillment. Your heart has been refilled with",
+          "s7": "profoundly meaningful experiences—the joy",
+          "s8": "of sharing memories and special moments",
+          "s9": "with those who matter most.",
+          "s10": "",  
+          "s11": ""
+        },
+        "Ribbons and Paper Boxes": {
+          "s1": "Cardboard boxes stack high above your head,",
+          "s2": "and vibrant ribbons scatter like a rainbow of",
+          "s3": "joy. Gift boxes fill the floor, yet they still cannot",
+          "s4": "contain all the love within them. You are in a ",
+          "s5": "season of giving and abundant love—where ",
+          "s6": "both you and those around you share your ",
+          "s7": "hearts with one another. The air is filled with ",
+          "s8": "kindness, generosity, and the deep ",
+          "s9": "connections that bind us together.",
+          "s10": "",
+          "s11": ""
+        }
+      }
+    },
   "7-1-3":{
     "title":{
       "Inspiring Flame": {

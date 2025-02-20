@@ -134,7 +134,7 @@ export const backgroundMapConfig: any = {
       "/background/2-2-1.png",
     ],
     stopMotionDuration: 2000,
-    imagePreload: ["/background/2-2-2.png"]
+    imagePreload: ["/background/2-2-2.png","/icons/christmas tree  1.png"]
   },
   "2-2-2":{
     image: "/background/2-2-2.png",
@@ -459,9 +459,13 @@ export const backgroundMapConfig: any = {
     image: "/background/7-1-1.png",
     imagePreload: [],
   },
-  "7-1-3":{
+  "7-1-2":{
     image: "/background/7-1-2.png",
-    imagePreload: [],
+    imagePreload: ["/background/7-1-3.png"],
+  },
+  "7-1-3":{
+    image: "/background/7-1-3.png",
+    imagePreload: ["/background/7-1-2.png"],
   },
   "7-1-4":{
     image: "/background/7-1-2.png",
