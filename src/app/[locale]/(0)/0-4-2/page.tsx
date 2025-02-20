@@ -12,9 +12,7 @@ const Scene042 = () => {
 
   const [name, setName] = useState("");
   return (
-    <section
-      className="w-full justify-center h-lvh flex flex-col"
-    >
+    <section className="w-full justify-center h-lvh flex flex-col">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

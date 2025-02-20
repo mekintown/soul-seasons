@@ -1,10 +1,13 @@
 "use client";
+
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
-import { potImagesLeft, potImagesRight } from "@/lib/pots-config";
+import { getPotImages } from "@/lib/pots-config";
+
+enum PotLabel {}
 
 const Scene2_2Page2 = () => {
   const t = useTranslations("2-2-2");
@@ -15,6 +18,8 @@ const Scene2_2Page2 = () => {
   const locale = useLocale();
   const router = useRouter();
 
+  const { potImagesleft: potImagesLeft, potImagesright: potImagesRight } =
+    getPotImages(t);
   useEffect(() => {
     localStorage.setItem("motivationGoal", JSON.stringify(glowingPots));
   }, [glowingPots]);
@@ -56,12 +61,11 @@ const Scene2_2Page2 = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0 }}
-          className="absolute w-full h-full flex justify-center items-center"
+          className="absolute bottom-[40px] w-full h-full flex justify-center items-center"
         >
           <img
             src="/img/motivation/christmas-tree-1.png"
             alt="Christmas Tree"
-            className="absolute top-[47%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
           />
         </motion.div>
 
@@ -96,7 +100,7 @@ const Scene2_2Page2 = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          className="relative flex justify-center h-full w-full mx-auto mt-10 gap-3"
+          className="relative flex justify-center h-full w-full mx-auto gap-3"
         >
           {/* Left Column */}
           <div className="flex flex-col items-center">
@@ -108,10 +112,12 @@ const Scene2_2Page2 = () => {
               return (
                 <div
                   key={index}
-                  className={`relative flex flex-col h-[120px] items-center gap-5 ${
-                    pot.pos === "right-[50px]" ? "right-[50px]" : ""
-                  } ${pot.pos === "left-[50px]" ? "left-[50px]" : ""}`}
-                  onClick={() => handleClick(index, pot.label)}
+                  className={
+                    index === 2 || index === 1
+                      ? `relative  right-[50px] flex flex-col h-[120px] items-center gap-5`
+                      : `relative flex flex-col h-[120px] items-center gap-5`
+                  }
+                  onClick={() => handleClick(index, pot.motivation)}
                 >
                   <img
                     src={isGlowing ? pot.glow : pot.src}
@@ -129,7 +135,7 @@ const Scene2_2Page2 = () => {
                     </div>
                   )}
 
-                  <p className="mt-2 relative bottom-[50px] font-light text-xs text-white text-center">
+                  <p className="text-right mt-2 relative bottom-[50px] font-bold text-xs text-white text-center">
                     {pot.label}
                   </p>
                 </div>
@@ -149,10 +155,12 @@ const Scene2_2Page2 = () => {
               return (
                 <div
                   key={adjustedIndex}
-                  className={`relative flex flex-col h-[120px] items-center gap-5 ${
-                    pot.pos === "right-[50px]" ? "right-[50px]" : ""
-                  } ${pot.pos === "left-[50px]" ? "left-[50px]" : ""}`}
-                  onClick={() => handleClick(adjustedIndex, pot.label)}
+                  className={
+                    index === 2 || index === 1
+                      ? `relative  left-[50px] flex flex-col h-[120px] items-center gap-5`
+                      : `relative flex flex-col h-[120px] items-center gap-5`
+                  }
+                  onClick={() => handleClick(adjustedIndex, pot.motivation)}
                 >
                   <img
                     src={isGlowing ? pot.glow : pot.src}
@@ -171,7 +179,7 @@ const Scene2_2Page2 = () => {
                     </div>
                   )}
 
-                  <p className="mt-2 relative bottom-[50px] font-light text-xs text-white text-center">
+                  <p className="mt-2 relative bottom-[50px] font-bold text-xs text-white text-center">
                     {pot.label}
                   </p>
                 </div>
