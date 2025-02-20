@@ -144,6 +144,12 @@
       "s7": "See you then.\""
     }
   },
+  "1-1-3": {
+    "p1": {
+      "s1": "Who is that person?",
+      "s2": "within xx characters"
+    }
+  },
   "1-2-1": {
     "name": "You",
     "importantPerson": "Someone important"
