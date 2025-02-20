@@ -9,8 +9,8 @@ import { useState } from "react";
 const Scene5 = () => {
   const t = useTranslations("0-5");
   const locale = useLocale();
-const [stressScore, setStressScore] = useState(1);
-const [mouseDown, setMouseDown] = useState(false);
+  const [stressScore, setStressScore] = useState(1);
+  const [mouseDown, setMouseDown] = useState(false);
 
   return (
     <section className="w-full h-lvh flex flex-col pt-[150px]">
@@ -31,12 +31,12 @@ const [mouseDown, setMouseDown] = useState(false);
                   {t("p1.s1")}
                   <br />
                   {t("p1.s2")}
-                  <br/>
+                  <br />
                   {t("p1.s3")}
-                 {locale === 'en'? <br/>: null}
+                  {locale === "en" ? <br /> : null}
                   {t("p1.s4")}
                   <span className="font-bold">{t("p1.push")}</span>
-                  {locale === 'th'? <br/> : null}
+                  {locale === "th" ? <br /> : null}
                   {t("p1.or")}
                   <span className="font-bold">{t("p1.stress")}</span>
                   {t("p1.s5")}
@@ -47,11 +47,15 @@ const [mouseDown, setMouseDown] = useState(false);
             BoxPadding="px-5 py-5"
           />
           <div className="flex justify-center items-center h-full flex-col">
-            <Bar  setMouseDown={setMouseDown} stressScore={stressScore} setStressScore={setStressScore} />
+            <Bar
+              setMouseDown={setMouseDown}
+              stressScore={stressScore}
+              setStressScore={setStressScore}
+            />
           </div>
 
           <div className="flex justify-start items-center h-full flex-col ">
-            <NextButton disabled= {!mouseDown} url="/0-6" />
+            <NextButton disabled={!mouseDown} url="/0-6" />
           </div>
         </div>
       </motion.div>

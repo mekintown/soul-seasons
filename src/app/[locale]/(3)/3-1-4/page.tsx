@@ -36,5 +36,3 @@ const Scene3_1_4 = ()=>{
         </section>
     )
 }
-
-export default Scene3_1_4

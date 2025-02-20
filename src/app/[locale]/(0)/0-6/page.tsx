@@ -6,8 +6,8 @@ const Zero6 = () => {
   const t = useTranslations("0-6");
 
   return (
-    <Link href="/0-7">
-      <section className="bg-linear-radial-gradient w-full justify-center h-lvh flex flex-col">
+    <Link href="/0-7-1">
+      <section className="w-full justify-center h-lvh flex flex-col">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

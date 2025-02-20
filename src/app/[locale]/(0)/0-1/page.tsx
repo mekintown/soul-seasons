@@ -10,10 +10,7 @@ const Scene01: React.FC = () => {
   const t = useTranslations("0-1");
 
   return (
-
-    <section
-      className="w-full h-lvh flex flex-col"
-    >
+    <section className="w-full h-lvh flex flex-col">
       <div className="flex justify-center items-center h-full flex-col">
         {/* Animated Image */}
         <motion.div
@@ -27,7 +24,6 @@ const Scene01: React.FC = () => {
           className="flex flex-col items-center text-center text-base text-woh-black"
         >
           <img src={SoulSeasons.src} alt="Soul Seasons Logo" />
-
         </motion.div>
 
         <motion.div
@@ -40,7 +36,6 @@ const Scene01: React.FC = () => {
           className="flex flex-col items-center text-center text-base text-woh-black"
         >
           <NextButton url="/0-2" disabled={false} label={t("btn")} />
-
         </motion.div>
       </div>
     </section>

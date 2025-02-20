@@ -12,9 +12,7 @@ const Scene032 = () => {
   const imageSrc = locale === "th" ? "/icons/hidetabTh.png" : "icons/hidetabEn.png";
 
   return (
-    <section
-      className="w-full justify-center h-lvh flex flex-col"
-    >
+    <section className="w-full justify-center h-lvh flex flex-col">
       <Shadow>
         <motion.div
           initial={{ opacity: 0 }}

@@ -64,8 +64,8 @@ export const useCalculation = () => {
         console.error("Error parsing speed:", error);
       }
     }
-    setDataLoaded(true); 
-  }, []); 
+    setDataLoaded(true);
+  }, []);
 
   // Effect to handle calculations based on state changes.
   useEffect(() => {

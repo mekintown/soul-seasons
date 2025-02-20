@@ -6,7 +6,11 @@ interface MessageBoxProps {
   BoxPadding?: string;
 }
 
-const MessageBox: React.FC<MessageBoxProps> = ({ message, size, BoxPadding }) => {
+const MessageBox: React.FC<MessageBoxProps> = ({
+  message,
+  size,
+  BoxPadding,
+}) => {
   return (
     <div className={`flex justify-center items-center ${size || ""}`}>
       {/* Use bg-white/70 for a 70% opaque background */}
