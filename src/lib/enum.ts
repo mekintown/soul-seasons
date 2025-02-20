@@ -36,6 +36,5 @@ export const seasonImg = {
     "Life Canvas": {"img": ['/icons/seasons/canvas.png','/icons/seasons/origami.png'], "w": ["w-[146.09px]", "w-[81.09px]"],"h": ["h-[63px]", "h-[58px]"]},
     "Refilled Heart": {"img":['/icons/seasons/picnic.png','/icons/seasons/flowerpetal.png'], "w": ["w-[140px]","w-[82.42px]"],"h": ["h-[70px]", "h-[71px]"]},
     "Ribbons and Paper Boxes":{ "img":['/icons/seasons/gift.png','/icons/seasons/foam.png'], "w": ["w-[81.49px]","w-[85.97px]"],"h": ["h-[76px]", "h-[72px]"] }
-
 };
 

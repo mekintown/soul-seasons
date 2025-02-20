@@ -138,11 +138,11 @@ export const useCalculation = () => {
 
     // Sort from highest to lowest weight.
     const sortedWeight = combinedWeighted.sort((a, b) => b.weight - a.weight);
-    const season = Seasons(sortedWeight);
+    const season = Seasons(sortedWeight) || '';
     const chapters = Chapter(sortedWeight);
     
     setSortedSubConcepts(sortedWeight);
-    setSeasons(season);
+    setSeasons(season as string | string[]);
     setChapter(chapters);
   }, [motivation, obstacles, speed]); // Run whenever these dependencies change.
 

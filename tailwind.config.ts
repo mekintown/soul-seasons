@@ -76,7 +76,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       animation: {
-        dissolve: "dissolve 0.3s ease-out",
+        dissolve: "dissolve 0.3s ease-in-out",
         rotate: "rotate 1s linear ",
         dissolve_slow: "dissolve 2s ease-out",
       },

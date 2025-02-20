@@ -103,7 +103,7 @@ const Scene3_1_5 = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
         className="flex justify-start items-center h-full flex-col mt-10">
-        <NextButton url="/3-1-6" disabled={currentGoal.length < 3} />
+        <NextButton url="/3-2-2" disabled={currentGoal.length < 3} />
       </motion.div>
     </section>
   );

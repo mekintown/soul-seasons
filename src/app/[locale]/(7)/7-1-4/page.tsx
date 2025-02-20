@@ -3,7 +3,7 @@ import { useCalculation } from '@/lib/calculation'
 import {seasonImg} from "@/lib/enum";
 import { useLocale, useTranslations } from 'next-intl';
 
-const Scene7_1_4 = ()=>{
+const Scene7_1_3 = ()=>{
      
    const {seasons} = useCalculation()
     // const seasons = "Inspiring Flame"
@@ -89,4 +89,4 @@ const Scene7_1_4 = ()=>{
         </section>
     )
 }
-export default Scene7_1_4
+export default Scene7_1_3

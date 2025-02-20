@@ -167,6 +167,26 @@ const InteractiveBackground = () => {
           }
         );
         break;
+        case "7-1-2":
+        backgroundMapConfig[page].image.forEach(
+          (image: SetStateAction<string | undefined>, index: number) => {
+            setTimeout(() => {
+              setBgImgSrc(image);
+              
+            }, index * backgroundMapConfig[page].stopMotionDuration);
+          }
+        );
+        break;
+        case "7-1-4":
+        backgroundMapConfig[page].image.forEach(
+          (image: SetStateAction<string | undefined>, index: number) => {
+            setTimeout(() => {
+              setBgImgSrc(image);
+              
+            }, index * backgroundMapConfig[page].stopMotionDuration);
+          }
+        );
+        break;
 
       default:
         setBgImgSrc(backgroundMapConfig[page].image);

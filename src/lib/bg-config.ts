@@ -609,18 +609,17 @@ export const backgroundMapConfig: any = {
   },
   "7-1-1":{
     image: "/background/7-1-1.png",
-    imagePreload: [],
-  },
-  "7-1-2":{
-    image: "/background/7-1-2.png",
-    imagePreload: ["/background/7-1-3.png"],
-  },
-  "7-1-3":{
-    image: "/background/7-1-3.png",
     imagePreload: ["/background/7-1-2.png"],
   },
+  "7-1-2":{
+    image: ["/background/7-1-2.png","/background/7-1-3.png"],
+    stopMotionDuration: 1000,
+    imagePreload: ["/background/7-1-2.png"],
+  },
+  
   "7-1-4":{
-    image: "/background/7-1-2.png",
+    image: ["/background/7-1-2.png","/background/7-1-3.png"],
+    stopMotionDuration: 1000,
     imagePreload: [],
   }
 } as const
