@@ -1,4 +1,7 @@
 export const backgroundMapConfig: any = {
+  "": {
+    image: "/background/0.webp",
+  },
   "0-1": {
     image: "/background/0.webp",
     imagePreload: ["/background/0-blur.jpg"],
@@ -8,11 +11,11 @@ export const backgroundMapConfig: any = {
     imagePreload: [],
   },
   "0-3-1": {
-    image: "/background/0.jpg",
+    image: "/background/0-blur.jgp",
     imagePreload: [],
   },
   "0-3-2": {
-    image: "/background/0.jpg",
+    image: "/background/0-blur.jpg",
     imagePreload: [],
   },
   "0-4-1": {
