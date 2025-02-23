@@ -1,35 +1,34 @@
 export const backgroundMapConfig: any = {
-  "0": {
-    image: "/background/0.png",
-    imagePreload: [],
+  "": {
+    image: "/background/0.webp",
   },
   "0-1": {
-    image: "/background/0.png",
-    imagePreload: [],
+    image: "/background/0.webp",
+    imagePreload: ["/background/0-blur.jpg"],
   },
   "0-2": {
-    image: "/background/0.png",
+    image: "/background/0-blur.jpg",
     imagePreload: [],
   },
   "0-3-1": {
-    image: "/background/0.png",
+    image: "/background/0-blur.jgp",
     imagePreload: [],
   },
   "0-3-2": {
-    image: "/background/0.png",
+    image: "/background/0-blur.jpg",
     imagePreload: [],
   },
   "0-4-1": {
-    image: "/background/0.png",
+    image: "/background/0.webp",
     imagePreload: [],
   },
   "0-4-2": {
-    image: "/background/0.png",
+    image: "/background/0.webp",
     imagePreload: [],
   },
   "0-5": {
-    image: "/background/0.png",
-    imagePreload: [],
+    image: "/background/0.webp",
+    imagePreload: ["/background/0-7-1.png"],
   },
   "0-6": {
     image: "/background/0-7-1.png",
@@ -289,7 +288,7 @@ export const backgroundMapConfig: any = {
       "/background/1-4-15.webp",
     ],
     stopMotionDuration: 1000,
-    imagePreload: [],
+    imagePreload: ["/background/2-1.png"],
   },
   "2-1-1": {
     image: "/background/2-1.png",
@@ -343,7 +342,7 @@ export const backgroundMapConfig: any = {
   "2-2-2": {
     image: "/background/2-2-2.png",
     stopMotionDuration: 1000,
-    imagePreload: [],
+    imagePreload: ["/background/2-2-4.webp"],
   },
   "2-2-4": {
     image: "/background/2-2-4.webp",
@@ -433,10 +432,6 @@ export const backgroundMapConfig: any = {
     imagePreload: [],
   },
   "3-1-5": {
-    image: "/background/3-1.gif",
-    imagePreload: [],
-  },
-  logic: {
     image: "/background/3-1.gif",
     imagePreload: [],
   },
@@ -594,7 +589,7 @@ export const backgroundMapConfig: any = {
       "/background/4-1-21.png",
     ],
     stopMotionDuration: 1000,
-    imagePreload: [],
+    imagePreload: ["/background/5-1-1.png"],
   },
   "5-1-1": {
     image: "/background/5-1-1.png",
@@ -646,7 +641,7 @@ export const backgroundMapConfig: any = {
   },
   "5-1-13": {
     image: "/background/5-1-1.png",
-    imagePreload: [],
+    imagePreload: ["/background/5-2-1.webp"],
   },
   "5-2-1": {
     image: "/background/5-2-1.webp",
