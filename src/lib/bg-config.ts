@@ -1,34 +1,30 @@
 export const backgroundMapConfig: any = {
-  "0": {
-    image: "/background/0.png",
-    imagePreload: [],
-  },
   "0-1": {
-    image: "/background/0.png",
-    imagePreload: [],
+    image: "/background/0.webp",
+    imagePreload: ["/background/0.jpg"],
   },
   "0-2": {
-    image: "/background/0.png",
+    image: "/background/0-blur.jpg",
     imagePreload: [],
   },
   "0-3-1": {
-    image: "/background/0.png",
+    image: "/background/0.jpg",
     imagePreload: [],
   },
   "0-3-2": {
-    image: "/background/0.png",
+    image: "/background/0.jpg",
     imagePreload: [],
   },
   "0-4-1": {
-    image: "/background/0.png",
+    image: "/background/0.webp",
     imagePreload: [],
   },
   "0-4-2": {
-    image: "/background/0.png",
+    image: "/background/0.webp",
     imagePreload: [],
   },
   "0-5": {
-    image: "/background/0.png",
+    image: "/background/0.webp",
     imagePreload: ["/background/0-7-1.png"],
   },
   "0-6": {
