@@ -4,6 +4,7 @@ import Sounds from "@/components/ui/sounds";
 import SoundToggle from "@/components/ui/sound-toggle";
 import { PropsWithChildren } from "react";
 import LangToggle from "@/components/ui/lang-toggle";
+import InteractiveBackground from "@/components/interactive-background";
 
 interface LayoutProps extends PropsWithChildren {
   params: Promise<{ locale: string }>;
@@ -22,6 +23,7 @@ const LocaleLayout = async ({ children, params }: LayoutProps) => {
   return (
     <html lang={locale}>
       <body className="relative mx-auto min-h-screen w-full max-w-md overflow-x-hidden overscroll-none">
+        <InteractiveBackground />
         <Sounds />
         <div className="absolute right-8 top-12 z-50 flex w-full items-center justify-end">
           <LangToggle />
