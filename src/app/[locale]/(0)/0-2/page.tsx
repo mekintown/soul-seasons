@@ -1,6 +1,5 @@
 "use client";
 import MessageBox from "@/components/ui/messagebox";
-import Shadow from "@/components/ui/Shadow";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import NextButton from "@/components/ui/NextButton";
@@ -10,7 +9,6 @@ const Scene02 = () => {
 
   return (
     <section className="w-full justify-center h-lvh flex flex-col">
-      <Shadow>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -59,7 +57,6 @@ const Scene02 = () => {
             <NextButton url="/0-3-1" disabled={false} label={t("btn")} />
           </div>
         </motion.div>
-      </Shadow>
     </section>
   );
 };

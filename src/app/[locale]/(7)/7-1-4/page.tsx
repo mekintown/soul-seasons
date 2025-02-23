@@ -1,12 +1,12 @@
 'use client';
-import { useCalculation } from '@/lib/calculation'
-import { seasonImg } from "@/lib/enum";
+import { useLogicCalculation} from '@/lib/logicCalculation/logicCalculation'
+import { seasonImg, Season } from "@/lib/enum";
 import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 
 const Scene7_1_4 = () => {
-  //  const { seasons } = useCalculation();
-  const seasons = "Life Canvas";
+   const { seasons } = useLogicCalculation();
+//   const seasons = "Life Canvas";
    const t = useTranslations(`7-1-4`);
    const locale = useLocale();
    const [blur, setBlur] = useState(true);
@@ -17,11 +17,11 @@ const Scene7_1_4 = () => {
            setBlur(false);
        }, 1000);
    }, []);
-   
+   console.log(seasons);
    return (
        <section className="relative w-full min-h-screen flex flex-col justify-center items-center">
            {seasons && (
-            <div className={`${seasons === "Life Canvas" ? "mt-[80px]" : "mt-16"} ml-6 flex w-full min-h-[300px] justify-center items-center flex-col`}>
+            <div className={`${seasons === Season.LifesCanvas ? "mt-[80px]" : "mt-16"} ml-6 flex w-full min-h-[300px] justify-center items-center flex-col`}>
               <div className="w-full gap-3 h-auto flex justify-center items-center font-light text-primaryblue">
                        <div className="text-[18px] font-bold h-auto flex flex-col items-center justify-center">
                            {/* First Image with Blur Effect */}
@@ -65,7 +65,7 @@ const Scene7_1_4 = () => {
                           className={`
                             ${seasonImg[seasons as keyof typeof seasonImg]?.["w"][1]} 
                             ${seasonImg[seasons as keyof typeof seasonImg]?.["h"][1]} 
-                            ${["Trophies and Triumphs", "Life Canvas", "Refilled Heart", "Ribbons and Paper Boxes"].includes(seasons)
+                            ${[Season.TrophiesAndTriumphs, Season.LifesCanvas, Season.ARefilledHeart, Season.RibbonsAndPaperBoxes].includes(seasons)
                               ? "" // No additional class needed
                               : "relative w-[75px] h-auto bottom-6"}
                             ${blur ? "filter blur-sm dissolve" : ""}
@@ -89,7 +89,7 @@ const Scene7_1_4 = () => {
                            <br /> {t(`p3.${seasons}.s7`)}
                            <br /> {t(`p3.${seasons}.s8`)}
                            {
-                               seasons === "Life Canvas" && locale === "en" && (
+                               seasons === Season.LifesCanvas && locale === "en" && (
                                    <>
                                        <br /> {t(`p3.${seasons}.s9`)}
                                        <br /> {t(`p3.${seasons}.s10`)}

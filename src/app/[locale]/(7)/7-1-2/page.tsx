@@ -1,6 +1,6 @@
 'use client';
 import { useRouter } from "@/i18n/routing";
-import { useCalculation } from "@/lib/calculation";
+import { useLogicCalculation } from "@/lib/logicCalculation/logicCalculation";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
@@ -26,7 +26,7 @@ const Scene7_1_2 = () => {
   const [blur, setBlur] = useState(true);
   const t = useTranslations(`7-1-2`);
   const router = useRouter();
-  const { seasons } = useCalculation();
+  const { seasons } = useLogicCalculation();
   useEffect(() => { 
     setTimeout(() => {
       setBlur(false);
