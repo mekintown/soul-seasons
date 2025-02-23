@@ -110,8 +110,9 @@ export const backgroundMapConfig: any = {
       "/background/1-3-4.png",
       "/background/1-3-5.png",
     ],
-    imagePreload: ["/background/1-3-6.png"],
     stopMotionDuration: 1000,
+    redirectTo: "1-3-6",
+    imagePreload: ["/background/1-3-6.png"],
   },
   "1-3-6": {
     image: "/background/1-3-6.png",
@@ -160,6 +161,7 @@ export const backgroundMapConfig: any = {
       "/background/1-4-15.webp",
     ],
     stopMotionDuration: 1000,
+    redirectTo: "2-1-1",
     imagePreload: ["/background/2-1.png"],
   },
   "2-1-1": {
@@ -209,6 +211,7 @@ export const backgroundMapConfig: any = {
       "/background/2-2-1.png",
     ],
     stopMotionDuration: 2000,
+    redirectTo: "2-2-2",
     imagePreload: ["/background/2-2-2.png"],
   },
   "2-2-2": {
@@ -249,6 +252,7 @@ export const backgroundMapConfig: any = {
       "/background/2-3-10.png",
     ],
     stopMotionDuration: 1000,
+    redirectTo: "3-1-1",
     imagePreload: [],
   },
   "2-7": {
@@ -258,6 +262,7 @@ export const backgroundMapConfig: any = {
       "/background/2-3.webp",
     ],
     stopMotionDuration: 1200,
+    redirectTo: "2-8",
     imagePreload: [],
   },
   "2-8": {
@@ -285,6 +290,7 @@ export const backgroundMapConfig: any = {
       "/background/2-9-8.webp",
     ],
     stopMotionDuration: 1200,
+    redirectTo: "2-10",
     imagePreload: [],
   },
   "3-1-1": {
@@ -317,11 +323,12 @@ export const backgroundMapConfig: any = {
   },
   "3-2-4": {
     image: "/background/3-2-11_1.gif",
-    imagePreload: [],
+    useBackgroundState: true,
   },
   "3-2-6": {
     image: "/background/3-2-11_3.gif",
-    imagePreload: [],
+    stopMotionDuration: 2000,
+    redirectTo: "3-2-7",
   },
   "3-2-7": {
     image: "/background/3-2-11_3.gif",
@@ -336,8 +343,8 @@ export const backgroundMapConfig: any = {
     imagePreload: ["/background/3-2-11_1.gif", "/background/3-2-11_2.gif"],
   },
   "3-2-12": {
-    // images use zustand state
-    imagePreload: [],
+    image: "/background/3-2-11_3.gif",
+    useBackgroundState: true,
   },
   "3-3-1": {
     image: "/background/3-3-1.gif",
@@ -384,6 +391,7 @@ export const backgroundMapConfig: any = {
       "/background/3-3-14.webp",
     ],
     stopMotionDuration: 1000,
+    redirectTo: "4-1-1",
     imagePreload: [],
   },
   "4-1-1": {
@@ -394,6 +402,7 @@ export const backgroundMapConfig: any = {
       "/background/4-1-4.gif",
     ],
     stopMotionDuration: 1000,
+    redirectTo: "4-1-4",
     imagePreload: [],
   },
 
@@ -461,6 +470,7 @@ export const backgroundMapConfig: any = {
       "/background/4-1-21.png",
     ],
     stopMotionDuration: 1000,
+    redirectTo: "5-1-1",
     imagePreload: ["/background/5-1-1.png"],
   },
   "5-1-1": {
@@ -560,6 +570,7 @@ export const backgroundMapConfig: any = {
       "/background/6-1-4.png",
     ],
     stopMotionDuration: 1200,
+    redirectTo: "6-2-1",
     imagePreload: ["/background/6-2-1.png"],
   },
   "6-2-1": {
