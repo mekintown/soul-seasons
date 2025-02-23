@@ -6,7 +6,22 @@ import React, { useEffect, useState } from "react";
 import NextButton from "@/components/ui/NextButton";
 import { Share2 } from "lucide-react";
 import { useCalculation } from "@/lib/calculation";
-import { chapterMap, seasonMap } from "@/lib/types";
+import { Season, SeasonsChapter } from "@/lib/enum";
+
+const chapterMap: Record<SeasonsChapter, string> = {
+  [SeasonsChapter.Start]: "1",
+  [SeasonsChapter.Middle]: "2",
+  [SeasonsChapter.End]: "3",
+};
+
+const seasonMap: Record<Season, string> = {
+  [Season.InspiringFlames]: "1",
+  [Season.LifesCanvas]: "2",
+  [Season.HeartAndHome]: "3",
+  [Season.RibbonsAndPaperBoxes]: "4",
+  [Season.TrophiesAndTriumphs]: "5",
+  [Season.ARefilledHeart]: "6",
+};
 
 const Scene7_2: React.FC = () => {
   const locale = useLocale();
@@ -37,8 +52,6 @@ const Scene7_2: React.FC = () => {
   };
 
   useEffect(() => {
-    // const parser = new UAParser(navigator.userAgent)
-    // setUserAgentData(parser.getDevice().model)
     const seasonsNo = typeof seasons === "string" ? seasonMap[seasons] : "1";
     const chapterNo = chapter ? chapterMap[chapter] : "middle";
 

@@ -1,20 +1,46 @@
 import { useEffect, useState } from "react";
-import { motivationMap } from "./motivations";
-import { obstacleMapping } from "./obstacles";
-import Seasons from "./season";
-import Chapter from "./chapter";
-import { Categories, Category } from "./enum";
-import { Season, SeasonsChapter } from "./types";
-
-type Motivation = {
-  index: number;
-  name: string;
-};
+import {
+  Categories,
+  Category,
+  Motivation,
+  Obstacle,
+  Season,
+  SeasonsChapter,
+} from "./enum";
+import SeasonDetermination from "./seasonDetermination";
+import ChapterDetermination from "./chapterDetermination";
 
 type WeightedSubConcept = {
   category: Category;
   subConcept: Categories;
   weight: number;
+};
+
+const motivationMap: Record<Motivation, Categories> = {
+  [Motivation.CareerWork]: Categories.Ambitious,
+  [Motivation.Family]: Categories.HeartAndHome,
+  [Motivation.RelationshipFriends]: Categories.HeartAndHome,
+  [Motivation.SharingContributions]: Categories.SoulfulImpact,
+  [Motivation.SelfDevelopment]: Categories.SelfLove,
+  [Motivation.FinanceMoney]: Categories.Ambitious,
+  [Motivation.Health]: Categories.SelfLove,
+  [Motivation.Spiritual]: Categories.SoulfulImpact,
+};
+
+const obstacleMapping: Record<Obstacle, Categories | Categories[]> = {
+  [Obstacle.NotGoodEnough]: Categories.Ambitious,
+  [Obstacle.NotPrioritize]: Categories.HeartAndHome,
+  [Obstacle.NotLoveMyself]: Categories.SelfLove,
+  [Obstacle.FearNotAccepted]: Categories.SoulfulImpact,
+  [Obstacle.TimeManagement]: [Categories.Ambitious, Categories.HeartAndHome],
+  [Obstacle.LackConfidence]: [Categories.Ambitious, Categories.SelfLove],
+  [Obstacle.LackInspiration]: [Categories.Ambitious, Categories.SoulfulImpact],
+  [Obstacle.OverDriven]: [Categories.HeartAndHome, Categories.SelfLove],
+  [Obstacle.SocietyPressure]: [
+    Categories.HeartAndHome,
+    Categories.SoulfulImpact,
+  ],
+  [Obstacle.OverwhelmedWorld]: [Categories.SelfLove, Categories.SoulfulImpact],
 };
 
 export const useCalculation = () => {
@@ -25,24 +51,22 @@ export const useCalculation = () => {
     Categories[]
   >([]);
   const [subConceptObstacles, setSubConceptObstacles] = useState<string[]>([]);
-  const [seasons, setSeasons] = useState<Season | string[]>([]);
+  const [seasons, setSeasons] = useState<Season>();
   const [chapter, setChapter] = useState<SeasonsChapter>();
   const [motivation, setMotivation] = useState<Motivation[]>([]);
-  const [obstacles, setObstacles] = useState<string[]>([]);
+  const [obstacles, setObstacles] = useState<Obstacle[]>([]);
   const [speed, setSpeed] = useState(10);
   const [dataLoaded, setDataLoaded] = useState(false);
 
-  // Effect to load data from localStorage once on mount.
   useEffect(() => {
     const storedMotivation = localStorage.getItem("motivationGoal");
-    const storedObstacles = localStorage.getItem("currentGoal");
+    const storedObstacles = localStorage.getItem("currentObstacles");
     const speedClicked = localStorage.getItem("speed");
 
     if (storedMotivation) {
       try {
-        const parsedMotivation = JSON.parse(storedMotivation);
         setMotivation(
-          parsedMotivation.map((item: any, index: number) => ({
+          JSON.parse(storedMotivation).map((item: any, index: number) => ({
             ...item,
             index,
           }))
@@ -54,8 +78,7 @@ export const useCalculation = () => {
 
     if (storedObstacles) {
       try {
-        const parsedObstacles = JSON.parse(storedObstacles);
-        setObstacles(parsedObstacles);
+        setObstacles(JSON.parse(storedObstacles));
       } catch (error) {
         console.error("Error parsing obstacles:", error);
       }
@@ -63,8 +86,7 @@ export const useCalculation = () => {
 
     if (speedClicked) {
       try {
-        const parsedSpeed = JSON.parse(speedClicked);
-        setSpeed(parsedSpeed);
+        setSpeed(JSON.parse(speedClicked));
       } catch (error) {
         console.error("Error parsing speed:", error);
       }
@@ -72,63 +94,29 @@ export const useCalculation = () => {
     setDataLoaded(true);
   }, []);
 
-  // Effect to handle calculations based on state changes.
   useEffect(() => {
     if (!dataLoaded) {
       return;
     }
-    const motivationSubConcepts = motivation.map(
-      (mot) => motivationMap[mot.name]
-    );
+
+    const motivationSubConcepts = motivation.map((mot) => motivationMap[mot]);
     const obstacleSubConcepts = obstacles.map((obs) => obstacleMapping[obs]);
 
-    const distinctMotSubConcepts = Array.from(new Set(motivationSubConcepts));
-    const distinctObsSubConcepts = Array.from(new Set(obstacleSubConcepts));
-
-    let selectedMotSubConcept: Categories[] = [];
-    let selectedObsSubConcept: Categories[] = [];
-
-    switch (distinctMotSubConcepts.length) {
-      case 2:
-        selectedMotSubConcept = distinctMotSubConcepts;
-        break;
-      case 3:
-        selectedMotSubConcept = motivation
-          .slice(0, 2)
-          .map((mot) => motivationMap[mot.name]);
-        break;
-      default:
-        selectedMotSubConcept = distinctMotSubConcepts;
-        break;
-    }
-
-    switch (distinctObsSubConcepts.length) {
-      case 2:
-        selectedObsSubConcept = distinctObsSubConcepts.flat();
-        break;
-      case 3:
-        selectedObsSubConcept = obstacles
-          .slice(0, 2)
-          .map((obs) => obstacleMapping[obs])
-          .flat();
-        break;
-      default:
-        selectedObsSubConcept = distinctObsSubConcepts.flat();
-        break;
-    }
+    const selectedMotSubConcept = Array.from(
+      new Set(motivationSubConcepts)
+    ).slice(0, 2);
+    const selectedObsSubConcept = Array.from(
+      new Set(obstacleSubConcepts.flat())
+    ).slice(0, 2);
 
     setSubConceptMotivation(selectedMotSubConcept);
     setSubConceptObstacles(selectedObsSubConcept);
 
-    const motivationWeight = 0.9;
-    const obstacleWeight = 0.1 * speed;
-
-    // Create weighted objects for each sub-concept.
     const weightedMotivations: WeightedSubConcept[] = selectedMotSubConcept.map(
       (sub) => ({
         category: Category.Motivation,
         subConcept: sub,
-        weight: motivationWeight,
+        weight: 0.9,
       })
     );
 
@@ -136,22 +124,17 @@ export const useCalculation = () => {
       (sub) => ({
         category: Category.Obstacle,
         subConcept: sub,
-        weight: obstacleWeight,
+        weight: 0.1 * speed,
       })
     );
 
-    // Combine the two arrays.
-    const combinedWeighted = [...weightedMotivations, ...weightedObstacles];
-
-    // Sort from highest to lowest weight.
-    const sortedWeight = combinedWeighted.sort((a, b) => b.weight - a.weight);
-    const season = Seasons(sortedWeight);
-    const chapters = Chapter(sortedWeight);
-
+    const sortedWeight = [...weightedMotivations, ...weightedObstacles].sort(
+      (a, b) => b.weight - a.weight
+    );
     setSortedSubConcepts(sortedWeight);
-    setSeasons(season);
-    setChapter(chapters);
-  }, [motivation, obstacles, speed]); // Run whenever these dependencies change.
+    setSeasons(SeasonDetermination(sortedWeight));
+    setChapter(ChapterDetermination(sortedWeight));
+  }, [motivation, obstacles, speed]);
 
   return {
     sortedSubConcepts,
