@@ -2,12 +2,35 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
 
 const Page0_8_25 = () => {
   const t = useTranslations("0-8-25");
+  const [showText, setShowText] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
+
+  useEffect(() => {
+    const showTimer = setTimeout(() => {
+      setShowText(true);
+    }, 2000);
+
+    const fadeTimer = setTimeout(() => {
+      setFadeOut(true);
+    }, 4000);
+
+    return () => {
+      clearTimeout(showTimer);
+      clearTimeout(fadeTimer);
+    };
+  }, []);
 
   return (
-    <div className="flex justify-center items-center relative w-full min-h-screen">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ opacity: { duration: 1 } }}
+      className="flex h-screen items-center justify-center relative"
+    >
       <Image
         src="/0-8/0-8-tree-7.webp"
         alt="Tree"
@@ -16,37 +39,26 @@ const Page0_8_25 = () => {
         className="absolute z-0"
       />
 
-      <motion.div
-        style={{
-          textAlign: "center",
-        }}
-        initial={{ opacity: 0, z: -20 }}
-        animate={{ opacity: 1, z: 0, transition: { duration: 1, delay: 1 } }}
-      >
-        <div
-          className="relative w-full h-full flex justify-center items-center"
-          style={{
-            minHeight: "10vh",
-            minWidth: "22vh",
-            marginBottom: 400,
-            right: "30%",
-          }}
+      {showText && (
+        <motion.div
+          className="absolute flex flex-col justify-center items-center right-[30%] top-[20%] text-center"
+          initial={{ opacity: 0 }}
+          animate={fadeOut ? { opacity: 0 } : { opacity: 1 }}
+          transition={{ opacity: { duration: 1 } }}
         >
-          <img
+          <Image
+            width={181}
+            height={69}
             src="/0-8/0-8-text.webp"
             alt="text background"
-            className="absolute inset-0 w-full h-full object-cover z-0"
+            className="relative z-0"
           />
-
-          <span
-            className="font-th text-[#182649] z-10"
-            style={{ fontSize: "18px", textAlign: "center" }}
-          >
+          <span className="absolute font-th text-[#182649] text-lg z-10 leading-snug">
             {t("p1.s1")}
           </span>
-        </div>
-      </motion.div>
-    </div>
+        </motion.div>
+      )}
+    </motion.div>
   );
 };
 

@@ -26,9 +26,11 @@ const Page0_8_8 = () => {
   const t = useTranslations("0-8-7");
 
   return (
-    <div
-      className="flex justify-center items-center relative w-full min-h-screen"
-      style={{ cursor: "pointer" }}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ opacity: { duration: 1 } }}
+      className="flex h-screen items-center justify-center relative"
     >
       <Image
         src="/0-8/0-8-tree-3.webp"
@@ -64,7 +66,7 @@ const Page0_8_8 = () => {
           </span>
         </motion.div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

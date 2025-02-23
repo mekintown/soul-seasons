@@ -1,22 +1,14 @@
 "use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { useRouter } from "@/i18n/routing";
-import { useEffect } from "react";
 
 const Page0_8_29 = () => {
-  const router = useRouter();
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      router.push("0-8-30");
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, [router]);
   return (
-    <div
-      className="flex justify-center items-center relative w-full min-h-screen"
-      style={{ cursor: "pointer" }}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ opacity: { duration: 1 } }}
+      className="flex h-screen items-center justify-center relative"
     >
       <Image
         src="/0-8/0-8-tint.png"
@@ -25,7 +17,7 @@ const Page0_8_29 = () => {
         objectFit="cover"
         className="absolute z-0"
       />
-    </div>
+    </motion.div>
   );
 };
 
