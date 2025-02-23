@@ -6,7 +6,7 @@ import {
   Obstacle,
   Season,
   SeasonsChapter,
-} from "./enum";
+} from "../enum";
 import SeasonDetermination from "./seasonDetermination";
 import ChapterDetermination from "./chapterDetermination";
 
@@ -43,7 +43,7 @@ const obstacleMapping: Record<Obstacle, Categories | Categories[]> = {
   [Obstacle.OverwhelmedWorld]: [Categories.SelfLove, Categories.SoulfulImpact],
 };
 
-export const useCalculation = () => {
+export const useLogicCalculation = () => {
   const [sortedSubConcepts, setSortedSubConcepts] = useState<
     WeightedSubConcept[]
   >([]);
@@ -102,31 +102,29 @@ export const useCalculation = () => {
     const motivationSubConcepts = motivation.map((mot) => motivationMap[mot]);
     const obstacleSubConcepts = obstacles.map((obs) => obstacleMapping[obs]);
 
-    const selectedMotSubConcept = Array.from(
+    const selectedMotivationSubConcept = Array.from(
       new Set(motivationSubConcepts)
     ).slice(0, 2);
-    const selectedObsSubConcept = Array.from(
+    const selectedObstacleSubConcept = Array.from(
       new Set(obstacleSubConcepts.flat())
     ).slice(0, 2);
 
-    setSubConceptMotivation(selectedMotSubConcept);
-    setSubConceptObstacles(selectedObsSubConcept);
+    setSubConceptMotivation(selectedMotivationSubConcept);
+    setSubConceptObstacles(selectedObstacleSubConcept);
 
-    const weightedMotivations: WeightedSubConcept[] = selectedMotSubConcept.map(
-      (sub) => ({
+    const weightedMotivations: WeightedSubConcept[] =
+      selectedMotivationSubConcept.map((sub) => ({
         category: Category.Motivation,
         subConcept: sub,
         weight: 0.9,
-      })
-    );
+      }));
 
-    const weightedObstacles: WeightedSubConcept[] = selectedObsSubConcept.map(
-      (sub) => ({
+    const weightedObstacles: WeightedSubConcept[] =
+      selectedObstacleSubConcept.map((sub) => ({
         category: Category.Obstacle,
         subConcept: sub,
         weight: 0.1 * speed,
-      })
-    );
+      }));
 
     const sortedWeight = [...weightedMotivations, ...weightedObstacles].sort(
       (a, b) => b.weight - a.weight

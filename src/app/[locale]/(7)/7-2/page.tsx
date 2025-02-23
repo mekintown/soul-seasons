@@ -5,7 +5,7 @@ import { useLocale } from "next-intl";
 import React, { useEffect, useState } from "react";
 import NextButton from "@/components/ui/NextButton";
 import { Share2 } from "lucide-react";
-import { useCalculation } from "@/lib/calculation";
+import { useLogicCalculation } from "@/lib/logicCalculation/logicCalculation";
 import { Season, SeasonsChapter } from "@/lib/enum";
 
 const chapterMap: Record<SeasonsChapter, string> = {
@@ -26,7 +26,7 @@ const seasonMap: Record<Season, string> = {
 const Scene7_2: React.FC = () => {
   const locale = useLocale();
   const [result, setResult] = useState<string>();
-  const { seasons, chapter } = useCalculation();
+  const { seasons, chapter } = useLogicCalculation();
   const DOWNLOAD_FILENAME = "results.jpeg";
 
   const shareImage = async () => {

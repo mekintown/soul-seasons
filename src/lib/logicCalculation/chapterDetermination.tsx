@@ -1,5 +1,5 @@
-import { Category, SeasonsChapter } from "./enum";
-import { WeightedSubConcept } from "./types";
+import { Category, SeasonsChapter } from "../enum";
+import { WeightedSubConcept } from "../types";
 
 const ChapterDetermination = (
   sortedWeights: WeightedSubConcept[]

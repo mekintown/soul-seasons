@@ -1,5 +1,5 @@
-import { Categories, Season } from "./enum";
-import { WeightedSubConcept } from "./types";
+import { Categories, Season } from "../enum";
+import { WeightedSubConcept } from "../types";
 
 const SeasonDetermination = (sortedWeights: WeightedSubConcept[]): Season => {
   const top = sortedWeights.slice(0, 2);
