@@ -1,18 +1,7 @@
 "use client";
 import Image from "next/image";
-import { useRouter } from "@/i18n/routing";
-import { useEffect } from "react";
 
 const Page0_8_16 = () => {
-  const router = useRouter();
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      router.push("0-8-17");
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, [router]);
   return (
     <div
       className="flex justify-center items-center relative w-full min-h-screen"
