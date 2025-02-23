@@ -116,37 +116,17 @@ export const backgroundMapConfig: Record<string, backgroundConfig> = {
     image: "/0-8/0-8-bg.webp",
     imagePreload: [],
   },
-  "0-8-17": {
-    image: "/0-8/0-8-bg.webp",
-    imagePreload: [],
-  },
-  "0-8-18": {
-    image: "/0-8/0-8-bg.webp",
-    imagePreload: [],
-  },
+
   "0-8-19": {
     image: "/0-8/0-8-bg.webp",
     imagePreload: [],
-  },
-  "0-8-20": {
-    image: "/0-8/0-8-bg.webp",
-    imagePreload: [],
+    redirectTo: "0-8-21",
+    stopMotionDuration: 4000,
   },
   "0-8-21": {
     image: "/0-8/0-8-bg.webp",
     imagePreload: [],
-  },
-  "0-8-22": {
-    image: "/0-8/0-8-bg.webp",
-    imagePreload: [],
-  },
-  "0-8-23": {
-    image: "/0-8/0-8-bg.webp",
-    imagePreload: [],
-  },
-  "0-8-24": {
-    image: "/0-8/0-8-bg.webp",
-    imagePreload: [],
+    stopMotionDuration: 6000,
   },
   "0-8-25": {
     image: "/0-8/0-8-bg.webp",

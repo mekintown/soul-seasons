@@ -25,7 +25,12 @@ const Page0_8_4 = () => {
   }, []);
 
   return (
-    <div className="flex h-screen items-center justify-center relative">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ opacity: { duration: 1 } }}
+      className="flex h-screen items-center justify-center relative"
+    >
       <Image
         src="/0-8/0-8-tree-2.webp"
         alt="Tree"
@@ -60,7 +65,7 @@ const Page0_8_4 = () => {
           </span>
         </motion.div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
