@@ -13,7 +13,7 @@ enum MarbleImg {
   Marble5 = "/icons/marble/marble5.png",
   Marble6 = "/icons/marble/marble6.png"
 }
-const Scene7_1_3 = () => {
+const Scene7_1_2 = () => {
 
   const marbleImg = { 
     "Inspiring flame": MarbleImg.Marble1, 
@@ -80,4 +80,4 @@ const Scene7_1_3 = () => {
   );
 };
 
-export default Scene7_1_3;
+export default Scene7_1_2;

@@ -1,5 +1,4 @@
 'use client'
-import { Textarea } from "@/components/ui/textarea"
 import { motion } from "framer-motion"
 import { useRouter } from "@/i18n/routing"
 const Scene7_1_1 = () => {
@@ -7,6 +6,7 @@ const Scene7_1_1 = () => {
   const handleClick = () => {
     router.push("/7-1-2");
   }
+  const goal = localStorage.getItem("goal")
   return (
     <motion.div
     initial={{ opacity: 0 }}
@@ -15,12 +15,15 @@ const Scene7_1_1 = () => {
     >
     <section className="w-full h-lvh flex flex-col items-center justify-center"
     onClick={handleClick}>
-          <h1 className="relative left-[30px] top-[70px] text-center font-['TAN - MON CHERI'] font-normal italic text-[64px] leading-[90.25px] tracking-normal">
+      <div className="relative w-full h-full flex flex-col items-center justify-center gap-12">
+      <h1 className="relative left-[30px] top-[70px] text-center font-['TAN - MON CHERI'] font-normal italic text-[64px] leading-[90.25px] tracking-normal">
             Goal
           </h1>
           <div className="mt-10">
-            <Textarea className="w-[170px] h-[100px] left-[50px] top-[30px]" />
+            {goal}
           </div>
+      </div>
+         
     </section>
     </motion.div>
     
