@@ -1,4 +1,12 @@
-export const backgroundMapConfig: any = {
+interface backgroundConfig {
+  image: string | string[];
+  imagePreload?: string[];
+  stopMotionDuration?: number;
+  redirectTo?: string;
+  useBackgroundState?: boolean;
+}
+
+export const backgroundMapConfig: Record<string, backgroundConfig> = {
   "": {
     image: "/background/0.webp",
   },
@@ -64,6 +72,93 @@ export const backgroundMapConfig: any = {
   },
   "0-7-8": {
     image: "/background/0-7-1.png",
+    imagePreload: [],
+  },
+  "0-8-1": {
+    image: "/0-8/0-8-bg.webp",
+    imagePreload: [],
+  },
+  "0-8-2": {
+    image: "/0-8/0-8-bg.webp",
+    imagePreload: [],
+    redirectTo: "0-8-4",
+    stopMotionDuration: 4000,
+  },
+  "0-8-4": {
+    image: "/0-8/0-8-bg.webp",
+    imagePreload: [],
+    redirectTo: "0-8-7",
+    stopMotionDuration: 6000,
+  },
+  "0-8-7": {
+    image: "/0-8/0-8-bg.webp",
+    imagePreload: [],
+    stopMotionDuration: 6000,
+    redirectTo: "0-8-9",
+  },
+  "0-8-9": {
+    image: "/0-8/0-8-bg.webp",
+    imagePreload: [],
+  },
+  "0-8-10": {
+    image: "/0-8/0-8-bg.webp",
+    imagePreload: [],
+    stopMotionDuration: 6000,
+    redirectTo: "0-8-13",
+  },
+  "0-8-13": {
+    image: "/0-8/0-8-bg.webp",
+    imagePreload: [],
+    stopMotionDuration: 6000,
+    redirectTo: "0-8-16",
+  },
+  "0-8-16": {
+    image: "/0-8/0-8-bg.webp",
+    imagePreload: [],
+  },
+
+  "0-8-19": {
+    image: "/0-8/0-8-bg.webp",
+    imagePreload: [],
+    redirectTo: "0-8-21",
+    stopMotionDuration: 4000,
+  },
+  "0-8-21": {
+    image: "/0-8/0-8-bg.webp",
+    imagePreload: [],
+    stopMotionDuration: 6000,
+    redirectTo: "0-8-25",
+  },
+  "0-8-25": {
+    image: "/0-8/0-8-bg.webp",
+    imagePreload: [],
+    stopMotionDuration: 4000,
+    redirectTo: "0-8-28",
+  },
+  "0-8-28": {
+    image: "/0-8/0-8-bg.webp",
+    imagePreload: ["/0-8/0-8-29.png"],
+    stopMotionDuration: 2000,
+    redirectTo: "0-8-29",
+  },
+  "0-8-29": {
+    image: "/0-8/0-8-29.png",
+    imagePreload: ["/0-8/0-8-30.png"],
+    stopMotionDuration: 2000,
+    redirectTo: "0-8-30",
+  },
+  "0-8-30": {
+    image: "/0-8/0-8-30.png",
+    imagePreload: [],
+    stopMotionDuration: 2000,
+    redirectTo: "1-1-1",
+  },
+  "1-1-1": {
+    image: "/0-8/0-8-30.png",
+    imagePreload: [],
+  },
+  "1-1-2": {
+    image: "/0-8/0-8-30.png",
     imagePreload: [],
   },
   "1-1-3": {
