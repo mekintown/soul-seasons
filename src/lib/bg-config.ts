@@ -1,4 +1,12 @@
-export const backgroundMapConfig: any = {
+interface backgroundConfig {
+  image: string | string[];
+  imagePreload?: string[];
+  stopMotionDuration?: number;
+  redirectTo?: string;
+  useBackgroundState?: boolean;
+}
+
+export const backgroundMapConfig: Record<string, backgroundConfig> = {
   "": {
     image: "/background/0.webp",
   },
@@ -73,22 +81,18 @@ export const backgroundMapConfig: any = {
   "0-8-2": {
     image: "/0-8/0-8-bg.webp",
     imagePreload: [],
+    redirectTo: "0-8-3",
   },
   "0-8-3": {
     image: "/0-8/0-8-bg.webp",
     imagePreload: [],
+    redirectTo: "0-8-4",
   },
   "0-8-4": {
     image: "/0-8/0-8-bg.webp",
     imagePreload: [],
-  },
-  "0-8-5": {
-    image: "/0-8/0-8-bg.webp",
-    imagePreload: [],
-  },
-  "0-8-6": {
-    image: "/0-8/0-8-bg.webp",
-    imagePreload: [],
+    redirectTo: "0-8-7",
+    stopMotionDuration: 6000,
   },
   "0-8-7": {
     image: "/0-8/0-8-bg.webp",
