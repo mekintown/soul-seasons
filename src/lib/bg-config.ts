@@ -82,6 +82,7 @@ export const backgroundMapConfig: Record<string, backgroundConfig> = {
     image: "/0-8/0-8-bg.webp",
     imagePreload: [],
     redirectTo: "0-8-4",
+    stopMotionDuration: 4000,
   },
   "0-8-4": {
     image: "/0-8/0-8-bg.webp",
