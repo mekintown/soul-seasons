@@ -6,12 +6,12 @@ import React, { useEffect, useState } from "react";
 import NextButton from "@/components/ui/NextButton";
 import { Share2 } from "lucide-react";
 import { useLogicCalculation } from "@/lib/logicCalculation/logicCalculation";
-import { Season, SeasonsChapter } from "@/lib/enum";
+import { Season, Chapter } from "@/lib/enum";
 
-const chapterMap: Record<SeasonsChapter, string> = {
-  [SeasonsChapter.Start]: "1",
-  [SeasonsChapter.Middle]: "2",
-  [SeasonsChapter.End]: "3",
+const chapterMap: Record<Chapter, string> = {
+  [Chapter.Start]: "1",
+  [Chapter.Middle]: "2",
+  [Chapter.End]: "3",
 };
 
 const seasonMap: Record<Season, string> = {
@@ -52,7 +52,7 @@ const Scene7_2: React.FC = () => {
   };
 
   useEffect(() => {
-    const seasonsNo = typeof seasons === "string" ? seasonMap[seasons] : "1";
+    const seasonsNo = seasons ? seasonMap[seasons] : "1";
     const chapterNo = chapter ? chapterMap[chapter] : "middle";
 
     setResult(`/img/results-${locale}/D 7-2-${seasonsNo}-${chapterNo}.webp`);

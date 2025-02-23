@@ -5,7 +5,7 @@ import {
   Motivation,
   Obstacle,
   Season,
-  SeasonsChapter,
+  Chapter,
 } from "../enum";
 import SeasonDetermination from "./seasonDetermination";
 import ChapterDetermination from "./chapterDetermination";
@@ -51,8 +51,8 @@ export const useLogicCalculation = () => {
     Categories[]
   >([]);
   const [subConceptObstacles, setSubConceptObstacles] = useState<string[]>([]);
-  const [seasons, setSeasons] = useState<Season>();
-  const [chapter, setChapter] = useState<SeasonsChapter>();
+  const [seasons, setSeasons] = useState<Season>(Season.ARefilledHeart);
+  const [chapter, setChapter] = useState<Chapter>(Chapter.Start);
   const [motivation, setMotivation] = useState<Motivation[]>([]);
   const [obstacles, setObstacles] = useState<Obstacle[]>([]);
   const [speed, setSpeed] = useState(10);

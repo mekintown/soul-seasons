@@ -30,7 +30,7 @@ export enum Season {
   ARefilledHeart = "A Refilled Heart",
 }
 
-export enum SeasonsChapter {
+export enum Chapter {
   Start = "start",
   Middle = "middle",
   End = "end",

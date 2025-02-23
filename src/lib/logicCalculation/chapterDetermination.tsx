@@ -1,9 +1,7 @@
-import { Category, SeasonsChapter } from "../enum";
+import { Category, Chapter } from "../enum";
 import { WeightedSubConcept } from "../types";
 
-const ChapterDetermination = (
-  sortedWeights: WeightedSubConcept[]
-): SeasonsChapter => {
+const ChapterDetermination = (sortedWeights: WeightedSubConcept[]): Chapter => {
   const motivationWeights = sortedWeights.filter(
     (item) => item.category === Category.Motivation
   );
@@ -12,20 +10,20 @@ const ChapterDetermination = (
   );
 
   if (motivationWeights.length === 0 && obstacleWeights.length === 0) {
-    return SeasonsChapter.Middle;
+    return Chapter.Middle;
   }
 
   const topMotivation = motivationWeights[0] || { subConcept: "", weight: 0 };
   const topObstacle = obstacleWeights[0] || { subConcept: "", weight: 0 };
 
   if (topObstacle.weight > topMotivation.weight) {
-    return SeasonsChapter.Start;
+    return Chapter.Start;
   } else if (
     topMotivation.subConcept.trim() === topObstacle.subConcept.trim()
   ) {
-    return SeasonsChapter.End;
+    return Chapter.End;
   } else {
-    return SeasonsChapter.Middle;
+    return Chapter.Middle;
   }
 };
 
