@@ -2,20 +2,9 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { useRouter } from "@/i18n/routing";
-import { useEffect } from "react";
 
 const Page0_8_19 = () => {
   const t = useTranslations("0-8-19");
-  const router = useRouter();
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      router.push("0-8-20");
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, [router]);
 
   return (
     <div
