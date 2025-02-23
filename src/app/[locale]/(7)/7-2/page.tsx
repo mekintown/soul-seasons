@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import NextButton from "@/components/ui/NextButton";
 import { Share2 } from "lucide-react";
 import { useCalculation } from "@/lib/calculation";
+import { chapterMap, seasonMap } from "@/lib/types";
 
 const Scene7_2: React.FC = () => {
   const locale = useLocale();
@@ -38,23 +39,10 @@ const Scene7_2: React.FC = () => {
   useEffect(() => {
     // const parser = new UAParser(navigator.userAgent)
     // setUserAgentData(parser.getDevice().model)
-    const chapterNumber =
-      chapter === "start" ? "1" : chapter === "end" ? "3" : "2";
-    const seasonsNumber =
-      seasons === "Inspiring Flames"
-        ? "1"
-        : seasons === "Life’s Canvas"
-          ? "2"
-          : seasons === "Heart & Home"
-            ? "3"
-            : seasons === "Ribbons and Paper Boxes"
-              ? "4"
-              : seasons === "Trophies and Triumphs"
-                ? "5"
-                : "6";
-    setResult(
-      `/img/results-${locale}/D 7-2-${seasonsNumber}-${chapterNumber}.webp`
-    );
+    const seasonsNo = typeof seasons === "string" ? seasonMap[seasons] : "1";
+    const chapterNo = chapter ? chapterMap[chapter] : "middle";
+
+    setResult(`/img/results-${locale}/D 7-2-${seasonsNo}-${chapterNo}.webp`);
   }, [seasons, chapter]);
 
   return (

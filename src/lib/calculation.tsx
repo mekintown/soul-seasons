@@ -4,6 +4,7 @@ import { obstacleMapping } from "./obstacles";
 import Seasons from "./season";
 import Chapter from "./chapter";
 import { Categories, Category } from "./enum";
+import { Season, SeasonsChapter } from "./types";
 
 type Motivation = {
   index: number;
@@ -24,8 +25,8 @@ export const useCalculation = () => {
     Categories[]
   >([]);
   const [subConceptObstacles, setSubConceptObstacles] = useState<string[]>([]);
-  const [seasons, setSeasons] = useState<string | string[]>("");
-  const [chapter, setChapter] = useState<string>("");
+  const [seasons, setSeasons] = useState<Season | string[]>([]);
+  const [chapter, setChapter] = useState<SeasonsChapter>();
   const [motivation, setMotivation] = useState<Motivation[]>([]);
   const [obstacles, setObstacles] = useState<string[]>([]);
   const [speed, setSpeed] = useState(10);
