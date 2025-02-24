@@ -6,10 +6,23 @@ import ReactHowler from "react-howler";
 import AudioPlayer from "./audio-player";
 import { usePathname } from "@/i18n/routing";
 
+export interface SoundEffect {
+  sound: string;
+  loop?: boolean;
+  volume?: number;
+  replay?: boolean;
+}
+
+export interface AmbientTrack {
+  sound: string;
+  volume?: number;
+  secondSound?: string;
+}
+
 const Sounds = () => {
   const path = usePathname();
   const page = path.split("/")[1];
-  const defaultBackingTrackVolume = 0.75;
+  const defaultBackingTrackVolume = 0.25;
   const defaultSoundEffectVolume = 0.3;
   const defaultAmbientTrackVolume = 0.9;
   const scene = page
@@ -24,21 +37,16 @@ const Sounds = () => {
   const backingTrackRef = createRef<ReactHowler>();
   const soundEffectRef = createRef<ReactHowler>();
   const ambientTrackRef = createRef<ReactHowler>();
-  const [soundEffect, setSoundEffect] = useState<{
-    sound: string;
-    loop?: boolean;
-    volume?: number;
-    replay?: boolean;
-  }>();
-  const [ambientTrack, setAmbientTrack] = useState<{
-    sound: string;
-    volume?: number;
-  }>();
+  const [soundEffect, setSoundEffect] = useState<SoundEffect>();
+  const [ambientTrack, setAmbientTrack] = useState<AmbientTrack>();
 
   const fadeDuration = 250;
 
   useEffect(() => {
-    const nextSound = scenePageMap[scene];
+    let nextSound = scenePageMap[scene];
+    if (page in scenePageMap) {
+      nextSound = scenePageMap[page as keyof typeof scenePageMap];
+    }
 
     if (nextSound !== backingTrackSound) {
       backingTrackRef.current?.howler.fade(backingTrackVolume, 0, fadeDuration);
@@ -46,7 +54,7 @@ const Sounds = () => {
         setBackingTrackSound(nextSound);
       }, fadeDuration);
     }
-  }, [scene]);
+  }, [page]);
 
   useEffect(() => {
     let nextSoundEffect: typeof soundEffect;
@@ -138,6 +146,16 @@ const Sounds = () => {
         <AudioPlayer
           key={ambientTrack.sound}
           src={ambientTrack.sound}
+          loop
+          preload
+          volume={ambientTrack.volume ?? defaultAmbientTrackVolume}
+          ref={ambientTrackRef}
+        />
+      )}
+      {ambientTrack?.secondSound && (
+        <AudioPlayer
+          key={ambientTrack.secondSound}
+          src={ambientTrack.secondSound}
           loop
           preload
           volume={ambientTrack.volume ?? defaultAmbientTrackVolume}
